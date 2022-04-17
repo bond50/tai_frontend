@@ -3,7 +3,7 @@ import Head from "next/head";
 import {APP_NAME, DOMAIN,} from "../../config";
 import React from "react";
 import SmallCard from "../../components/card/small-card";
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout";
 
 
 const Tag = ({tag, blogs, query}) => {
