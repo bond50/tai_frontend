@@ -1032,11 +1032,16 @@ section {
 /*}*/
 
 #service .service h2, #service .service h3, #service .service h4, #service .service h5, #service .service h6 {
-    text-align: center;
+    text-align: left;
+}
+
+#service .service h3, #service .service h4, #service .service h5, #service .service h6 {
+    font-size: 17px
 }
 
 
 #service .service img {
+    max-width: 100%;
     width: 100%;
     object-fit: contain;
     height: auto;
