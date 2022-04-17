@@ -3,7 +3,6 @@ import {API, APP_NAME, DOMAIN} from "../../config";
 import Head from "next/head";
 import React, {useEffect, useState} from "react";
 import Card from "../../components/card/Card";
-import DisqusThread from "../../components/DiscussThread";
 import SmallCard from "../../components/reusables/card/small-card";
 import Layout from "../../components/layout";
 import BlogSideBarContent from "../../components/sidebar/sidebar-content";
@@ -68,9 +67,6 @@ const SingleBlog = ({blog, query}) => {
     };
 
 
-    const showComments = () => <div>
-        <DisqusThread id={blog._id} title={blog.title} path={blog.slug}/>
-    </div>;
 
     return (
         <>
