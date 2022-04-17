@@ -1,0 +1,61 @@
+{
+  "hero": [
+    {
+      "id": 1,
+      "title": "Our asbestos handling team",
+      "excerpt": "We acknowledge that the presence of asbestos creates a long-term human and environmental risk to the community around us hence the urgency and need to dispose it off and clean our facilities and premises in order to minimize further environmental risks that are brought by asbestos",
+      "src": "/hero/late.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Our asbestos handling team",
+      "excerpt": "We acknowledge that the presence of asbestos creates a long-term human and environmental risk to the community around us hence the urgency and need to dispose it off and clean our facilities and premises in order to minimize further environmental risks that are brought by asbestos",
+      "src": "/hero/image2.jpg"
+    }
+  ],
+  "about": {
+    "id": 1,
+    "header2": "About",
+    "header3": "About us",
+    "src": "/hero/14.jpg",
+    "excerpt": "",
+    "body": "Tai Lifestyle Limited is a private liability company, registered and incorporated under the company act, 2015 cap 486 of the laws of Kenya. The company location is in Mombasa city and its physical office address is off Nkrumah Road, Third Floor, Taiyebi House, opposite NSSF Building, Mombasa, whilst its postal address is P.O Box 89990-80100 Mombasa.\n\nTai Lifestyle was primarily formed to carryout Safe Management of hazardous waste emanating from oil and oil Products hence, collect, transport and dispose waste oil and sludge according the NEMA regulations and guidelines. Waste generation occurs from all these numerous human activities, which creates the need for proper management to protect both the environment and our health.\n\n In this regard, we owned a NEMA fully Licensed Treatment plant/disposal site located in Mikindani, off Mombasa –Mariakani Road, coupled with License to transport the aforesaid waste. \n\nOver the years, the need for diversity and growth has necessitated expansion of our scope to include handling, transportation and disposal of asbestos. Therefore we own another disposal site, whose Environmental Impact Assessment (EIA) has been done and respective Disposal License issued accordingly. This site is located in Maungu, about 30 kilometers from Voi town.\n\nAsbestos disposal basically involve removal of old hazardous roofing sheets, wrapping them with recommended polythene bags and tapes, transportation and subsequent disposal at NEMA authorized site\n\nSince in every building where old sheets are removed will require re-roofing for replacement, this has in turn made us venture into building and construction so that \nwe can offer a complete package to our clientele.\n\nIn the above foregoing, we are registered with National Construction Authority Category for (4) for Building, road works and water works contractor.\n \nOur commitment to offer professional services and products tailored to serve the interest of our clientele cannot be over-emphasized. We look forward to opportunities that will give us a room to provide our acquired expertise and experience gained over the years of our operation\n"
+  },
+  "core-values": [
+    {
+      "title": "SAFETY",
+      "eventKey": "1",
+      "content": "The safety of our employees, public and environment is everyone’s responsibility.  We Plan safety into every aspect of our work and do not deviate from that plan. "
+    },
+    {
+      "title": "integrity",
+      "eventKey": "2",
+      "content": "Our business conduct will include the highest level of honesty, ethics, and moral correctness. We do not compromise employees, customers, or our company in the course of conducting our assignments."
+    },
+    {
+      "title": "teamwork",
+      "eventKey": "3",
+      "content": "Our culture of teamwork allows us to work together within the Company, and with our customers to deliver better solutions and collectively accomplish our goals."
+    },
+    {
+      "title": "transparency",
+      "eventKey": "4",
+      "content": "Our actions must match our words. Each day we strive to earn our reputation rather than simply manage it. To that end, we operate in a manner in which our integrity and values cannot be questioned, hence we embrace authenticity"
+    },
+    {
+      "title": "accountability",
+      "eventKey": "5",
+      "content": "Each individual is fully accountable for his or her decisions and actions."
+    },
+    {
+      "title": "leadership",
+      "eventKey": "6",
+      "content": "Each day, every employee is expected to give the best of them, to strive constantly for quality and to demonstrate the highest level of professionalism and to lead by example."
+    },
+    {
+      "title": "professionalism",
+      "eventKey": "7",
+      "content": "We believe that the key to quality and efficiency is professionalism, hence our emphasis entails having expertise based on a deep level of knowledge, and having a commitment to the area of practice - possibly (but not necessarily) through being a member of a relevant professional body."
+    }
+  ]
+}

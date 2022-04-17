@@ -1,0 +1,40 @@
+.Card {
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+    overflow: hidden;
+}
+
+.CardBody img {
+    overflow: hidden;
+}
+
+.CardBody h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c384e;
+    margin: 10px 0 0 0;
+}
+
+.CardBody h3 {
+    font-size: 18px;
+}
+
+.CardBody {
+    padding: 0 20px 20px 20px
+}
+
+
+.CardBody a {
+    font-size: 20px;
+    display: inline-block;
+    color: rgba(1, 41, 112, 0.5);
+    line-height: 0;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.CardBody a:hover {
+    color: #012970;
+}
