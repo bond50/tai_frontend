@@ -24,10 +24,7 @@ const AuthWrapper = ({login, children, password, register}) => {
                                     {/*    <h3><i className="fa fa-lock fa-4x"/></h3>*/}
                                     {/*</div>*/}
                                     <div className={`pt-4 pb-2 ${classes.CardTitle}`}>
-
-
                                         {login && <h5 className={`text-center pb-0 fs-4`}> Login to Your Account</h5>}
-                                        {register && <h5 className={`text-center pb-0 fs-4`}>Create an account</h5>}
                                         {password &&
                                         <h5 className={`text-center pb-0 fs-4`}>Forgot password ?</h5>}
                                         {login &&
@@ -36,7 +33,8 @@ const AuthWrapper = ({login, children, password, register}) => {
                                         <p className="text-center small">Enter your personal details to create
                                             account </p>}
                                         {password &&
-                                        <p className="text-center small">You can reset your password here </p>}
+                                        <p className="text-center small">You can reset your password here </p>
+                                        }
 
                                     </div>
                                     {children}

@@ -100,16 +100,7 @@ const AdminLogin = () => {
                 {showError()}
                 {showLoading()}
                 {showMessage()}
-                <div className={`col-12 ${classes.sBtn}`}>
-                    <div className="small mb-0">Dont have account?
-                        <Link href={`/signup/`}>
-                            <a className={`mx-1`}>Create an account</a>
-                        </Link>
-                    </div>
-                </div>
                   <input type="hidden" name="_csrf" value="{{csrfToken}}"/>
-
-
                 <div className={`col-12 ${classes.sBtn}`}>
                     <div className="small mb-0">Forgot password?
                         <Link href={`/auth/password/forgot`}>
