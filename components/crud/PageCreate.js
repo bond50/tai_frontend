@@ -1,10 +1,11 @@
 import CreateForm from "../reusables/forms/CreateForm";
 import SideCatTags from "../reusables/forms/side-cat-tags";
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Alert from "../messages/Alert";
+import {useEffect, useState} from "react";
 import {dataFromLocalStorage, setDataToLocalStorage} from "../reusables/functions/dataFromLocalStorage";
 import useSWR from "swr";
-import {fetcher} from "../axios/axios";
+import axiosInstance, {fetcher} from "../axios/axios";
 import {createService} from "../../actions/service";
 import {getCookie} from "../../actions/auth";
 

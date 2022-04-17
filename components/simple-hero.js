@@ -1,4 +1,6 @@
 import React from 'react';
+import renderHTML from "react-render-html";
+import Link from "next/link";
 import Breadcrumbs from "./reusables/Breadcrumbs";
 
 const SimpleHero = ({title}) => {

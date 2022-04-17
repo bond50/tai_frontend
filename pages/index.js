@@ -8,6 +8,7 @@ import useSWR from "swr";
 import {fetcher} from "../components/axios/axios";
 import Featured from "../components/home/featured";
 import Cta from "../components/home/cta";
+import Services from "../components/home/services";
 import CoreValues from "../components/about/core-values";
 
 

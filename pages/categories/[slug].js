@@ -6,6 +6,7 @@ import SmallCard from "../../components/card/small-card";
 import Layout from "../../components/Layout";
 
 
+
 const Category = ({category, blogs, query}) => {
     console.log(category)
 

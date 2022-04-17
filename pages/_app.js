@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Layout from "../components/layout";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {useEffect} from "react";

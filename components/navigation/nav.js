@@ -4,6 +4,7 @@ import useToggle from "../../hooks/useToggle";
 import useSWR from "swr";
 import {fetcher} from "../axios/axios";
 import SingleDropdown from "./single-dropdown";
+import {BLOG_DOMAIN} from "../../config";
 
 const Nav = () => {
     const [open, toggleClosed] = useToggle();

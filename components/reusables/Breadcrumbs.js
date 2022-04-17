@@ -1,5 +1,6 @@
 import Breadcrumbs from 'nextjs-breadcrumbs';
-import React from "react";
+import {useRouter} from 'next/router';
+import React, {useEffect, useState} from "react";
 
 
 const Breadcrumb = () => {
