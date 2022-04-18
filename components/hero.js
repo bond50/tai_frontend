@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Carousel} from "react-bootstrap";
-import Image from "next/image";
+import Image from "./reusables/lazy/Image";
 
 import renderHTML from "react-render-html";
 import Link from "next/link";
@@ -27,15 +27,15 @@ function BlogCarousel() {
 
     const renderCarouselItem = () => {
         return blogs && blogs.map(d => {
-            const myLoader = () => {
-                return photoLink;
-            }
+            // const myLoader = () => {
+            //     return photoLink;
+            // }
 
             const photoLink = `${API}/service/photo/${d.slug}`
             return <Carousel.Item key={d._id} className='carousel-item'>
                 <Image
                     src={photoLink}
-                    loader={myLoader}
+                    // loader={myLoader}
                     layout="fill"
                     alt={d.title}
                     className='img-fluid'

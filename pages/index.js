@@ -4,11 +4,11 @@ import Head from "next/head";
 import {useRouter} from "next/router";
 import About from "../components/home/about";
 import Layout from "../components/layout";
-import useSWR from "swr";
-import {fetcher} from "../components/axios/axios";
 import Featured from "../components/home/featured";
 import Cta from "../components/home/cta";
 import CoreValues from "../components/about/core-values";
+
+
 
 
 const Index = () => {

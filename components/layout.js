@@ -1,8 +1,6 @@
 import React from 'react';
 import Navigation from "./navigation/navigation";
 import Hero from './hero'
-import useSWR from "swr";
-import {fetcher} from "./axios/axios";
 import Footer from "./footer/footer";
 import SimpleHero from "./simple-hero";
 
@@ -22,7 +20,7 @@ const Layout = ({children, noCarousel, simple, title, className}) => {
             <main className={className ? className : null}>
                 {children}
             </main>
-            <Footer/>
+            {/*<Footer/>*/}
         </>
     );
 };
