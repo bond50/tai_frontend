@@ -34,7 +34,7 @@ function MyApp({Component, pageProps}) {
         )
     },)
 
-    console.log('ANATS', GOOGLE_ANALYTICS)
+
 
     return <>
         {
@@ -50,7 +50,7 @@ function MyApp({Component, pageProps}) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
+            gtag('config', '${GOOGLE_ANALYTICS}', {
               page_path: window.location.pathname,
             });
                 `}
