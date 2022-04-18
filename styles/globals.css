@@ -1221,7 +1221,7 @@ section {
 
 #footer .footer-top {
     padding: 60px 0 30px 0;
-    background: #f1f6fd;
+    background: #f3f5fa;
 }
 
 #footer .footer-top .footer-contact {
@@ -1302,6 +1302,10 @@ section {
     color: #09254b;
     position: relative;
     padding-bottom: 12px;
+}
+#footer .footer-newsletter p {
+    color: #09254b;
+
 }
 
 

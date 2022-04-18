@@ -45,11 +45,11 @@ function BlogCarousel() {
                     <div className="container">
                         <h2 className="animate__animated animate__fadeInDown"><span>{d.title.toLowerCase()}</span></h2>
                         {renderHTML(trim(d.excerpt, 200))}
-                          <Link href={`/blogs/${d.slug}`}>
-                                <a className="btn-get-started animate__animated animate__fadeInUp">Read
-                                    More
-                                </a>
-                            </Link>
+                        <Link href={`/tai/${d.slug}`}>
+                            <a className="btn-get-started animate__animated animate__fadeInUp">Read
+                                More on {d.title}
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </Carousel.Item>
@@ -61,8 +61,8 @@ function BlogCarousel() {
         <section id="hero">
             <Carousel
                 activeIndex={index} onSelect={handleSelect} fade
-                nextLabel=''
-                prevLabel=''
+                nextLabel='next'
+                prevLabel='prev'
                 nextIcon={blogs.length && blogs.length > 1 && nextIcon}
                 prevIcon={blogs.length && blogs.length > 1 && prevIcon}>
                 {renderCarouselItem()}

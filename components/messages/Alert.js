@@ -22,6 +22,8 @@ const Alert = ({msg, type, label, reload}) => {
                 }, 5000);
             }
         }
+        return setShow(false)
+
     }, [msg, reload]);
 
     return <>

@@ -76,7 +76,6 @@ const Footer = () => {
                                 We are registered with National Construction Authority Category for (4) for Building,
                                 road works and water work contractor.
                             </p>
-
                         </div>
 
                     </div>
