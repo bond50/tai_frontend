@@ -329,6 +329,7 @@ section {
     overflow: hidden;
     position: relative;
     height: 100vh;
+    margin-top: 60px;
 
 
 }
@@ -1210,9 +1211,10 @@ section {
 
 
 #footer {
-    color: #102f56;
+    color: #ffffff;
     font-size: 14px;
     padding: 0 0 30px 0;
+    background-color: #0b2341;
 
 
 }
