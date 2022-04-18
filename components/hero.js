@@ -31,7 +31,7 @@ function BlogCarousel() {
                 return photoLink;
             }
 
-            const photoLink = `${API}/blog/photo/${d.slug}`
+            const photoLink = `${API}/service/photo/${d.slug}`
             return <Carousel.Item key={d._id} className='carousel-item'>
                 <Image
                     src={photoLink}
