@@ -26,7 +26,7 @@ const Page = () => {
         loading: false
     });
 
-    const {error, success, formData, title} = values;
+    const {error, success,loading, formData, title} = values;
     const token = getCookie('token');
     const router = useRouter()
 
@@ -126,12 +126,13 @@ const Page = () => {
 
     const editBlog = e => {
         e.preventDefault();
+        setValues({...values, loading: true});
         updatePage(formData, token, router.query.slug)
             .then(data => {
                 if (data.error) {
-                    setValues({...values, error: data.error});
+                    setValues({...values, error: data.error,loading: false});
                 } else {
-                    setValues({...values, title: '', success: `Item titled "${data.title}" is successfully updated`});
+                    setValues({...values, title: '', success: `Item titled "${data.title}" is successfully updated`, loading: false});
                     if (isAuth() && isAuth().role === 1) {
                         // Router.replace(`/admin2/crud/${router.query.slug}`).then(r => console.log(r));
                         Router.replace(`/admin`).then(r => (console.log(r)));
@@ -211,7 +212,10 @@ const Page = () => {
                     handleChange={handleChange('title')}
                     handleBody={handleBody}
                     bodyValue={body}
-                    btnCapture={'Update'}
+                    btnCapture= btnCapture={loading ? <>
+                        <span className="spinner-grow spinner-grow-sm"
+                              role="status"
+                              aria-hidden="true"/> Publishing...</> : 'Update'}
                     titleValue={title}
                     onSubmit={editBlog}/>
                 <div className="mb-3">
