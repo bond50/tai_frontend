@@ -9,8 +9,6 @@ export const API = publicRuntimeConfig.PRODUCTION
 export const APP_NAME = publicRuntimeConfig.APP_NAME;
 
 
-
-
 export const DOMAIN = publicRuntimeConfig.PRODUCTION
     ? publicRuntimeConfig.DOMAIN_PRODUCTION
     : publicRuntimeConfig.DOMAIN_DEVELOPMENT;
@@ -19,4 +17,8 @@ export const DOMAIN = publicRuntimeConfig.PRODUCTION
 export const BLOG_DOMAIN = publicRuntimeConfig.PRODUCTION
     ? publicRuntimeConfig.DOMAIN_PRODUCTION
     : publicRuntimeConfig.BLOG_DOMAIN_DEVELOPMENT;
+
+export const GOOGLE_ANALYTICS = publicRuntimeConfig.PRODUCTION
+    ? publicRuntimeConfig.GOOGLE_ANALYTICS
+    : null;
 

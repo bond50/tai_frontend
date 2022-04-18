@@ -8,11 +8,11 @@ import 'nprogress/nprogress.css';
 import NProgress from 'nprogress';
 import Router from "next/router";
 import Script from "next/script";
+import {publicRuntimeConfig} from "../next.config";
+import {GOOGLE_ANALYTICS} from "../config";
 
 
 function MyApp({Component, pageProps}) {
-
-
     NProgress.configure({showSpinner: false});
     Router.onRouteChangeStart = () => NProgress.start();
     Router.onRouteChangeComplete = () => NProgress.done();
@@ -34,13 +34,14 @@ function MyApp({Component, pageProps}) {
         )
     },)
 
+    console.log('ANATS', GOOGLE_ANALYTICS)
 
     return <>
-         {
-            process.env.PRODUCTION && <>
+        {
+            publicRuntimeConfig.PRODUCTION && <>
                 <Script
                     strategy="lazyOnload"
-                    src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+                    src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`}
                 />
 
                 {/* eslint-disable-next-line @next/next/inline-script-id */}
@@ -61,4 +62,5 @@ function MyApp({Component, pageProps}) {
     </>
 
 }
+
 export default MyApp
