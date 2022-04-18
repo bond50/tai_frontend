@@ -212,7 +212,7 @@ const Page = () => {
                     handleChange={handleChange('title')}
                     handleBody={handleBody}
                     bodyValue={body}
-                    btnCapture= btnCapture={loading ? <>
+                     btnCapture={loading ? <>
                         <span className="spinner-grow spinner-grow-sm"
                               role="status"
                               aria-hidden="true"/> Publishing...</> : 'Update'}
