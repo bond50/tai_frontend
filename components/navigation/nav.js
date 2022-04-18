@@ -20,7 +20,7 @@ const Nav = () => {
     }
 
     if (!data) {
-        return <div className='preloader'/>
+        return <div id='preloader'/>
     }
 
 

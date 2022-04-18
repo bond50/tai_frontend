@@ -49,14 +49,6 @@ const Index = () => {
         </Head>
     );
 
-    const {data, error} = useSWR({url: `/featured-services`, method: 'get'}, fetcher);
-    const {data: values, error: valueErr} = useSWR({url: `/core-values`, method: 'get'}, fetcher);
-    if (error) return <div>failed to load</div>
-    if (!data) return <div id='preloader'/>
-    if (valueErr) return <div>failed to load</div>
-    if (!values) return <div id='preloader'/>
-
-
     return (
         <>
             {head()}
