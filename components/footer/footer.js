@@ -7,7 +7,7 @@ import {BLOG_DOMAIN} from "../../config";
 const Footer = () => {
     const {data: services, error} = useSWR({url: `/featured-services`, method: 'get'}, fetcher);
     if (error) return <div>failed to load</div>
-    if (!services) return <div>loading...</div>
+    if (!services) return <div id='preloader'/>
 
     return (
         <footer id="footer">
@@ -45,7 +45,7 @@ const Footer = () => {
                             <ul>
                                 <li><i className="bx bx-chevrons-right"/>
                                     <Link href={'/'}>
-                                        <a href="#">Home</a>
+                                        <a>Home</a>
                                     </Link>
                                 </li>
                                 <li><i className="bx bx-chevrons-right"/>
@@ -54,12 +54,12 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li><i className="bx bx-chevrons-right"/>
-                                    <Link href={'/tai/history'}>
+                                    <Link href={'/tai/our-history'}>
                                         <a>about us</a>
                                     </Link>
                                 </li>
                                 <li><i className="bx bx-chevrons-right"/>
-                                    <Link href={`${BLOG_DOMAIN}`}>
+                                    <Link href={`/blogs`}>
                                         <a>Blog</a>
                                     </Link>
                                 </li>
