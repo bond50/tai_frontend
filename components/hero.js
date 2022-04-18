@@ -6,8 +6,9 @@ import renderHTML from "react-render-html";
 import Link from "next/link";
 import {API} from "../config";
 import useSWR from "swr";
-import {fetcher} from "../../../../tai_last/frontend/components/axios/axios";
+
 import {trim} from "./reusables/functions/trim";
+import {fetcher} from "./axios/axios";
 
 function BlogCarousel() {
     const [index, setIndex] = useState(0);
