@@ -14,7 +14,6 @@ const About = () => {
                         construction and heavy civil engineering works.
                     </p>
                 </div>
-
                 <div className="row">
                     <div className="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                         <Image src='/hero/image2.jpg' className="img-fluid" alt="" width={1600} height={1200}/>
@@ -29,8 +28,8 @@ const About = () => {
                             <li>
                                 <i className="bx bx-trash"/>
                                 <div>
-                                    <h5>Safe Management of hazardous waste emanating
-                                        from oil and oil Products </h5>
+                                    <h4>Safe Management of hazardous waste emanating
+                                        from oil and oil Products </h4>
                                     <p>Tai Lifestyle was primarily formed to carryout Safe Management of hazardous waste
                                         emanating from oil and oil Products hence, collect, transport and dispose waste
                                         oil and sludge
@@ -52,22 +51,22 @@ const About = () => {
                                     </p>
                                 </div>
                             </li>
-                            <li>
-                                <i className="bx bx-extension"/>
-                                <div>
-                                    <h5> Scope Expansion</h5>
-                                    <p>
-                                        Over the years, the need for diversity and growth has necessitated expansion of
-                                        our scope to include handling, transportation and disposal of asbestos.
-                                        Therefore, we own another disposal site, whose Environmental Impact Assessment
-                                        (EIA) has been done and respective Disposal License issued accordingly. This
-                                        site is located in Maungu, about 30 kilometers from Voi town.
-                                    </p>
-                                </div>
-                            </li>
+                            {/*<li>*/}
+                            {/*    <i className="bx bx-extension"/>*/}
+                            {/*    <div>*/}
+                            {/*        <h5> Scope Expansion</h5>*/}
+                            {/*        <p>*/}
+                            {/*            Over the years, the need for diversity and growth has necessitated expansion of*/}
+                            {/*            our scope to include handling, transportation and disposal of asbestos.*/}
+                            {/*            Therefore, we own another disposal site, whose Environmental Impact Assessment*/}
+                            {/*            (EIA) has been done and respective Disposal License issued accordingly. This*/}
+                            {/*            site is located in Maungu, about 30 kilometers from Voi town.*/}
+                            {/*        </p>*/}
+                            {/*    </div>*/}
+                            {/*</li>*/}
                         </ul>
                         <div className="text-center">
-                            <Link href={`/history`}>
+                            <Link href={`/our-history`}>
                                 <a className="btn-learn-more">Find out more about us</a>
                             </Link>
                         </div>

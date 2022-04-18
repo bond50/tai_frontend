@@ -19,7 +19,7 @@ const Index = () => {
             <title>{APP_NAME} </title>
             <meta
                 name="description"
-                content={`${APP_NAME} is a private liability company, registered and incorporated under the company act, 2015 cap 486 of the laws of Kenya. `}
+                content={`${APP_NAME} is a private liability company, registered and incorporated under the company act, 2015 cap 486 of the laws of Kenya.`}
             />
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
@@ -38,11 +38,11 @@ const Index = () => {
 
             <meta
                 property="og:image"
-                content={`/herp.jpg`}
+                content={`/late.jpg`}
             />
             <meta
                 property="og:image:secure_url"
-                content={`/image1.jpg`}
+                content={`/late.jpg`}
             />
             <meta property="og:image:type" content="image/png"/>
             {/*<meta property="fb:app_id" content={`${FB_APP_ID}`}/>*/}

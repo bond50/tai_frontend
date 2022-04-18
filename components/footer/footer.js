@@ -15,7 +15,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-3 col-md-6 footer-links">
-                            <h4>Our Services</h4>
+                            <h3>Our Services</h3>
                             <ul>
                                 {services.map(servive => (
                                     <li key={servive._id}><i className="bx bx-chevrons-right"/>
@@ -70,15 +70,13 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-
-
                         <div className="col-lg-4 col-md-6 footer-newsletter">
-                            <h4>Join Our Newsletter</h4>
-                            <p>Subscribe to our newsletter to get the latest updates</p>
-                            <form action="" method="post">
-                                <input type="email" name="email"/>
-                                <input type="submit" value="Subscribe"/>
-                            </form>
+                            <h4>About</h4>
+                            <p>
+                                We are registered with National Construction Authority Category for (4) for Building,
+                                road works and water work contractor.
+                            </p>
+
                         </div>
 
                     </div>

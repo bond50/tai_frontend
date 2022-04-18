@@ -5,7 +5,6 @@ const Cta = () => {
     return (
         <section id="cta" className="cta" data-aos="fade-up">
             <div className="container">
-
                 <div className="row">
                     <div className="col-lg-9  text-lg-left">
                         <h3>Let Tai Lifestyle help you Build a more <span> Successful Business</span></h3>

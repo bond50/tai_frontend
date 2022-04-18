@@ -11,7 +11,7 @@ const Featured = () => {
     if (!data) return <div id='preloader'/>
 
     return (
-        <section id="icon-boxes" className="icon-boxes" data-aos="fade-up">
+        <section id="icon-boxes" className="icon-boxes " data-aos="fade-up">
             <div className="container">
                 <div className="row">
                     {data.map(d => {
@@ -19,11 +19,11 @@ const Featured = () => {
                                     data-aos="fade-up" key={d._id}>
                             <div className="icon-box">
                                 <div className="icon"><i className="bx bx-building-house"/></div>
-                                <h4 className="title">
+                                <h3 className="title">
                                     <Link href={`/tai/${d.slug}`}>
                                          <a>{d.title}</a>
                                     </Link>
-                                </h4>
+                                </h3>
                                 {renderHTML(trim(d.excerpt,100))}
                             </div>
                         </div>

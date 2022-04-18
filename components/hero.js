@@ -1,38 +1,54 @@
 import React, {useState} from 'react';
 import {Carousel} from "react-bootstrap";
+import Image from "next/image";
+
+import renderHTML from "react-render-html";
 import Link from "next/link";
-import renderHTML from 'react-render-html';
-import {trim} from "./reusables/functions/trim";
+import {API} from "../config";
 import useSWR from "swr";
-import {fetcher} from "./axios/axios";
+import {fetcher} from "../../../../tai_last/frontend/components/axios/axios";
 
 function BlogCarousel() {
-
     const [index, setIndex] = useState(0);
-    const [nextIcon] = useState(<span className="carousel-control-next-icon bi bi-caret-right-fill"
+    const [nextIcon] = useState(<span className="carousel-control-next-icon bi bi-chevron-right"
                                       aria-hidden="true"/>);
-    const [prevIcon] = useState(<span className="carousel-control-prev-icon bi bi-caret-left-fill"
+    const [prevIcon] = useState(<span className="carousel-control-next-icon bi bi-chevron-left"
                                       aria-hidden="true"/>);
-    const {data:heroData, error} = useSWR({url: `/featured-services`, method: 'get'}, fetcher);
-    if (error) return <div>failed to load</div>
-    if (!heroData) return <div id='preloader'/>
-
 
     const handleSelect = (selectedIndex) => {
         setIndex(selectedIndex);
     };
+    const {data: blogs, error} = useSWR({url: `/featured-services`, method: 'get'}, fetcher);
+    if (error) return <div>failed to load</div>
+    if (!blogs) return <div id='preloader'/>
+
 
     const renderCarouselItem = () => {
-        return heroData && heroData.map((d, i) => {
-            return <Carousel.Item key={i}>
-                <div className="carousel-container">
-                    <div className="carousel-content ">
-                        <h2 className="animate__animated animate__zoomIn ">{d.title.toLowerCase()}</h2>
-                        <div className='animate__animated animate__zoomIn'> {renderHTML(trim(d.excerpt, 250))}</div>
-                        <Link href={`/tai/${d.slug}`}>
-                            <a className="btn-get-started animate__animated animate__zoomIn ">Read more
-                                about {d.title}</a>
-                        </Link>
+        return blogs && blogs.map(d => {
+            const myLoader = () => {
+                return photoLink;
+            }
+
+            const photoLink = `${API}/blog/photo/${d.slug}`
+            return <Carousel.Item key={d._id} className='carousel-item'>
+                <Image
+                    src={photoLink}
+                    loader={myLoader}
+                    layout="fill"
+                    alt={d.title}
+                    className='img-fluid'
+                    objectFit="cover"
+                />
+                <div className="carousel-container ">
+                    <div className="container">
+                        <h2 className="animate__animated animate__fadeInDown">Welcome to <span>Multi</span></h2>
+                        <p className="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid
+                            qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias
+                            dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus
+                            deleniti vel. Minus et tempore modi architecto.</p>
+                        <a href="#about"
+                           className="btn-get-started animate__animated animate__fadeInUp scrollto">Read
+                            More</a>
                     </div>
                 </div>
             </Carousel.Item>
@@ -40,16 +56,14 @@ function BlogCarousel() {
 
     }
 
-
     return (
-        <section id='hero' className='d-flex justify-content-center align-items-center'>
+        <section id="hero">
             <Carousel
-                activeIndex={index}
-                onSelect={handleSelect} fade
+                activeIndex={index} onSelect={handleSelect} fade
                 nextLabel=''
                 prevLabel=''
-                nextIcon={heroData.length && heroData.length > 1 && nextIcon}
-                prevIcon={heroData.length && heroData.length > 1 && prevIcon}>
+                nextIcon={blogs.length && blogs.length > 1 && nextIcon}
+                prevIcon={blogs.length && blogs.length > 1 && prevIcon}>
                 {renderCarouselItem()}
             </Carousel>
         </section>
