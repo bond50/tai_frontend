@@ -7,6 +7,7 @@ import Link from "next/link";
 import {API} from "../config";
 import useSWR from "swr";
 import {fetcher} from "../../../../tai_last/frontend/components/axios/axios";
+import {trim} from "./reusables/functions/trim";
 
 function BlogCarousel() {
     const [index, setIndex] = useState(0);
@@ -42,9 +43,7 @@ function BlogCarousel() {
                 <div className="carousel-container ">
                     <div className="container">
                         <h2 className="animate__animated animate__fadeInDown"><span>{d.title.toLowerCase()}</span></h2>
-                         {renderHTML(d.excerpt)}
-
-
+                        {renderHTML(trim(d.excerpt, 200))}
                           <Link href={`/blogs/${d.slug}`}>
                                 <a className="btn-get-started animate__animated animate__fadeInUp">Read
                                     More
