@@ -134,8 +134,8 @@ const Page = () => {
                 } else {
                     setValues({...values, title: '', success: `Item titled "${data.title}" is successfully updated`, loading: false});
                     if (isAuth() && isAuth().role === 1) {
-                        // Router.replace(`/admin2/crud/${router.query.slug}`).then(r => console.log(r));
-                        Router.replace(`/admin`).then(r => (console.log(r)));
+                        Router.replace(`/admin/crud/${router.query.slug}`).then(r => console.log(r));
+                        // Router.replace(`/admin`).then(r => (console.log(r)));
                     } else if (isAuth() && isAuth().role === 0) {
                         // Router.replace(`/user/crud/gen-page/${router.query.slug}`).then(r => console.log(r));
                         Router.replace(`/user`).then(r => (console.log(r)));
