@@ -11,7 +11,7 @@ const Featured = () => {
     if (!data) return <div id='preloader'/>
 
     return (
-        <section id="icon-boxes" className="icon-boxes " data-aos="fade-up">
+        <section id="icon-boxes" className="icon-boxes section-bg" data-aos="fade-up">
             <div className="container">
                 <div className="row">
                     {data.map(d => {
