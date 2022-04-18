@@ -4,7 +4,7 @@ import classes from '../../styles/Userprofile.module.css'
 import Head from "next/head";
 import {API, APP_NAME, DOMAIN} from "../../config";
 import ContactForm from "../../components/form/ContactForm";
-import Image from "next/image";
+import Image from "../../components/reusables/lazy/Image";
 import React from "react";
 import Layout from "../../components/layout";
 
@@ -67,6 +67,7 @@ const Userprofile = ({user, blogs, query}) => {
                                         src={photoLink}
                                         width={620}
                                         height={480}
+                                        alt={user.name}
                                         layout="responsive"
                                         className="img-fluid" />
                                     <div

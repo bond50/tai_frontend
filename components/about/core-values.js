@@ -1,9 +1,15 @@
 import React from "react";
 import Accordion from 'react-bootstrap/Accordion'
 import Image from "next/image";
+import useSWR from "swr";
+import {fetcher} from "../axios/axios";
 
 
-const CoreValues = ({values}) => {
+const CoreValues = () => {
+    const {data: values, error: valueErr} = useSWR({url: `/core-values`, method: 'get'}, fetcher);
+    if (!values) return <div id='preloader'/>
+    if (valueErr) return <div>failed to load</div>
+
     return <section id="values" className="values ">
         <div className="container" data-aos="fade-up">
             <div className="section-title">

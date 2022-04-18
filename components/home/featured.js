@@ -2,8 +2,14 @@ import React from 'react';
 import renderHTML from "react-render-html";
 import {trim} from "../reusables/functions/trim";
 import Link from "next/link";
+import useSWR from "swr";
+import {fetcher} from "../axios/axios";
 
-const Featured = ({data}) => {
+const Featured = () => {
+    const {data, error} = useSWR({url: `/featured-services`, method: 'get'}, fetcher);
+    if (error) return <div>failed to load</div>
+    if (!data) return <div id='preloader'/>
+
     return (
         <section id="icon-boxes" className="icon-boxes" data-aos="fade-up">
             <div className="container">

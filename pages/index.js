@@ -8,7 +8,6 @@ import useSWR from "swr";
 import {fetcher} from "../components/axios/axios";
 import Featured from "../components/home/featured";
 import Cta from "../components/home/cta";
-import Services from "../components/home/services";
 import CoreValues from "../components/about/core-values";
 
 
@@ -53,20 +52,19 @@ const Index = () => {
     const {data, error} = useSWR({url: `/featured-services`, method: 'get'}, fetcher);
     const {data: values, error: valueErr} = useSWR({url: `/core-values`, method: 'get'}, fetcher);
     if (error) return <div>failed to load</div>
-    if (!data) return <div>loading...</div>
+    if (!data) return <div id='preloader'/>
     if (valueErr) return <div>failed to load</div>
-    if (!data) return <div>loading...</div>
+    if (!values) return <div id='preloader'/>
 
 
     return (
         <>
             {head()}
             <Layout>
-                <Featured data={data}/>
+                <Featured/>
                 <Cta/>
                 <About/>
-
-                <CoreValues values={values}/>
+                <CoreValues/>
             </Layout>
         </>
     );
