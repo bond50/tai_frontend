@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Carousel} from "react-bootstrap";
 import Image from "./reusables/lazy/Image";
-
 import renderHTML from "react-render-html";
 import Link from "next/link";
 import {API} from "../config";

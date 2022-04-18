@@ -20,7 +20,7 @@ const Layout = ({children, noCarousel, simple, title, className}) => {
             <main className={className ? className : null}>
                 {children}
             </main>
-            {/*<Footer/>*/}
+            <Footer/>
         </>
     );
 };
