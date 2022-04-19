@@ -9,12 +9,14 @@
 }
 
 .Categories a {
-    color: #111;
+     font-size: 15px;
+    font-weight: bold;
+     color: #556270;
     transition: 0.3s;
 }
 
 .Categories a:hover {
-    color: #2CC73E;
+    color: #f03c02;
 }
 
 .Categories a span {
