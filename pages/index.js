@@ -6,9 +6,6 @@ import About from "../components/home/about";
 import Layout from "../components/layout";
 import Featured from "../components/home/featured";
 import Cta from "../components/home/cta";
-import CoreValues from "../components/about/core-values";
-
-
 
 
 const Index = () => {
@@ -56,7 +53,6 @@ const Index = () => {
                 <Featured/>
                 <Cta/>
                 <About/>
-                <CoreValues/>
             </Layout>
         </>
     );

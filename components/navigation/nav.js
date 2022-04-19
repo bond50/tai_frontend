@@ -4,9 +4,17 @@ import useToggle from "../../hooks/useToggle";
 import useSWR from "swr";
 import {fetcher} from "../axios/axios";
 import SingleDropdown from "./single-dropdown";
-import {BLOG_DOMAIN} from "../../config";
+import {API, BLOG_DOMAIN} from "../../config";
+import {useRouter} from "next/router";
+import About from "./about";
 
 const Nav = () => {
+    const router = useRouter()
+    console.log(router.asPath)
+
+    let route = `${API}/`
+    console.log()
+
     const [open, toggleClosed] = useToggle();
     let attachedClasses = [`navbar`];
 
@@ -32,11 +40,12 @@ const Nav = () => {
     return (
         <nav id="navbar" className={`${attachedClasses.join(' ')}`}>
             <ul>
-                <Item to={`/`} active={true} clicked={toggleClosed}>Home</Item>
+                <Item to={`/`} active={router.pathname === "/"} clicked={toggleClosed}>Home</Item>
+                <About clicked={toggleClosed}/>
                 {showLinks}
-                <Item to={`/team`} clicked={toggleClosed}>Our Team</Item>
-                <Item to={`/blogs`} clicked={toggleClosed}>Our Blog</Item>
-                <Item to={`/contact`} clicked={toggleClosed}>Contact</Item>
+                <Item to={`/team`} active={router.pathname === "/team"} clicked={toggleClosed}>Our Team</Item>
+                <Item to={`/blogs`} active={router.pathname === "/blogs"} clicked={toggleClosed}>Our Blog</Item>
+                <Item to={`/contact`} active={router.pathname === "/contact"} clicked={toggleClosed}>Contact</Item>
                 <Item to={`/`} clicked={toggleClosed} className='getstarted'>Get Started</Item>
             </ul>
             <i className={`bi bi-${open ? "x" : 'list'} mobile-nav-toggle`} onClick={toggleClosed}/>

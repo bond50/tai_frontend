@@ -1,56 +1,68 @@
 import React from "react";
 import Accordion from 'react-bootstrap/Accordion'
-import Image from "next/image";
-import useSWR from "swr";
-import {fetcher} from "../axios/axios";
-
+import PageWrapper from "../../hoc/page-wrapper";
 
 const CoreValues = () => {
-    const {data: values, error: valueErr} = useSWR({url: `/core-values`, method: 'get'}, fetcher);
-    if (!values) return <div id='preloader'/>
-    if (valueErr) return <div>failed to load</div>
+    const values = [
+        {
+            title: "Safety",
+            content: "The safety of our employees, public and environment is everyone’s responsibility.  We Plan safety into every aspect of our work and do not deviate from that plan. "
+        },
+        {
+            title: "Integrity",
+            content: "Our business conduct will include the highest level of honesty, ethics, and moral correctness. We do not compromise employees, customers, or our company in the course of conducting our assignments."
+        },
+        {
+            title: "Teamwork",
+            content: "Our culture of teamwork allows us to work together within the Company, and with our customers to deliver better solutions and collectively accomplish our goals."
+        },
+        {
+            title: "Transparency",
+            content: "Our actions must match our words. Each day we strive to earn our reputation rather than simply manage it. To that end, we operate in a manner in which our integrity and values cannot be questioned, hence we embrace authenticity"
+        },
+        {
+            title: "Accountability",
+            content: "Each individual is fully accountable for his or her decisions and actions."
+        },
+        {
+            title: "Leadership",
+            content: "Each day, every employee is expected to give the best of them, to strive constantly for quality and to demonstrate the highest level of professionalism and to lead by example."
+        },
+        {
+            title: "Professionalism",
+            content: "We believe that the key to quality and efficiency is professionalism, hence our emphasis entails having expertise based on a deep level of knowledge, and having a commitment to the area of practice - possibly (but not necessarily) through being a member of a relevant professional body."
+        },
+    ]
 
-    return <section id="values" className="values ">
-        <div className="container" data-aos="fade-up">
-            <div className="section-title">
-                <h2>Core Values</h2>
-                <h3>Our <span>Core Values</span></h3>
-            </div>
-            <div className="row">
-                <div className="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
-                    <div className="content">
-                        <h3>Tai Lifestyle Limited Core values</h3>
-                        <p>
-                            The core values are the basic elements of how we go about our work. They are the practices
-                            we use (or should be using) every day in everything we do. CORE VALUES: Govern personal
-                            relationships. Guide business processes.
-                        </p>
-                    </div>
-                    <div className="accordion-list">
-                        {values && values.map((item, i) => {
-                            return (
-                                <Accordion defaultActiveKey='0' key={item._id}>
-                                    <Accordion.Item eventKey={i.toString()}>
-                                        <Accordion.Header>
-                                            <span>{`0${i + 1}`}</span>{item.title.toLowerCase()}
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                            {item.content}
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                </Accordion>
-                            );
-                        })}
-                    </div>
-                </div>
-                <div className="col-lg-5 align-items-stretch "
-                     data-aos="zoom-in" data-aos-delay="100">
-                    <Image src={`/hero/14.jpg`} className='img-fluid' alt='kk' width={1430} height={1670}/>
-                </div>
+    const list = [
+        {to:"/about/mission", title:"Mission"},
+        {to:"/about/vision", title:"Vision"},
+        {to:"/about/history", title:"History"},
+    ]
+
+    return <PageWrapper title='Core values'  sidebarTitle='Related' sideList={list}>
+        <div className="values">
+            <div className="accordion-list">
+                {values && values.map((item, i) => {
+                    return (
+                        <Accordion defaultActiveKey='0' key={i}>
+                            <Accordion.Item eventKey={i.toString()}>
+                                <Accordion.Header>
+                                    <span>{`0${i + 1}`}</span>{item.title.toLowerCase()}
+                                </Accordion.Header>
+                                <Accordion.Body>
+                                    {item.content}
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
+                    );
+                })}
             </div>
         </div>
 
-    </section>;
-};
 
+    </PageWrapper>
+
+
+}
 export default CoreValues;

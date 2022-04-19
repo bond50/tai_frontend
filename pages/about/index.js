@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Links = () => {
+const Index = () => {
     return (
         <div>
-
+            
         </div>
     );
 };
 
-export default Links;
+export default Index;

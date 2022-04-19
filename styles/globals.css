@@ -580,7 +580,7 @@ section {
 
 #simple-hero h2 {
     margin: 0 0 10px 0;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
     color: #fff;
 }
@@ -609,37 +609,29 @@ section {
 }
 
 #simple-hero .breadcrumbs ol a {
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
 }
 
 #simple-hero .breadcrumbs ol li + li {
-    padding-left: 10px;
+    padding-left: 4px;
 }
 
 #simple-hero .breadcrumbs ol li + li::before {
     display: inline-block;
-    padding-right: 10px;
+    padding-right: 4px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
     content: "/";
 }
 
-/*@media (max-width: 991px) {*/
-/*    .breadcrumbs {*/
-/*        margin-top: 58px;*/
-/*    }*/
+@media (max-width: 991px) {
+    #simple-hero h2 {
+        font-size: 20px;
+    }
 
-/*    .breadcrumbs .d-flex {*/
-/*        display: block !important;*/
-/*    }*/
+}
 
-/*    .breadcrumbs ol {*/
-/*        display: block;*/
-/*    }*/
-
-/*    .breadcrumbs ol li {*/
-/*        display: inline-block;*/
-/*    }*/
-/*}*/
 .section-bg {
     background-color: #f3f5fa;
 }
@@ -1303,6 +1295,7 @@ section {
     position: relative;
     padding-bottom: 12px;
 }
+
 #footer .footer-newsletter p {
     color: #09254b;
 
