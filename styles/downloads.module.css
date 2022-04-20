@@ -1,0 +1,95 @@
+.Download {
+    padding: 60px 0;
+    overflow: hidden;
+    background: #fff;
+}
+
+
+.DownloadWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.Wrapper {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background: #f1f6fd;
+    padding: 5px 10px;
+    margin: 10px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.Header i {
+    font-size: 38px;
+}
+
+.Header span {
+    color: #0C163B;
+    margin-right: 10px;
+    text-transform: capitalize;
+}
+
+
+.Date, .Size {
+    text-transform: capitalize;
+    font-size: 13px;
+    color: #09254b;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+
+@media (min-width: 992px) {
+    .Wrapper, .Header {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .Wrapper {
+        width: 70%;
+    }
+}
+
+.Btn {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 4px 13px;
+    transition: 0.5s;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid #f03c02;
+    color: #fff;
+}
+
+.Btn span {
+    text-decoration: none;
+    color: #0C163B;
+}
+.Btn span:hover {
+    color: #ffffff;
+}
+
+.Btn:hover {
+    background-color: #f03c02;
+
+}
+
+

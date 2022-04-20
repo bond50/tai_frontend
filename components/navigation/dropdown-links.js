@@ -5,3 +5,7 @@ export const aboutList = [
     {_id: 'asdsgdgdggdf', title: 'Core Values', slug: 'core-values'},
 
 ];
+export const mediaList = [
+    {_id: 'as;P[SHMEdf', title: 'Downloads', slug: 'downloads'},
+    {_id: 'aJHXHHDUDsdsgdgdggdf', title: 'Gallery', slug: 'gallery'},
+];

@@ -1,0 +1,21 @@
+
+.Gallery {
+    margin-top: 90px;
+    padding: 60px 0;
+    overflow: hidden;
+    background: #f1f6fd;
+}
+
+.GalleryItem {
+    overflow: hidden;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.GalleryItem img {
+    transition: all ease-in-out 0.4s;
+}
+
+.GalleryItem:hover img {
+    transform: scale(1.1);
+}

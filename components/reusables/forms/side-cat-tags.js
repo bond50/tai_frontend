@@ -1,8 +1,9 @@
 import React from 'react';
 
-const SideCatTags = ({handleChange, categories, tags, featuredServices}) => {
+const SideCatTags = ({handleChange, categories, tags}) => {
     return (
         <>
+            {handleChange &&
             <div className="form-group mb-3">
                 <h5>Featured image</h5>
                 <hr/>
@@ -13,6 +14,7 @@ const SideCatTags = ({handleChange, categories, tags, featuredServices}) => {
                     <input onChange={handleChange('photo')} type="file" accept="image/*" hidden/>
                 </label>
             </div>
+            }
 
             {categories && <div className='mb-3'>
                 <h5>Categories</h5>

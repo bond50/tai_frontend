@@ -17,12 +17,12 @@ const Alert = ({msg, type, label, reload}) => {
         if (msg) {
             setShow(true);
             if (!reload) {
-                setInterval(() => {
+                return setInterval(() => {
                     setShow(false);
                 }, 5000);
             }
         }
-        return setShow(false)
+
 
     }, [msg, reload]);
 

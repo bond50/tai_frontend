@@ -1,35 +1,24 @@
-import React from 'react';
-import {APP_NAME, DOMAIN} from "../config";
-import Head from "next/head";
+import React from "react";
+import useSWR from 'swr'
+import {fetcher} from "../../../components/reusables/functions/fetcher";
+import {API, APP_NAME, DOMAIN} from "../../../config";
+import DownloadList from "../../../components/media/downloads/download-list";
 import {useRouter} from "next/router";
-import About from "../components/home/about";
-import Layout from "../components/layout";
-import Featured from "../components/home/featured";
-import Cta from "../components/home/cta";
+import Head from "next/head";
+import Layout from "../../../components/layout";
 
-import RecentBlogs from "../components/home/recent-blogs";
-
-
-const Index = () => {
-
+const Downloads = () => {
     const router = useRouter()
-
-
-
-
     const head = () => (
         <Head>
-            <title>{APP_NAME} </title>
+            <title>Downloads | {APP_NAME}</title>
             <meta
                 name="description"
-                content={`${APP_NAME} is a private liability company, registered and incorporated under the company act, 2015 cap 486 of the laws of Kenya.`}
+                content={`Tai Lifestyle Limited is a private liability company, registered and incorporated under the company act, 2015 cap 486 of the laws of Kenya. `}
             />
-
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
-            <meta name="robots" content="max-image-preview:large"/>
-            <meta property="og:locale" content="en_US"/>
 
-            <meta property="og:title" content={`${APP_NAME}`}/>
+            <meta property="og:title" content={`Downloads | ${APP_NAME}`}/>
             <meta
                 property="og:description"
                 content={`Tai Lifestyle Limited is a private liability company, registered and incorporated under the company act, 2015 cap 486 of the laws of Kenya. `}
@@ -47,22 +36,25 @@ const Index = () => {
                 property="og:image:secure_url"
                 content={`/late.jpg`}
             />
-            <meta property="og:image:type" content="image/png"/>
+            <meta property="og:image:type" content="image/jpg"/>
             {/*<meta property="fb:app_id" content={`${FB_APP_ID}`}/>*/}
         </Head>
     );
 
+    const {data: files, error} = useSWR(`${API}/get-downloads`, fetcher)
+
+
+    if (error) return <div>failed to load</div>
+    if (!files) return <div className='preloader'/>
+
     return (
         <>
             {head()}
-            <Layout>
-                <Featured/>
-                <Cta/>
-                <About/>
-                <RecentBlogs/>
+            <Layout title='Downloads' simple>
+                <DownloadList files={files}/>
             </Layout>
         </>
     );
 };
 
-export default Index;
+export default Downloads;

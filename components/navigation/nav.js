@@ -7,6 +7,7 @@ import SingleDropdown from "./single-dropdown";
 import {API, BLOG_DOMAIN} from "../../config";
 import {useRouter} from "next/router";
 import About from "./about";
+import Media from "./media";
 
 const Nav = () => {
     const router = useRouter()
@@ -45,6 +46,7 @@ const Nav = () => {
                 {showLinks}
                 <Item to={`/team`} active={router.pathname === "/team"} clicked={toggleClosed}>Our Team</Item>
                 <Item to={`/blogs`} active={router.pathname === "/blogs"} clicked={toggleClosed}>Our Blog</Item>
+                <Media clicked={toggleClosed}/>
                 <Item to={`/contact`} active={router.pathname === "/contact"} clicked={toggleClosed}>Contact</Item>
                 <Item to={`/`} clicked={toggleClosed} className='getstarted'>Get Started</Item>
             </ul>
