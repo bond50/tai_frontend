@@ -1,10 +1,11 @@
-import Layout from "../../hoc/Layout";
+
 import Breadcrumbs from "../../components/reusables/Breadcrumbs";
 import Link from "next/link";
 import Head from "next/head";
-import {APP_NAME, DOMAIN, FB_APP_ID} from "../../config";
+import {APP_NAME, DOMAIN,} from "../../config";
 import React from "react";
 import {useRouter} from "next/router";
+import Layout from "../../components/layout";
 
 const Index = () => {
     const router = useRouter()
@@ -38,7 +39,7 @@ const Index = () => {
                 content={`/herp.jpg`}
             />
             <meta property="og:image:type" content="image/png"/>
-            <meta property="fb:app_id" content={`${FB_APP_ID}`}/>
+            {/*<meta property="fb:app_id" content={`${FB_APP_ID}`}/>*/}
         </Head>
     );
 
@@ -46,8 +47,7 @@ const Index = () => {
     return (
         <>
             {head()}
-            <Layout>
-                <Breadcrumbs/>
+            <Layout simple title='Useful media links'>
                 <section>
                     <div className="container page-intro">
                         <h4>Useful Media Links</h4>

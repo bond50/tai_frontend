@@ -632,6 +632,45 @@ section {
 
 }
 
+.page-intro h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #05579e;
+    padding-bottom: 12px;
+}
+
+.page-intro ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-intro ul i {
+    padding-right: 2px;
+    color: #f03c02;
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+.page-intro ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.page-intro ul a {
+    color: #111;
+    transition: 0.3s;
+    display: inline-block;
+    line-height: 1;
+}
+
+.page-intro ul a:hover {
+    text-decoration: none;
+    color: #f03c02;
+}
+
 .section-bg {
     background-color: #f3f5fa;
 }
