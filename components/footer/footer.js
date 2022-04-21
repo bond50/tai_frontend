@@ -54,7 +54,7 @@ const Footer = () => {
                                     </Link>
                                 </li>
                                 <li><i className="bx bx-chevrons-right"/>
-                                    <Link href={'/tai/our-history'}>
+                                    <Link href={'/about/history'}>
                                         <a>about us</a>
                                     </Link>
                                 </li>
