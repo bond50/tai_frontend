@@ -15,8 +15,6 @@ const Index = () => {
     const router = useRouter()
 
 
-
-
     const head = () => (
         <Head>
             <title>{APP_NAME} </title>

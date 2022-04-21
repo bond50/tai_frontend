@@ -20,7 +20,7 @@ const RecentBlogs = () => {
                 <div className="section-title">
                     <h2>blog</h2>
                     <h3>Latest <span>News and Events</span></h3>
-                    <p>Tai Lifestyle is has an multi user blog platform where we post various articles on lifestyle,
+                    <p>Tai Lifestyle has an multi user blog platform where we post various articles on lifestyle,
                         safety tips , news ,etc. You can visit our blog section for more information. Here are out
                         latest three articles
                     </p>

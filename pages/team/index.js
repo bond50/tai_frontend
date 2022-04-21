@@ -7,8 +7,8 @@ import {fetcher} from "../../components/axios/axios";
 
 const Index = () => {
     const {data, error} = useSWR({url: `/team-members`, method: 'get'}, fetcher);
-    if (error) return <div>failed to load</div>
-    if (!data) return <div>loading...</div>
+    if (error) return <div>failed to load team members</div>
+    if (!data) return <div id='preloader'/>
     return (
         <>
             <Layout simple title='Our team'>

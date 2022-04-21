@@ -65,7 +65,7 @@ section {
 }
 
 #header .logo {
-    font-size: 28px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
     line-height: 1;
@@ -75,7 +75,7 @@ section {
 }
 
 #header .logo a {
-    color: #165ab0;
+    color: #f03c02;
 }
 
 #header .logo img {
