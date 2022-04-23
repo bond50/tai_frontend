@@ -8,7 +8,7 @@ const Vision = () => {
         {to: "/about/core-values", title: "Core values"},
     ]
     return (
-        <PageWrapper title='Core values' sidebarTitle='Related' sideList={list}>
+        <PageWrapper title='Vision' sidebarTitle='Related' sideList={list}>
             <p>
                 Be, and be recognized as, the best services company in the world
             </p>

@@ -16,16 +16,16 @@ const Layout = ({children, pageTitle,}) => {
             <Header clicked={toggleClosed}/>
             <AdminSidebar closed={closed}/>
             <main className={attachedClasses.join(' ')}>
-                <div className="pagetitle">
-                    <h1>Profile</h1>
-                    <nav>
-                        <ol className="breadcrumb">
-                            <li className="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li className="breadcrumb-item">Users</li>
-                            <li className="breadcrumb-item active">Profile</li>
-                        </ol>
-                    </nav>
-                </div>
+                {/*<div className="pagetitle">*/}
+                {/*    <h1>Profile</h1>*/}
+                {/*    <nav>*/}
+                {/*        <ol className="breadcrumb">*/}
+                {/*            <li className="breadcrumb-item"><a href="index.html">Home</a></li>*/}
+                {/*            <li className="breadcrumb-item">Users</li>*/}
+                {/*            <li className="breadcrumb-item active">Profile</li>*/}
+                {/*        </ol>*/}
+                {/*    </nav>*/}
+                {/*</div>*/}
                 {pageTitle && <PageTitle title={pageTitle}/>}
                 {children}
             </main>

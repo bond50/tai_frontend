@@ -8,7 +8,7 @@ const History = () => {
         {to:"/about/core-values", title:"Core values"},
     ]
     return (
-        <PageWrapper title='Core values' sidebarTitle='Related' sideList={list}>
+        <PageWrapper title='History' sidebarTitle='Related' sideList={list}>
             <p>
                 Tai Lifestyle Limited is a private liability company, registered and incorporated under
                 the

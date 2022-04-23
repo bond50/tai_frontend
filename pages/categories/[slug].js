@@ -8,14 +8,12 @@ import Layout from '../../components/layout';
 
 
 const Category = ({category, blogs, query}) => {
-    console.log(category)
-
     const head = () => (
         <Head>
             <title>
                 {category.name} | {APP_NAME}
             </title>
-            <meta name="description" content={`${APP_NAME} blog on ${category.name}`}/>
+            <meta name="description" content={`${APP_NAME} blogs on ${category.name}`}/>
             <link rel="canonical" href={`${DOMAIN}/categories/${query.slug}`}/>
             <meta property="og:title" content={`${category.title}| ${APP_NAME}`}/>
             <meta property="og:description" content={`${APP_NAME} blog on ${category.name}`}/>
@@ -23,10 +21,10 @@ const Category = ({category, blogs, query}) => {
             <meta property="og:url" content={`${DOMAIN}/categories/${query.slug}`}/>
             <meta property="og:site_name" content={`${APP_NAME}`}/>
             <meta property="og:image"
-                  content={`/herp.jpg`}/>
+                  content={`/late.jpg`}/>
             <meta property="og:image:secure_url"
-                  content={`/herp.jpg`}/>
-            <meta property="og:image:type" content="image/png"/>
+                  content={`/late.jpg`}/>
+            <meta property="og:image:type" content="image/jpg"/>
             {/*<meta property="fb:app_id" content={`${FB_APP_ID}`}/>*/}
         </Head>
 

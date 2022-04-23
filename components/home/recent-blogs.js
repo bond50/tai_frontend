@@ -21,7 +21,9 @@ const RecentBlogs = () => {
                     <h2>blog</h2>
                     <h3>Latest <span>News and Events</span></h3>
                     <p>Tai Lifestyle has an multi user blog platform where we post various articles on lifestyle,
-                        safety tips , news ,etc. You can visit our blog section for more information. Here are out
+                        safety tips , news ,etc. You can visit our <Link href='/blogs'>
+                            <a>blog  section </a>
+                        </Link>for more information. Here are our
                         latest three articles
                     </p>
                 </div>

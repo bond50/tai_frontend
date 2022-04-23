@@ -29,7 +29,7 @@ const ApprovedPosts = ({username}) => {
             {blogs.map(blog => {
                 let endpoint
                 if (isAuth() && isAuth().role === 1) {
-                    endpoint = `/admin2/crud/blog/${blog.slug}`
+                    endpoint = `/admin/crud/blog/${blog.slug}`
 
                 } else if (isAuth() && isAuth().role === 0) {
                     endpoint = `/user/crud/blog/${blog.slug}`

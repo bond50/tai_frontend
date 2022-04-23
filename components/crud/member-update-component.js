@@ -137,7 +137,7 @@ const MemberUpdateComponent = ({id}) => {
     );
 
 
-
+  const imgSrc = `${API}/user/photo/${username_for_photo}`
     return (
 
        <section>

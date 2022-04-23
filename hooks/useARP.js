@@ -31,7 +31,7 @@ const UseARP = (url) => {
                 setValues({...values, data: response.data, loading: false})
             })
             .catch(err => {
-                if (err.response.status) {
+                if (err.response.status===404) {
                     setValues({...values, error: 'Oops! something went wrong while fetching data', loading: false})
                 }
             })

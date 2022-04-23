@@ -11,18 +11,18 @@ const Blogs = ({blogs, totalBlogs, blogsLimit, router}) => {
 
     const head = () => (
         <Head>
-            <title>Blogs | {APP_NAME}</title>
+            <title>Blog | {APP_NAME}</title>
             <meta
                 name="description"
-                content="Vihiga county referral hospital blog on our services departments wards core values strategic plan"
+                content="Tai Lifestyle Limited Latest articles on safety tips when handling asbestos, news ,workers training,our concern about asbestos,disposal of sludge and construction"
             />
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 
-            <meta property="og:title" content={`Latest articles | ${APP_NAME}`}/>
+            <meta property="og:title" content={`Blog  | ${APP_NAME}`}/>
             <meta
                 property="og:description"
-                content="Vihiga county referral hospital blog on our services departments wards core values strategic plan"
+                content="Tai Lifestyle Limited Latest articles on safety tips when handling asbestos, news ,workers training,our concern about asbestos,disposal of sludge and construction"
             />
 
             <meta property="og:type" content="webiste"/>
@@ -31,13 +31,13 @@ const Blogs = ({blogs, totalBlogs, blogsLimit, router}) => {
 
             <meta
                 property="og:image"
-                content={`/herp.jpg`}
+                content={`/late.jpg`}
             />
             <meta
                 property="og:image:secure_url"
-                content={`/herp.jpg`}
+                content={`/late.jpg`}
             />
-            <meta property="og:image:type" content="image/png"/>
+            <meta property="og:image:type" content="image/jpg"/>
             {/*<meta property="fb:app_id" content={`${FB_APP_ID}`}/>*/}
         </Head>
     );

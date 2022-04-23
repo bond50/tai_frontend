@@ -11,10 +11,6 @@ import Media from "./media";
 
 const Nav = () => {
     const router = useRouter()
-    console.log(router.asPath)
-
-    let route = `${API}/`
-    console.log()
 
     const [open, toggleClosed] = useToggle();
     let attachedClasses = [`navbar`];
