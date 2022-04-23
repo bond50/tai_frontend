@@ -12,7 +12,7 @@ const Index = () => {
 
     const head = () => (
         <Head>
-            <title>Blogs | {APP_NAME}</title>
+            <title>Media| {APP_NAME}</title>
             <meta
                 name="description"
                 content={`Welcome to ${APP_NAME} Media section .You can access all images, videos and downloads from this section`}
@@ -20,7 +20,7 @@ const Index = () => {
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 
-            <meta property="og:title" content={`Medical services | ${APP_NAME}`}/>
+            <meta property="og:title" content={`Media | ${APP_NAME}`}/>
             <meta
                 property="og:description"
                 content={`Welcome to ${APP_NAME} Media section .You can access all images, videos and downloads from this section`}
@@ -32,11 +32,11 @@ const Index = () => {
 
             <meta
                 property="og:image"
-                content={`/herp.jpg`}
+                content={`/late.jpg`}
             />
             <meta
                 property="og:image:secure_url"
-                content={`/herp.jpg`}
+                content={`/late.jpg`}
             />
             <meta property="og:image:type" content="image/png"/>
             {/*<meta property="fb:app_id" content={`${FB_APP_ID}`}/>*/}

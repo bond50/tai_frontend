@@ -13,7 +13,7 @@ const GalleryIndex = () => {
     const router = useRouter()
     const head = () => (
         <Head>
-            <title>Downloads | {APP_NAME}</title>
+            <title>Gallery | {APP_NAME}</title>
             <meta
                 name="description"
                 content={`Tai Lifestyle Limited is a private liability company, registered and incorporated under the company act, 2015 cap 486 of the laws of Kenya. `}
