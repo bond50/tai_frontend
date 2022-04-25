@@ -1,5 +1,5 @@
 import classes from '../../styles/LoadRecent.module.css'
-import moment from "moment";
+import dayjs from 'dayjs';
 import Link from "next/link";
 
 const LoadRecentBlogs = ({blogs}) => {
@@ -13,7 +13,7 @@ const LoadRecentBlogs = ({blogs}) => {
                         </Link>
                     </h4>
                     <div className={classes.Time}>
-                        {moment(blog.updatedAt).fromNow()}
+                        {dayjs(blog.createdAt).format("ddd, MMM D, YYYY h:mm A")}
                     </div>
                 </div>
             </div>

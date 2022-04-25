@@ -1,4 +1,3 @@
-import Gallery from "../../../components/media/gallery/gallery-wrapper";
 import useSWR from "swr";
 import {API, APP_NAME, DOMAIN,} from "../../../config";
 import {fetcher} from "../../../components/reusables/functions/fetcher";
@@ -6,6 +5,11 @@ import React from "react";
 import {useRouter} from "next/router";
 import Head from "next/head";
 import Layout from "../../../components/layout";
+
+import dynamic from 'next/dynamic'
+
+const Gallery  = dynamic(() => import('../../../components/media/gallery/gallery-wrapper'))
+
 
 
 const GalleryIndex = () => {

@@ -1,5 +1,3 @@
-
-import Breadcrumbs from "../../components/reusables/Breadcrumbs";
 import Link from "next/link";
 import Head from "next/head";
 import {APP_NAME, DOMAIN,} from "../../config";
@@ -55,7 +53,7 @@ const Index = () => {
                             <li>
                                 <i className="bi bi-chevron-double-right"/>
                                 <Link href={`/media/downloads`}>
-                                    <a>Downloads</a>
+                                    <a>Gallery</a>
                                 </Link>
                             </li>
                             <li>

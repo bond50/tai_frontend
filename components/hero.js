@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import {Carousel} from "react-bootstrap";
 import Image from "./reusables/lazy/Image";
-import renderHTML from "react-render-html";
+import renderHTML from "html-react-parser";
 import Link from "next/link";
 import {API} from "../config";
 import useSWR from "swr";
-
 import {trim} from "./reusables/functions/trim";
 import {fetcher} from "./axios/axios";
 
@@ -37,6 +36,7 @@ function BlogCarousel() {
                     // loader={myLoader}
                     layout="fill"
                     alt={d.title}
+
                     className='img-fluid'
                     objectFit="cover"
                 />

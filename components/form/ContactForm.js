@@ -63,32 +63,53 @@ const ContactForm = ({authorEmail, label}) => {
     );
 
     const sideData = () => {
-        return <div className="col-lg-5 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div className="info">
-                <div className="address">
-                    <i className="bi bi-geo-alt"/>
-                    <h4>Location:</h4>
-                    <p>Off Nkrumah Road, Third Floor, Taiyebi House, opposite NSSF Building.</p>
-                </div>
-
-                <div className="email">
-                    <i className="bi bi-envelope"/>
-                    <h4>Email:</h4>
-                    <p>info@tailifestyle.co.ke</p>
-                </div>
-
-                <div className="phone">
-                    <i className="bi bi-phone"/>
-                    <h4>Call:</h4>
-                    <p>+254 702356422 <br/>+254 723422747</p>
-                </div>
-
-                <iframe
-                    src="https://maps.google.com/maps?q=Taiyebi%20House,%20Nkurumah%20Rd,%20Mombasa&t=&z=11&ie=UTF8&iwloc=&output=embed"
-                    frameBorder="0" style={{border: "0", width: "100%", height: "290px"}} allowFullScreen/>
+        return <div className="info">
+            <div className="address">
+                <i className="bi bi-geo-alt"/>
+                <h4>Mombasa Branch</h4>
+                <p>Off Nkrumah Road,
+                    Third Floor, Taiyebi House,
+                    opposite NSSF Building.
+                </p>
+            </div>
+            <div className="address">
+                <i className="bi bi-geo-alt"/>
+                <h4>Nairobi Branch</h4>
+                <p>Westlands, woodvale Avenue</p>
             </div>
 
+            <div className="email">
+                <i className="bi bi-envelope"/>
+                <h4>Email:</h4>
+                <p>info@tailifestyle.co.ke</p>
+            </div>
+
+            <div className="phone">
+                <i className="bi bi-phone"/>
+                <h4>Call:</h4>
+                <p>
+                    +254 723422747 <br/>
+                    +254 702356422 <br/>
+                    +254 726784411 <br/>
+                    +254 702685522
+                </p>
+            </div>
+            <div className="d-flex justify-content-between">
+                <div className='mx-1'>
+                    <iframe
+                        src="https://maps.google.com/maps?q=Taiyebi%20House,%20Nkurumah%20Rd,%20Mombasa&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                        frameBorder="0" style={{border: "0", width: "100%", height: "190px"}} allowFullScreen/>
+                </div>
+
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2042700.666461011!2d34.63729495508313!3d-0.5267046107821423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f176ab13e43fb%3A0xd1ca2edce00adff9!2sWoodvale%20Grove%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1650889226685!5m2!1sen!2ske"
+                        frameBorder="0" style={{border: "0", width: "100%", height: "190px"}} allowFullScreen/>
+                </div>
+            </div>
         </div>
+
+
     }
 
     const contactForm = () =>
@@ -156,12 +177,12 @@ const ContactForm = ({authorEmail, label}) => {
         <section id="contact" className="contact">
             <div className="container" data-aos="fade-up">
                 <div className="row">
-                    {sideData()}
-                    <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up"
+                    <div className="col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        {sideData()}
+                    </div>
+                    <div className="col-lg-6 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up"
                          data-aos-delay="200">
-                        <div className={'col-lg-10'}>
-                            {contactForm()}
-                        </div>
+                        {contactForm()}
                     </div>
                 </div>
             </div>

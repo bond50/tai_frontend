@@ -1,8 +1,9 @@
 import React from 'react';
-import History from "../../components/about/history";
 import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
+import dynamic from 'next/dynamic'
+const  History  = dynamic(() => import('../../components/about/history'))
 
 
 const Hist = () => {
@@ -17,6 +18,9 @@ const Hist = () => {
             />
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
+             <meta name="keywords"
+                  content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com, history , about , about us about tai , about tai lifestyle, about tai lifestyle limited, tai lifestyle limited history"/>
+
 
             <meta property="og:title" content={`History | ${APP_NAME}`}/>
             <meta
@@ -33,7 +37,7 @@ const Hist = () => {
             />
             <meta
                 property="og:image:secure_url"
-                content={`/herp.jpg`}
+                content={`/late.jpg`}
             />
             <meta property="og:image:type" content="image/jpg"/>
             {/*<meta property="fb:app_id" content={`${FB_APP_ID}`}/>*/}

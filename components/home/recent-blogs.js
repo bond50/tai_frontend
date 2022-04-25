@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from "next/image";
-import moment from "moment";
 import {API} from "../../config";
-import renderHTML from "react-render-html";
+import renderHTML from "html-react-parser";
 import Link from "next/link";
 import useSWR from "swr";
 import {fetcher} from "../axios/axios";
+import dayjs from "dayjs";
 
 
 const RecentBlogs = () => {
@@ -41,7 +41,7 @@ const RecentBlogs = () => {
                                         alt={blog.title}/>
                                 </div>
                                 <span
-                                    className='post-date'> {moment(blog.updatedAt).format('MMMM Do YYYY, h:mm:ss a')}</span>
+                                    className='post-date'> {dayjs(blog.createdAt).format("ddd, MMM D, YYYY h:mm A")}</span>
                                 <h3 className='post-title'>{blog.title.toLowerCase()}</h3>
                                 {renderHTML(blog.excerpt.length >= 160 ? `${blog.excerpt.substring(0, 80)}...` : blog.excerpt)}
                                 <Link href={`/blogs/${blog.slug}`}>

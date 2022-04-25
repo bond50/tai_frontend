@@ -29,18 +29,26 @@ const Footer = () => {
                         <div className="col-lg-3 col-md-6 footer-contact">
                             <h4>Contact info</h4>
                             <p>
-                                Off Nkrumah Road,
-                                Third Floor,
-                                Taiyebi House,
-                                opposite NSSF Building<br/> <br/>
+                                <strong>Mombasa</strong> <br/>
+                                <em>Off Nkrumah Road,
+                                    Third Floor,
+                                    Taiyebi House,
+                                    opposite NSSF Building.</em><br/>
                                 P.O.Box 89990-80100
-                                Mombasa, Kenya<br/> <br/>
-                                <strong>Phone 1:</strong>+254 702356422<br/>
-                                <strong>Phone 2:</strong>+254 723422747<br/>
+                                Mombasa, Kenya<br/>
+                                <strong>Nairobi</strong> <br/>
+                                <em> Westlands,
+                                    woodvale Avenue.</em> <br/>
+                                P.O box 14505-00800 <br/>
+                                <strong>Phone </strong><br/>
+                                +254 702356422 <br/>
+                                +254 702685522 <br/>
+                                +254 723422747 <br/>
+                                +254 726784411 <br/>
                                 <strong>Email:</strong> info@tailifestyle.co.ke<br/>
                             </p>
                         </div>
-                        <div className="col-lg-2 col-md-6 footer-links">
+                        <div className="col-lg-3 col-md-6 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
                                 <li><i className="bx bx-chevrons-right"/>
@@ -70,7 +78,7 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-lg-4 col-md-6 footer-newsletter">
+                        <div className="col-lg-3 col-md-6 footer-newsletter">
                             <h4>About</h4>
                             <p>
                                 We are registered with National Construction Authority Category for (4) for Building,

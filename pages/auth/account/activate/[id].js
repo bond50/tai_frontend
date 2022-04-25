@@ -5,6 +5,8 @@ import jwt from 'jsonwebtoken'
 import Link from "next/link";
 
 
+
+
 const ActivateAccount = ({router}) => {
     const [values, setValues] = useState({
         name: '',
@@ -55,8 +57,6 @@ const ActivateAccount = ({router}) => {
             {success && <Link href={`/signin `}>
                 <a className={`btn btn-outline-success btn-sm  mx-2`}> Sign in here</a>
             </Link>}
-
-
         </div>
 
     );

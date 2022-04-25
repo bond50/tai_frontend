@@ -16,6 +16,8 @@ const Blogs = ({blogs, totalBlogs, blogsLimit, router}) => {
                 name="description"
                 content="Tai Lifestyle Limited Latest articles on safety tips when handling asbestos, news ,workers training,our concern about asbestos,disposal of sludge and construction"
             />
+            <meta name="keywords"
+                  content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com, blog, blog section, news, events, safety tips"/>
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 

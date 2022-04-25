@@ -96,11 +96,13 @@ const ForgotPassword = () => {
     );
 
     return (
-        <>
-            <Alert msg={error} type='danger' label='Danger'/>
-            <Alert msg={message} type='success' label='Success' reload/>
-            {showForm && passwordForgotForm()}
-        </>
+        <section>
+            <div className="container">
+                <Alert msg={error} type='danger' label='Danger'/>
+                <Alert msg={message} type='success' label='Success' reload/>
+                {showForm && passwordForgotForm()}
+            </div>
+        </section>
     );
 };
 

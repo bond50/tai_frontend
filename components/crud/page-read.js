@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, {useEffect, useState} from 'react';
 import {getCookie, isAuth} from '../../actions/auth';
 import {list, removePage} from '../../actions/service';
-import moment from 'moment';
+import dayjs from "dayjs";
 import Alert from "../messages/Alert";
 
 
@@ -65,7 +65,7 @@ const PageRead = ({username}) => {
                 <div key={i} className="pb-5">
                     <h6>{pg.title}</h6>
                     <p className="mark">
-                        Written by {pg.postedBy.name} | Published on {moment(pg.updatedAt).fromNow()}
+                        Written by {pg.postedBy.name} | Published on {dayjs(pg.createdAt).format("ddd, MMM D, YYYY h:mm A")}
                     </p>
                     <button className="btn btn-sm btn-danger" onClick={() => deleteConfirm(pg.slug)}>
                         Delete

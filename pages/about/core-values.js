@@ -1,8 +1,10 @@
 import React from 'react';
-import CoreValues from "../../components/about/core-values";
 import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
+import dynamic from 'next/dynamic'
+
+const CoreValues = dynamic(() => import('../../components/about/core-values'))
 
 
 const Values = () => {
@@ -16,6 +18,8 @@ const Values = () => {
                 name="description"
                 content={`${APP_NAME} core values include safety,integrity, teamwork,transparency,teamwork,leadership and professionalism`}
             />
+            <meta name="keywords"
+                  content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com,core-values, safety,integrity, teamwork,transparency,teamwork,leadership , professionalism"/>
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 

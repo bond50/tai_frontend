@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, {useEffect, useState} from 'react';
 import {getCookie, isAuth} from '../../actions/auth';
 import {list, removeBlog} from '../../actions/blog';
-import moment from 'moment';
+import dayjs from "dayjs";
 import Alert from "../messages/Alert";
 
 
@@ -65,7 +65,7 @@ const BlogRead = ({username}) => {
                 <div key={i} className="pb-5">
                     <h6>{blog.title}</h6>
                     <p className="mark">
-                        Written by {blog.postedBy.name} | Published on {moment(blog.updatedAt).fromNow()}
+                        Written by {blog.postedBy.name} | Published on {dayjs(blog.createdAt).format("ddd, MMM D, YYYY h:mm A")}
                     </p>
                     <button className="btn btn-sm btn-danger" onClick={() => deleteConfirm(blog.slug)}>
                         Delete

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import TopBar from "./top-bar";
+import TopBar from "./top/top-bar";
 import Header from "./header";
 
 const Navigation = () => {

@@ -1,6 +1,6 @@
 import classes from '../../../styles/downloads.module.css'
 import React, {Fragment, useEffect, useState} from 'react';
-import moment from "moment";
+import dayjs from "dayjs";
 import axios from "axios";
 
 import {API} from "../../../config";
@@ -89,7 +89,7 @@ const DownloadList = ({files}) => {
                             </div>
                             <div className="d-flex align-items-center flex-column m-2">
                                 <div className={classes.Date}>Uploaded
-                                    on <span>{moment(file.createdAt).format('llll')}</span></div>
+                                    on <span>{dayjs(file.createdAt).format("ddd, MMM D, YYYY h:mm A")}</span></div>
                                 <div className={classes.Size}>File size :<span>{file.fileSize}</span></div>
                             </div>
                             <div className={`${classes.Btn} text-center`}

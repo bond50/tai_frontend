@@ -1,8 +1,13 @@
 import React from 'react';
 import Navigation from "./navigation/navigation";
-import Hero from './hero'
-import Footer from "./footer/footer";
-import SimpleHero from "./simple-hero";
+
+import dynamic from 'next/dynamic'
+
+const Hero  = dynamic(() => import('./hero'))
+const SimpleHero  = dynamic(() => import('./simple-hero'))
+const Footer  = dynamic(() => import('./footer/footer'))
+
+
 
 const Layout = ({children, noCarousel, simple, title, className}) => {
 

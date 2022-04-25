@@ -1,8 +1,10 @@
 import React from 'react';
-import Mission from "../../components/about/mission";
 import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
+import dynamic from 'next/dynamic'
+
+const Mission = dynamic(() => import('../../components/about/mission'))
 
 const Miss = () => {
     const router = useRouter()
@@ -14,7 +16,8 @@ const Miss = () => {
                 name="description"
                 content={`To be one of the Africa’s leading suppliers in institutions and organizations`}
             />
-
+            <meta name="keywords"
+                  content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com,  mission"/>
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 
             <meta property="og:title" content={`Mission | ${APP_NAME}`}/>

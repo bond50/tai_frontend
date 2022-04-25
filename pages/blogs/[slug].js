@@ -3,9 +3,10 @@ import {API, APP_NAME, DOMAIN} from "../../config";
 import Head from "next/head";
 import React, {useEffect, useState} from "react";
 import Card from "../../components/card/Card";
-import SmallCard from "../../components/reusables/card/small-card";
+
 import Layout from "../../components/layout";
 import BlogSideBarContent from "../../components/sidebar/sidebar-content";
+import SmallCard from "../../components/card/small-card";
 
 
 const SingleBlog = ({blog, query}) => {
@@ -38,6 +39,8 @@ const SingleBlog = ({blog, query}) => {
                 {blog.title} | {APP_NAME}
             </title>
             <meta name="description" content={blog.mdesc}/>
+            <meta name="keywords"
+                  content={`Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com, ${blog.title}`}/>
             <link rel="canonical" href={`${DOMAIN}/blogs/${query.slug}`}/>
             <meta property="og:title" content={`${blog.title}| ${APP_NAME}`}/>
             <meta property="og:description" content={blog.mdesc}/>
@@ -65,7 +68,6 @@ const SingleBlog = ({blog, query}) => {
             </div>
         ));
     };
-
 
 
     return (

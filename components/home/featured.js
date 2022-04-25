@@ -1,5 +1,5 @@
 import React from 'react';
-import renderHTML from "react-render-html";
+import renderHTML from "html-react-parser";
 import {trim} from "../reusables/functions/trim";
 import Link from "next/link";
 import useSWR from "swr";
@@ -11,8 +11,8 @@ const Featured = () => {
     if (!data) return <div id='preloader'/>
 
     return (
-        <section id="icon-boxes" className="icon-boxes section-bg" data-aos="fade-up">
-            <div className="container">
+        <section id="icon-boxes" className="icon-boxes section-bg">
+            <div className="container"  data-aos="fade-up">
                 <div className="row">
                     {data.map(d => {
                         return <div className="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"

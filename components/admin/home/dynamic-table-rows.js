@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import Link from "next/link";
-import moment from "moment";
+import dayjs from "dayjs";
 import classes from "./index.module.css";
 import {isAuth} from "../../../actions/auth";
 
@@ -18,7 +18,7 @@ const DynamicTableRows = ({blog, user, team, deleteConfirm, endpoint}) => {
                     <td>
                         <h6>{blog.title}</h6>
                     </td>
-                    <td> {moment(blog.createdAt).format('MMMM Do YYYY, h:mm:ss a')}</td>
+                    <td> {dayjs(blog.createdAt).format("ddd, MMM D, YYYY h:mm A")}</td>
                     <td>{
                         blog.accepted === false ? <span className="badge bg-warning">Pending</span> :
                             <span className="badge bg-success">Approved</span>

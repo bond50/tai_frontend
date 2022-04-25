@@ -1,8 +1,10 @@
 import React from 'react';
-import Vision from "../../components/about/vision";
 import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
+import dynamic from 'next/dynamic'
+
+const Vision = dynamic(() => import('../../components/about/vision'))
 
 const Vis = () => {
 
@@ -15,6 +17,9 @@ const Vis = () => {
                 name="description"
                 content={`Be, and be recognized as, the best services company in the world`}
             />
+
+             <meta name="keywords"
+                  content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com, vision , vision statement"/>
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 

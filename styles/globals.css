@@ -23,24 +23,6 @@ section {
     overflow: hidden;
 }
 
-#topbar {
-    background: #37517e;
-    color: #fff;
-    height: 40px;
-    font-size: 16px;
-    font-weight: 600;
-    z-index: 996;
-    transition: all 0.5s;
-}
-
-#topbar.scrolled {
-    top: -40px;
-}
-
-#topbar i {
-    padding-right: 6px;
-    line-height: 0;
-}
 
 /*--------------------------------------------------------------
 # Header
@@ -217,7 +199,7 @@ section {
 * Mobile Navigation
 */
 .mobile-nav-toggle {
-    color: #bb3003;
+    color: #05579e;
     font-size: 28px;
     cursor: pointer;
     display: none;
@@ -557,6 +539,17 @@ section {
         opacity: 0;
     }
 }
+.gallery .gallery-item {
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+.gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+}
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
 
 #simple-hero {
     width: 100%;
@@ -882,7 +875,7 @@ section {
 }
 
 .cta {
-    background: #0b2341;
+    background: #37517e;
     padding: 60px 0;
     color: #fff;
 }

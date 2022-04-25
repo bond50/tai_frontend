@@ -3,7 +3,7 @@ import Head from "next/head";
 import {API, APP_NAME, DOMAIN,} from "../../../config";
 import {listRelated, singlePage} from "../../../actions/service";
 import Layout from "../../../components/layout";
-import renderHTML from "react-render-html";
+import renderHTML from "html-react-parser";
 import Link from "next/link";
 
 

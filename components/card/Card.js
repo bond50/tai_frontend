@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, {Fragment} from "react";
-import renderHTML from 'react-render-html';
-import moment from 'moment';
+import renderHTML from 'html-react-parser';
+import dayjs from 'dayjs';
 import {API} from '../../config';
 import classes from '../../styles/BlogCard.module.css'
 import Image from "next/image";
@@ -72,7 +72,8 @@ const Card = ({blog, single}) => {
                     </li>
                     <li className="d-flex align-items-center">
                         <i className="bi bi-calendar"/>
-                        <span> {moment(blog.updatedAt).format('MMMM Do YYYY, h:mm:ss a')}</span>
+
+                        <span> {dayjs(blog.updatedAt).format('ddd, MMM D, YYYY h:mm A')}</span>
                     </li>
 
                 </ul>

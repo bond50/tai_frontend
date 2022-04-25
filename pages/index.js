@@ -3,18 +3,17 @@ import {APP_NAME, DOMAIN} from "../config";
 import Head from "next/head";
 import {useRouter} from "next/router";
 import About from "../components/home/about";
-import Layout from "../components/layout";
 import Featured from "../components/home/featured";
 import Cta from "../components/home/cta";
-
 import RecentBlogs from "../components/home/recent-blogs";
+
+import dynamic from 'next/dynamic'
+
+const Layout  = dynamic(() => import('../components/layout'))
 
 
 const Index = () => {
-
     const router = useRouter()
-
-
     const head = () => (
         <Head>
             <title>{APP_NAME} </title>
@@ -22,6 +21,7 @@ const Index = () => {
                 name="description"
                 content={`${APP_NAME} is a private liability company, registered and incorporated under the company act, 2015 cap 486 of the laws of Kenya.`}
             />
+              <meta name="keywords" content="Tai, Tai lifestyle ,Tai lifestyle Limited, tailifestyle.com"/>
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
             <meta name="robots" content="max-image-preview:large"/>

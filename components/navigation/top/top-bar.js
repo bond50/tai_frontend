@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './topbar.module.css'
 
 const TopBar = ({scrolled}) => {
     let barClasses = [`d-flex align-items-center fixed-top`];
@@ -8,13 +9,15 @@ const TopBar = ({scrolled}) => {
 
 
     return (
-        <div id="topbar" className={barClasses.join(" ")}>
+        <div className={` ${classes.topBar} ${barClasses.join(" ")}`}>
             <div className="container d-flex align-items-center justify-content-center justify-content-md-between">
                 <div className="align-items-center d-none d-md-flex">
                     <i className="bi bi-clock"/> Monday - Sunday, 7AM to 10PM
                 </div>
-                <div className="d-flex align-items-center">
-                    <i className="bi bi-phone"/> Call us now +254 702356422
+                <div className={`d-none d-lg-flex  align-items-center ${classes.link}`}>
+                    <a className="bi-envelope-open-fill"
+                       href="mailto:info@tailifestyle.co.ke?cc=tailifestyle01@gmail.com" target="_blank"
+                       rel="noopener noreferrer"><span>info@tailifestyle.co.ke</span></a>
                 </div>
             </div>
         </div>

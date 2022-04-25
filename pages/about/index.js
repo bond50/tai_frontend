@@ -3,7 +3,11 @@ import Head from "next/head";
 import {APP_NAME, DOMAIN,} from "../../config";
 import React from "react";
 import {useRouter} from "next/router";
-import Layout from "../../components/layout";
+
+
+import dynamic from 'next/dynamic'
+
+const Layout  = dynamic(() => import('../../components/layout'))
 
 const Index = () => {
     const router = useRouter()
@@ -15,6 +19,9 @@ const Index = () => {
                 name="description"
                 content={`Tai Lifestyle Limited is a private liability company, registered and incorporated under the company act, 2015 cap 486 of the laws of Kenya`}
             />
+             <meta name="keywords"
+                  content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com, core-values,history, vision, mission"/>
+
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 

@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import renderHTML from 'react-render-html';
-import moment from 'moment';
+import parse from 'html-react-parser';
 import {API} from '../../config';
+import dayjs from 'dayjs';
 import classes from '../../styles/SmallCard.module.css'
 import Image from "next/image";
 import React from "react";
@@ -50,9 +50,9 @@ const SmallCard = ({blog, service}) => {
                         </a>
                     </Link>
                 </h5>
-                <div className="card-text">{blog ? renderHTML(blog.excerpt) : renderHTML(service.excerpt)}</div>
+                <div className="card-text">{blog ? parse(blog.excerpt) : parse(service.excerpt)}</div>
                 {blog && <div className={classes.Info}>
-                    Posted {moment(blog.updatedAt).fromNow()} by{' '}
+                    Posted on {dayjs(blog.createdAt).format("ddd, MMM D, YYYY h:mm A")}
                     <Link href={`/profile/${blog.postedBy.username}`}>
                         <a className="float-end">{blog.postedBy.username}</a>
                     </Link>

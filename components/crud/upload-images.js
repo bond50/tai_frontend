@@ -3,8 +3,6 @@ import UploadForm from "../../components/reusables/forms/upload-form";
 import useUpload from "../../hooks/useUpload";
 import SideCatTags from "../../components/reusables/forms/side-cat-tags";
 import {isAuth} from "../../actions/auth";
-import lo from "simple-react-lightbox";
-
 
 const UploadImages = () => {
     let endpoint

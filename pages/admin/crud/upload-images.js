@@ -1,8 +1,8 @@
 import React from 'react';
 import Admin from '../../../components/auth/Admin';
-import Layout from "../../../hoc/admin/layout/layout";
-import UploadImages from "../../../components/crud/upload-images";
-
+ import dynamic from 'next/dynamic'
+const Layout = dynamic(() => import('../../../hoc/admin/layout/layout'))
+const UploadImages = dynamic(() => import('../../../components/crud/upload-images'))
 
 const Upload = () => {
 
