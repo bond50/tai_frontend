@@ -66,7 +66,7 @@ const About = () => {
                             {/*</li>*/}
                         </ul>
                         <div className="text-center">
-                            <Link href={`/our-history`}>
+                            <Link href={`/about/history`}>
                                 <a className="btn-learn-more">Find out more about us</a>
                             </Link>
                         </div>
