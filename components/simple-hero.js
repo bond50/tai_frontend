@@ -10,9 +10,7 @@ const SimpleHero = ({title}) => {
                         <h2 className='animate__animated animate__zoomIn'>{title}</h2>
                          <Breadcrumbs/>
                     </div>
-
                 </div>
-
             </div>
 
         </section>

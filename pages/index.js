@@ -3,13 +3,12 @@ import {APP_NAME, DOMAIN} from "../config";
 import Head from "next/head";
 import {useRouter} from "next/router";
 import About from "../components/home/about";
-import Featured from "../components/home/featured";
 import Cta from "../components/home/cta";
-import RecentBlogs from "../components/home/recent-blogs";
-
 import dynamic from 'next/dynamic'
 
 const Layout  = dynamic(() => import('../components/layout'))
+const Featured   = dynamic(() => import('../components/home/featured'))
+const RecentBlogs  = dynamic(() => import('../components/home/recent-blogs'))
 
 
 const Index = () => {

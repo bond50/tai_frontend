@@ -23,6 +23,13 @@ function BlogCarousel() {
     if (!blogs) return <div id='preloader'/>
 
 
+    let myArr = blogs
+    console.log(myArr)
+
+   const objIndex = myArr.findIndex((obj => obj._id === 0));
+    console.log("Before update: ", myArr[objIndex])
+
+
     const renderCarouselItem = () => {
         return blogs && blogs.map(d => {
             // const myLoader = () => {
@@ -36,7 +43,6 @@ function BlogCarousel() {
                     // loader={myLoader}
                     layout="fill"
                     alt={d.title}
-
                     className='img-fluid'
                     objectFit="cover"
                 />

@@ -1,3 +1,4 @@
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
@@ -53,7 +54,6 @@ section {
     line-height: 1;
     font-weight: 600;
 }
-
 
 
 #header .logo img {
@@ -539,16 +539,19 @@ section {
         opacity: 0;
     }
 }
+
 .gallery .gallery-item {
-  overflow: hidden;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+    overflow: hidden;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
 }
+
 .gallery .gallery-item img {
-  transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
 }
+
 .gallery .gallery-item:hover img {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #simple-hero {
@@ -1060,8 +1063,6 @@ section {
     height: 36px;
     background: rgba(16, 110, 234, 0.8);
     display: inline-block;
-    transition: ease-in-out 0.3s;
-    color: #fff;
 }
 
 .team .member .social a:hover {
@@ -1225,6 +1226,7 @@ section {
     }
 
 }
+
 .home-blog .post-box {
     padding: 30px;
     position: relative;
@@ -1245,6 +1247,9 @@ section {
 
 .home-blog .post-image img {
     transition: 0.5s;
+    width: 100%; /* or max-width: 100%; */
+    height: auto;
+
 }
 
 .home-blog .post-date {
@@ -1281,14 +1286,13 @@ section {
     color: #05579e;
 }
 
-.home-blog .post-box:hover .post-image{
+.home-blog .post-box:hover .post-image {
     color: #05579e;
 }
 
 .home-blog .post-box:hover .post-image img {
     transform: rotate(6deg) scale(1.2);
 }
-
 
 
 #footer {

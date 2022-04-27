@@ -2,8 +2,8 @@ import React from 'react';
 import Navigation from "./navigation/navigation";
 
 import dynamic from 'next/dynamic'
-
-const Hero  = dynamic(() => import('./hero'))
+// const Hero  = dynamic(() => import('./hero'))
+const AltHero  = dynamic(() => import('./AltHero'))
 const SimpleHero  = dynamic(() => import('./simple-hero'))
 const Footer  = dynamic(() => import('./footer/footer'))
 
@@ -11,7 +11,7 @@ const Footer  = dynamic(() => import('./footer/footer'))
 
 const Layout = ({children, noCarousel, simple, title, className}) => {
 
-    let carousel = <Hero/>
+    let carousel = <AltHero/>
     if (noCarousel) {
         carousel = null
     }
@@ -31,3 +31,4 @@ const Layout = ({children, noCarousel, simple, title, className}) => {
 };
 
 export default Layout;
+

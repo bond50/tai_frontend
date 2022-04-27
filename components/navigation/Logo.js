@@ -8,7 +8,11 @@ const Logo = () => {
         <h1 className="logo">
             <Link href={'/'}>
                 <a className="logo">
-                    <Image width={618} height={335} src="/log1.png" alt="logo" className="img-fluid"/>
+                    <Image
+                        width={92}
+                        height={50} src="/log1.png"
+                        alt="logo"
+                        className="img-fluid"/>
                 </a>
             </Link>
         </h1>

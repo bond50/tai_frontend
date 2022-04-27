@@ -1,11 +1,12 @@
 import React from 'react';
-import Image from "next/image";
+
 import {API} from "../../config";
 import renderHTML from "html-react-parser";
 import Link from "next/link";
 import useSWR from "swr";
 import {fetcher} from "../axios/axios";
 import dayjs from "dayjs";
+import Image from "../reusables/lazy/Image";
 
 
 const RecentBlogs = () => {
