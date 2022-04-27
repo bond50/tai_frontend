@@ -42,7 +42,7 @@ const RecentBlogs = () => {
                                         alt={blog.title}/>
                                 </div>
                                 <span
-                                    className='post-date'> {dayjs(blog.createdAt).format("ddd, MMM D, YYYY h:mm A")}</span>
+                                    className='post-date'> {dayjs(blog.updatedAt).format("ddd, MMM D, YYYY h:mm A")}</span>
                                 <h3 className='post-title'>{blog.title.toLowerCase()}</h3>
                                 {renderHTML(blog.excerpt.length >= 160 ? `${blog.excerpt.substring(0, 80)}...` : blog.excerpt)}
                                 <Link href={`/blogs/${blog.slug}`}>
