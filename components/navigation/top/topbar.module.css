@@ -1,5 +1,8 @@
 
 .topBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #37517e;
     color: #fff;
     height: 50px;
@@ -17,8 +20,12 @@
     padding-right: 6px;
     line-height: 0;
 }
-.topBar span{
-       font-size: 14px;
+
+.topBar span {
+    font-size: 14px;
+}
+.link{
+    display: flex;
 }
 
 .link a {
@@ -28,15 +35,16 @@
     justify-content: center;
     color: #ffffff;
     text-decoration: underline;
-    padding-left: 15px;
+
     /*display: inline-block;*/
     line-height: 1px;
     transition: 0.3s;
 }
-.link a:hover{
+
+.link a:hover {
     color: #f1f6fd;
 }
+
 .link span {
-    padding-left: 6px;
     line-height: 0;
 }
