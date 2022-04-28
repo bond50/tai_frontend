@@ -9,31 +9,38 @@
     transition: all 0.5s;
 }
 
+
+@media (max-width: 570px) {
+    .topBar {
+        font-size: 13px;
+    }
+
+}
+
+
 .topBar.scrolled {
     top: -50px;
 }
 
 .topBar i {
     padding-right: 6px;
-     font-size: 13px;
     line-height: 0;
 }
-.topBar span{
-       font-size: 14px;
-}
+
 
 .link a {
     color: #ffffff;
     text-decoration: underline;
     padding-left: 15px;
-    font-size: 14px;
     display: inline-block;
     line-height: 1px;
     transition: 0.3s;
 }
-.link a:hover{
+
+.link a:hover {
     color: #f1f6fd;
 }
+
 .link span {
     padding-left: 6px;
     line-height: 0;
