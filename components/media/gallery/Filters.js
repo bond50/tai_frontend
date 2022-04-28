@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import classes from '../../../styles/Filters.module.css'
 import useSWR from "swr";
 import {API} from "../../../config";
