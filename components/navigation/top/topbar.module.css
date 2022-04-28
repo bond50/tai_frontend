@@ -15,14 +15,18 @@
 
 .topBar i {
     padding-right: 6px;
+     font-size: 13px;
     line-height: 0;
+}
+.topBar span{
+       font-size: 14px;
 }
 
 .link a {
     color: #ffffff;
     text-decoration: underline;
     padding-left: 15px;
-    font-size: 13px;
+    font-size: 14px;
     display: inline-block;
     line-height: 1px;
     transition: 0.3s;
