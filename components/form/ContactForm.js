@@ -83,13 +83,13 @@ const ContactForm = ({authorEmail, label}) => {
 
             <div className="email">
                 <i className="bi bi-envelope"/>
-                <h4>Email:</h4>
+                <h4>Email</h4>
                 <p>info@tailifestyle.co.ke</p>
             </div>
 
             <div className="phone">
                 <i className="bi bi-phone"/>
-                <h4>Alternative :</h4>
+                <h4>Alternative</h4>
                 <p>
                     +254 798777999 <br/>
                 </p>
