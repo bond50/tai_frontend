@@ -1,47 +1,49 @@
 
 .topBar {
     background: #37517e;
-    color: #fff;
-    height: 50px;
-    font-size: 16px;
-    font-weight: 600;
-    z-index: 996;
+    height: 40px;
+    font-size: 14px;
     transition: all 0.5s;
+    z-index: 996;
 }
-
-
-@media (max-width: 570px) {
-    .topBar {
-        font-size: 13px;
-    }
-
-}
-
 
 .topBar.scrolled {
-    top: -50px;
+    top: -40px;
 }
 
-.topBar i {
-    padding-right: 6px;
+
+
+.topBar .contactInfo a {
+    line-height: 1;
+    color: #fff;
+    transition: 0.3s;
+    text-decoration: underline;
+}
+
+
+.topBar .contactInfo i {
+    color: #ffffff;
+    padding-right: 4px;
+    margin-left: 15px;
     line-height: 0;
 }
 
 
-.link a {
+.topBar span{
     color: #ffffff;
+}
+
+.topBar .socialLinks a {
     text-decoration: underline;
+    color: #fff;
     padding-left: 15px;
     display: inline-block;
     line-height: 1px;
     transition: 0.3s;
 }
 
-.link a:hover {
-    color: #f1f6fd;
-}
 
-.link span {
-    padding-left: 6px;
-    line-height: 0;
+
+.topBar .socialLinks a:first-child {
+    border-left: 0;
 }
