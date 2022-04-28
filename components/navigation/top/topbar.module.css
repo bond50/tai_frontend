@@ -23,11 +23,15 @@
 }
 
 .link a {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     color: #ffffff;
     text-decoration: underline;
     padding-left: 15px;
     font-size: 14px;
-    display: inline-block;
+    /*display: inline-block;*/
     line-height: 1px;
     transition: 0.3s;
 }
