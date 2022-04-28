@@ -7,12 +7,11 @@ const TopBar = ({scrolled}) => {
         barClasses.push('scrolled')
     }
 
-
     return (
         <div className={` ${classes.topBar} ${barClasses.join(" ")}`}>
             <div className="container d-flex align-items-center justify-content-center justify-content-md-between">
                 <div className="align-items-center  d-flex">
-                    <i className="bi bi-clock"/>  <span>Monday - Sunday, 7AM to 10PM</span>
+                    <i className="bi bi-clock"/> <span>Monday - Sunday, 7AM to 10PM</span>
                 </div>
                 <div className={`d-flex  align-items-center ${classes.link}`}>
                     <a className="bi-envelope-open-fill"

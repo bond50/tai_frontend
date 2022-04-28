@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from "./navigation/navigation";
 
 import dynamic from 'next/dynamic'
+import ScrollTop from "./ScrollTop";
 // const Hero  = dynamic(() => import('./hero'))
 const AltHero  = dynamic(() => import('./AltHero'))
 const SimpleHero  = dynamic(() => import('./simple-hero'))
@@ -26,6 +27,7 @@ const Layout = ({children, noCarousel, simple, title, className}) => {
                 {children}
             </main>
             <Footer/>
+            <ScrollTop/>
         </>
     );
 };

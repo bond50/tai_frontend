@@ -6,7 +6,6 @@ import {fetcher} from "../../reusables/functions/fetcher";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 
-
 const Filters = () => {
     const [tags, setTags] = useState([])
 

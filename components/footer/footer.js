@@ -2,12 +2,16 @@ import React from 'react';
 import Link from "next/link";
 import useSWR from "swr";
 import {fetcher} from "../axios/axios";
-import {BLOG_DOMAIN} from "../../config";
+
 
 const Footer = () => {
     const {data: services, error} = useSWR({url: `/featured-services`, method: 'get'}, fetcher);
     if (error) return <div>failed to load</div>
     if (!services) return <div id='preloader'/>
+
+
+
+
 
     return (
         <footer id="footer">
