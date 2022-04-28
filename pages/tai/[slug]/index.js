@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {Fragment, useEffect, useState} from 'react';
 import Head from "next/head";
 import {API, APP_NAME, DOMAIN,} from "../../../config";

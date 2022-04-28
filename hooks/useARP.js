@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
 
 import {getCookie} from "../actions/auth";
@@ -8,7 +9,7 @@ import axiosInstance from "../components/axios/axios";
 
 const UseARP = (url) => {
     const [values, setValues] = useState({
-        error: false,
+        error: null,
         loading: false,
         message: '',
         data: [],
@@ -25,7 +26,7 @@ const UseARP = (url) => {
     const token = getCookie('token');
 
     function loadData() {
-        setValues({...values, loading: true, error: false})
+        setValues({...values, loading: true, error: null})
         axiosInstance.get(url)
             .then(response => {
                 setValues({...values, data: response.data, loading: false})

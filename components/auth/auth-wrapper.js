@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "../../styles/login.module.css";
-
+import Image from "../reusables/lazy/Image";
 const AuthWrapper = ({login, children, password, register}) => {
     return (
             <section
@@ -12,7 +12,7 @@ const AuthWrapper = ({login, children, password, register}) => {
                                 !password &&
                                 <div className="d-flex justify-content-center py-4">
                                     <a href="#" className={`${classes.Logo} d-flex align-items-center w-auto`}>
-                                        <img src={`/tai.png`} alt="logo"/>
+                                        <Image src={`/tai.png`} alt="logo" width={642} height={381}/>
                                         <span className="d-none d-lg-block">Tai lifestyle limited </span>
                                     </a>
                                 </div>

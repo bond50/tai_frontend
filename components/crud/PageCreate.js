@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import CreateForm from "../reusables/forms/CreateForm";
 import SideCatTags from "../reusables/forms/side-cat-tags";
 import React from "react";

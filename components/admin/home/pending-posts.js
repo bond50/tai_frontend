@@ -36,8 +36,11 @@ const PendingPosts = ({username}) => {
                 }
 
 
-                return <DynamicTableRows blog={blog} deleteConfirm={deleteBlogConfirm} endpoint={endpoint}
-                                         key={blog._id}/>
+                return <DynamicTableRows
+                    blog={blog}
+                    deleteConfirm={deleteBlogConfirm}
+                    endpoint={endpoint}
+                    key={blog._id}/>
             })}
         </CardDetail>
 

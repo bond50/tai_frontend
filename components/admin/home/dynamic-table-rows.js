@@ -25,7 +25,7 @@ const DynamicTableRows = ({blog, user, team, deleteConfirm, endpoint}) => {
                     }
                     </td>
                     <td className={classes.td}>
-                        <Link href={endpoint}>
+                        <Link href={endpoint} passHref>
                         <span className={`badge bg-primary  ${classes.EditBtn}`}>
                             <i className='bi bi-gear'/>
                         </span>
@@ -57,13 +57,12 @@ const DynamicTableRows = ({blog, user, team, deleteConfirm, endpoint}) => {
                     </td>
                     <td className={classes.td}>
 
-                        <Link href={`/profile/${user.username}`}>
+                        <Link href={`/profile/${user.username}`} passHref>
                          <span className={`badge bg-primary  ${classes.EditBtn}`}>
                            <i className='bi bi-eye'/>
                        </span>
-
                         </Link>
-                        <Link href={`/admin/crud/users/${user._id}`}>
+                        <Link href={`/admin/crud/users/${user._id}`} passHref>
                        <span className={`badge bg-primary  ${classes.EditBtn}`}>
                            <i className='bi bi-gear'/>
                        </span>
@@ -90,12 +89,12 @@ const DynamicTableRows = ({blog, user, team, deleteConfirm, endpoint}) => {
                         <h6>{team.email}</h6>
                     </td>
                     <td className={classes.td}>
-                        <Link href={`/profile/${team.username}`}>
+                        <Link href={`/profile/${team.username}`} passHref>
                          <span className={`badge bg-primary  ${classes.EditBtn}`}>
                            <i className='bi bi-eye'/>
                        </span>
                         </Link>
-                        <Link href={`/admin/crud/team/${team._id}`}>
+                        <Link href={`/admin/crud/team/${team._id}`} passHref>
                        <span className={`badge bg-primary  ${classes.EditBtn}`}>
                            <i className='bi bi-gear'/>
                        </span>

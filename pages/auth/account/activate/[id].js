@@ -1,13 +1,13 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {useEffect, useState} from 'react';
-import {withRouter} from 'next/router';
+import {useRouter} from 'next/router';
 import {signup} from '../../../../actions/auth';
 import jwt from 'jsonwebtoken'
 import Link from "next/link";
 
 
-
-
-const ActivateAccount = ({router}) => {
+const ActivateAccount = () => {
+    const router = useRouter()
     const [values, setValues] = useState({
         name: '',
         token: '',
@@ -51,8 +51,8 @@ const ActivateAccount = ({router}) => {
             {success && `You have successfully activated your account. Please signin`}
             {showButton && <button className='btn btn-primary mt-4' onClick={clickSubmit}>Activate account</button>}
 
-            {!success && <Link href={`/signup `}>
-                <a className={`btn btn-outline-secondary  mx-2 mt-4`}>Back to sign up</a>
+            {!success && <Link href={`/`}>
+                <a className={`btn btn-outline-secondary  mx-2 mt-4`}>Back to home</a>
             </Link>}
             {success && <Link href={`/signin `}>
                 <a className={`btn btn-outline-success btn-sm  mx-2`}> Sign in here</a>
@@ -62,4 +62,4 @@ const ActivateAccount = ({router}) => {
     );
 };
 
-export default withRouter(ActivateAccount);
+export default ActivateAccount;

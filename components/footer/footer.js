@@ -29,23 +29,19 @@ const Footer = () => {
                         <div className="col-lg-3 col-md-6 footer-contact">
                             <h4>Contact info</h4>
                             <p>
-                                <strong>Mombasa</strong> <br/>
-                                <em>Off Nkrumah Road,
-                                    Third Floor,
-                                    Taiyebi House,
-                                    opposite NSSF Building.</em><br/>
+                                <strong>Mombasa Branch</strong> <br/>
+                                <em>Off Nkrumah Road, Third Floor, Taiyebi House,
+                                    opposite NSSF Building.</em>
+                                <br/>
                                 P.O.Box 89990-80100
                                 Mombasa, Kenya<br/>
-                                <strong>Nairobi</strong> <br/>
-                                <em> Westlands,
-                                    woodvale Avenue.</em> <br/>
+                                <strong>Phone</strong>:+254 798777444 <br/><br/>
+                                <strong>Nairobi Branch</strong><br/>
+                                <em> Westlands,woodvale Avenue.</em> <br/>
                                 P.O box 14505-00800 <br/>
-                                <strong>Phone </strong><br/>
-                                +254 702356422 <br/>
-                                +254 702685522 <br/>
-                                +254 723422747 <br/>
-                                +254 726784411 <br/>
-                                <strong>Email:</strong> info@tailifestyle.co.ke<br/>
+                                <strong>Phone </strong>:+254 798777666<br/><br/>
+                                <strong>Email</strong> <br/>info@tailifestyle.co.ke<br/>
+                                <strong> Alternative phone <br/></strong>+254 798777999
                             </p>
                         </div>
                         <div className="col-lg-3 col-md-6 footer-links">

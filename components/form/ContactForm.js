@@ -69,13 +69,16 @@ const ContactForm = ({authorEmail, label}) => {
                 <h4>Mombasa Branch</h4>
                 <p>Off Nkrumah Road,
                     Third Floor, Taiyebi House,
-                    opposite NSSF Building.
+                    opposite NSSF Building. <br/>+254 798777444
                 </p>
+
             </div>
             <div className="address">
                 <i className="bi bi-geo-alt"/>
                 <h4>Nairobi Branch</h4>
-                <p>Westlands, woodvale Avenue</p>
+                <p>Westlands, woodvale Avenue <br/>
+                    +254 798777666
+                </p>
             </div>
 
             <div className="email">
@@ -86,12 +89,9 @@ const ContactForm = ({authorEmail, label}) => {
 
             <div className="phone">
                 <i className="bi bi-phone"/>
-                <h4>Call:</h4>
+                <h4>Alternative :</h4>
                 <p>
-                    +254 723422747 <br/>
-                    +254 702356422 <br/>
-                    +254 726784411 <br/>
-                    +254 702685522
+                    +254 798777999 <br/>
                 </p>
             </div>
             <div className="d-flex justify-content-between">
