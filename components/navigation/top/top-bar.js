@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './topbar.module.css'
 
 const TopBar = ({scrolled}) => {
-    let barClasses = [`d-flex align-items-center fixed-top`];
+    let barClasses = [`d-flex align-items-center  fixed-top`];
     if (scrolled) {
         barClasses.push('scrolled')
     }
