@@ -12,7 +12,7 @@ const TopBar = ({scrolled}) => {
             <div className="container d-flex align-items-center  justify-content-md-between">
                 <div className="align-items-center d-flex mx-4">
                     <i className="bi bi-clock"/>
-                    <span style={{fontSize:'13px'}}>Monday - Sunday, 7AM to 10PM</span>
+                    <span style={{fontSize:'13px'}}>Daily, 7AM to 10PM</span>
                 </div>
                 <div className={`${classes.link}`}>
                     <a className="bi-envelope-open-fill"
