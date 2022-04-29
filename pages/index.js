@@ -5,7 +5,6 @@ import {useRouter} from "next/router";
 import About from "../components/home/about";
 import Cta from "../components/home/cta";
 import dynamic from 'next/dynamic'
-
 const Layout  = dynamic(() => import('../components/layout'))
 const Featured   = dynamic(() => import('../components/home/featured'))
 const RecentBlogs  = dynamic(() => import('../components/home/recent-blogs'))
