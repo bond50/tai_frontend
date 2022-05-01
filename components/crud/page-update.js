@@ -19,15 +19,17 @@ const Page = () => {
     const [isFeatured, setIsFeatured] = useState(false); // switch
 
 
+
     const [values, setValues] = useState({
         title: '',
         error: '',
+        icon:'',
         success: '',
         formData: process.browser && new FormData(),
         loading: false
     });
 
-    const {error, success,loading, formData, title} = values;
+    const {error, success,loading,icon, formData, title} = values;
     const token = getCookie('token');
     const router = useRouter()
 
@@ -45,7 +47,7 @@ const Page = () => {
                 if (data.error) {
                     console.log(data.error);
                 } else {
-                    setValues({...values, title: data.title});
+                    setValues({...values, title: data.title,icon:data.icon});
                     setBody(data.body);
                     setCategoriesArray(data.categories);
                     setIsAccepted(data.accepted)
@@ -210,7 +212,9 @@ const Page = () => {
                 </div>
 
                 <CreateForm
-                    handleChange={handleChange('title')}
+                    handleChange={handleChange}
+                    iconValue={icon}
+                    updating
                     handleBody={handleBody}
                     bodyValue={body}
                      btnCapture={loading ? <>

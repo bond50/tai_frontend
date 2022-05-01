@@ -261,7 +261,7 @@ const BlogUpdate = () => {
                 </div>
 
                 <CreateForm
-                    handleChange={handleChange('title')}
+                    handleChange={handleChange}
                     handleBody={handleBody}
                     bodyValue={body}
                     btnCapture={'Update'}

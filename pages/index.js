@@ -4,7 +4,6 @@ import Head from "next/head";
 import {useRouter} from "next/router";
 import About from "../components/home/about";
 import Cta from "../components/home/cta";
-import dynamic from 'next/dynamic'
 import Layout from  '../components/layout'
 import Featured from "../components/home/featured";
 import RecentBlogs from "../components/home/recent-blogs";

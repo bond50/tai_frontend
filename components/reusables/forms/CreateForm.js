@@ -4,7 +4,7 @@ import {QuillFormats, QuillModules} from '/..../../helpers/quill';
 
 const ReactQuill = dynamic(() => import('react-quill'), {ssr: false});
 
-const CreateForm = ({onSubmit, btnCapture, handleChange, handleBody, bodyValue, titleValue}) => {
+const CreateForm = ({onSubmit, btnCapture,iconValue, updating, handleChange, handleBody, bodyValue, titleValue}) => {
     const form = () => {
         return (
             <form onSubmit={onSubmit}>
@@ -12,10 +12,22 @@ const CreateForm = ({onSubmit, btnCapture, handleChange, handleBody, bodyValue, 
                     <label className="text-muted">Title</label>
                     <input
                         type="text"
+                        name='title'
                         className="form-control"
                         value={titleValue}
-                        onChange={handleChange}/>
+                        onChange={handleChange('title')}/>
                 </div>
+                {updating && <div className="form-group mb-3">
+                    <label className="text-muted">Icon from boxicons </label>
+                    <input
+                        type="text"
+                        placeholder='e.g bx bx-user'
+                        name='icon'
+                        className="form-control"
+                        value={iconValue}
+                        onChange={handleChange('icon')}/>
+                </div>
+                }
 
                 <div className="form-group mb-3">
                     <ReactQuill

@@ -23,7 +23,7 @@ const CreateBlog = () => {
         <div className='row'>
             <div className="col-md-8">
                 <CreateForm
-                    handleChange={handleChange('title')}
+                    handleChange={handleChange}
                     handleBody={handleBody}
                     bodyValue={body}
                     btnCapture={'Publish'}
