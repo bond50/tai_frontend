@@ -3,6 +3,7 @@ import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
 import Vision from "../../components/about/vision";
+import Layout from "../../components/layout";
 
 const Vis = () => {
 
@@ -16,7 +17,7 @@ const Vis = () => {
                 content={`Be, and be recognized as, the best services company in the world`}
             />
 
-             <meta name="keywords"
+            <meta name="keywords"
                   content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com, vision , vision statement"/>
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
@@ -47,8 +48,9 @@ const Vis = () => {
     return (
         <>
             {head()}
-            <Vision/>
-        </>
+            <Layout simple title='Vision'>
+                <Vision/>
+            </Layout></>
     );
 };
 

@@ -1,10 +1,9 @@
 import React from 'react';
-import Layout from "../components/layout";
 import Link from "next/link";
 
 const PageWrapper = ({title, children, sideList, sidebarTitle}) => {
     return (
-        <Layout simple title={title}>
+
             <div className="container">
                 <div id='service'>
                     <div className="wrapper">
@@ -26,7 +25,7 @@ const PageWrapper = ({title, children, sideList, sidebarTitle}) => {
                     </div>
                 </div>
             </div>
-        </Layout>
+
     );
 };
 

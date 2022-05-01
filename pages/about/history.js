@@ -3,6 +3,7 @@ import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
 import History from '../../components/about/history'
+import Layout from "../../components/layout";
 
 
 const Hist = () => {
@@ -17,7 +18,7 @@ const Hist = () => {
             />
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
-             <meta name="keywords"
+            <meta name="keywords"
                   content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com, history , about , about us about tai , about tai lifestyle, about tai lifestyle limited, tai lifestyle limited history"/>
 
 
@@ -47,8 +48,12 @@ const Hist = () => {
     return (
         <>
             {head()}
-            <History/>
+            <Layout simple title='History'>
+                <History/>
+            </Layout>
+
         </>
+
 
     );
 };

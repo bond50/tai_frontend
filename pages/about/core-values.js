@@ -3,6 +3,7 @@ import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
 import CoreValues from '../../components/about/core-values'
+import Layout from "../../components/layout";
 
 
 const Values = () => {
@@ -47,7 +48,10 @@ const Values = () => {
     return (
         <>
             {head()}
-            <CoreValues/>
+            <Layout simple title='Core-values'>
+                     <CoreValues/>
+            </Layout>
+
         </>
 
     )

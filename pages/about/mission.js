@@ -3,6 +3,7 @@ import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
 import Mission from "../../components/about/mission";
+import Layout from "../../components/layout";
 
 const Miss = () => {
     const router = useRouter()
@@ -41,9 +42,12 @@ const Miss = () => {
 
 
     return (
+
         <>
             {head()}
-            <Mission/>
+            <Layout simple title='Mission'>
+                <Mission/>
+            </Layout>
         </>
     );
 };
