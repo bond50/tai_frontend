@@ -2,8 +2,7 @@ import React from 'react';
 import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
-import dynamic from 'next/dynamic'
-const  History  = dynamic(() => import('../../components/about/history'))
+import History from '../../components/about/history'
 
 
 const Hist = () => {

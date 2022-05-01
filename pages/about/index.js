@@ -5,9 +5,7 @@ import React from "react";
 import {useRouter} from "next/router";
 
 
-import dynamic from 'next/dynamic'
-
-const Layout  = dynamic(() => import('../../components/layout'))
+import Layout from "../../components/layout";
 
 const Index = () => {
     const router = useRouter()

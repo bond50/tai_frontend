@@ -2,9 +2,7 @@ import React from 'react';
 import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
-import dynamic from 'next/dynamic'
-
-const Vision = dynamic(() => import('../../components/about/vision'))
+import Vision from "../../components/about/vision";
 
 const Vis = () => {
 

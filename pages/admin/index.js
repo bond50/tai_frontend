@@ -4,7 +4,7 @@ import Admin from "../../components/auth/Admin";
 import dynamic from 'next/dynamic'
 
 
-const Layout = dynamic(() => import('../../hoc/admin/layout/layout'))
+import Layout from "../../hoc/admin/layout/layout";
 
 
 const Index = () => {

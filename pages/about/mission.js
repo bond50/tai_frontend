@@ -2,9 +2,7 @@ import React from 'react';
 import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
-import dynamic from 'next/dynamic'
-
-const Mission = dynamic(() => import('../../components/about/mission'))
+import Mission from "../../components/about/mission";
 
 const Miss = () => {
     const router = useRouter()

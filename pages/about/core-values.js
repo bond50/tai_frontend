@@ -2,9 +2,7 @@ import React from 'react';
 import {useRouter} from "next/router";
 import Head from "next/head";
 import {APP_NAME, DOMAIN} from "../../config";
-import dynamic from 'next/dynamic'
-
-const CoreValues = dynamic(() => import('../../components/about/core-values'))
+import CoreValues from '../../components/about/core-values'
 
 
 const Values = () => {
