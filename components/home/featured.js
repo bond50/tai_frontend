@@ -24,7 +24,7 @@ const Featured = () => {
                                          <a>{d.title}</a>
                                     </Link>
                                 </h3>
-                                {renderHTML(trim(d.excerpt,100))}
+                                {renderHTML(trim(d.excerpt,250))}
                             </div>
                         </div>
                     })}
