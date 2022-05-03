@@ -10,9 +10,8 @@ const Logo = ({clicked}) => {
             <Link href={`/user`}>
                 <a className={classes.Link}>
                     <Image src={`/tai.png`} alt="logo" width={298} height={165}/>
-                     {isAuth() &&<span
-                        className="d-none d-lg-block mx-1">
-
+                    {isAuth() &&
+                    <span className="d-none d-lg-block mx-1">
                         {`${isAuth().username.toUpperCase()}'s Dashboard`}
                     </span>}
                 </a>

@@ -19,7 +19,7 @@ const Index = () => {
                 name="description"
                 content={`${APP_NAME} is a private liability company, registered and incorporated under the company act, 2015 cap 486 of the laws of Kenya.`}
             />
-              <meta name="keywords" content="Tai, Tai lifestyle ,Tai lifestyle Limited, tailifestyle.com"/>
+              <meta name="keywords" content="Tai, Tai lifestyle ,Tai lifestyle Limited, tailifestyle.com ,asbestos, asbestos handling construction, "/>
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
             <meta name="robots" content="max-image-preview:large"/>

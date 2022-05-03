@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link'
 import classes from '../styles/AltHero.module.css'
-import Image from "./reusables/lazy/Image";
+import Image from "next/image";
 
 const AltHero = () => {
     return (
@@ -10,8 +10,10 @@ const AltHero = () => {
                 src={'/hero2.jpg'}
                 layout="fill"
                 alt={'hero'}
+                priority={true}
                 className='img-fluid'
                 objectFit="cover"
+
             />
             <div className={`container   ${classes.container}`} data-aos="zoom-out" data-aos-delay="100">
                 <h1>Tai Lifestyle Limited</h1>
