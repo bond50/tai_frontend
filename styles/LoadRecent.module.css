@@ -1,0 +1,37 @@
+
+.Item {
+    display: flex;
+    margin-top: 15px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+}
+
+
+.Recent h4 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.Recent h4:first-letter {
+    text-transform: capitalize;
+}
+
+.Recent h4 a {
+    color: #556270;
+    transition: 0.3s;
+}
+
+.Recent h4 a:hover {
+    color: #d9232d;
+}
+
+.Time {
+    display: block;
+    font-style: italic;
+    font-size: 14px;
+    color: #aaaaaa;
+}

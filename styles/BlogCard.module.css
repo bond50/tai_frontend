@@ -1,0 +1,169 @@
+.Entry {
+    padding:  30px;
+    margin-bottom: 60px;
+    color: #111111;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.Image {
+    max-height: 440px;
+    margin: -30px -30px 20px -30px;
+    overflow: hidden;
+}
+
+.Image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.Title {
+    font-size: 28px;
+    text-transform: capitalize !important;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.Title a {
+    color: #294a70;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    text-transform: capitalize;
+}
+
+
+.Meta {
+    margin-bottom: 15px;
+
+}
+
+.Meta ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.Meta ul li + li {
+    padding-left: 20px;
+}
+
+.Meta i {
+    font-size: 16px;
+    margin-right: 8px;
+    color: #111111;
+    line-height: 0;
+}
+
+.Meta a {
+    font-size: 14px;
+    display: inline-block;
+    line-height: 1;
+}
+
+.Meta span {
+    font-size: 14px;
+    color: #111111;
+    display: inline-block;
+    line-height: 1;
+}
+
+
+.Content p, .Content ul li {
+    line-height: 26px;
+}
+
+
+.Content h3 {
+    font-size: 22px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.Content img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.Content blockquote {
+    overflow: hidden;
+    background-color: #e9fbe9;
+    padding: 20px;
+    position: relative;
+    /*margin: 20px 0;*/
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.Content blockquote::after {
+    height: 100%;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #f03c02;
+    margin-bottom: 10px;
+}
+
+.Footer {
+    padding-top: 10px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.Footer i {
+    color: #5e5e5e;
+    display: inline;
+}
+
+.Footer a {
+    color: #1e1e1e;
+    transition: 0.3s;
+}
+
+.Footer a:hover {
+    color: #bb3003;
+}
+
+.Cats {
+    list-style: none;
+    display: inline;
+    padding: 0 20px 0 0;
+    font-size: 14px;
+}
+
+.Cats li {
+    display: inline-block;
+}
+
+.Tags {
+    list-style: none;
+    display: inline;
+    padding: 0;
+    font-size: 14px;
+}
+
+.Tags li {
+    display: inline-block;
+}
+
+.Tags li + li::before {
+    padding-right: 6px;
+    color: #6c757d;
+    content: ",";
+}
+
+.Cats li + li::before {
+    padding-right: 6px;
+    color: #6c757d;
+    content: ",";
+}

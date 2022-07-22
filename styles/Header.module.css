@@ -1,0 +1,6 @@
+.Header {
+    background: #fff;
+    transition: all 0.6s;
+    z-index: 500;
+    padding: 20px 0;
+}

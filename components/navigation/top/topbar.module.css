@@ -1,0 +1,53 @@
+
+.topBar {
+    background: #37517e;
+    height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+    z-index: 996;
+}
+
+.topBar.scrolled {
+    top: -40px;
+}
+
+.topBar .contactInfo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.topBar .contactInfo a {
+    line-height: 1;
+    color: #fff;
+    transition: 0.3s;
+    text-decoration: underline;
+}
+
+
+.topBar .contactInfo i {
+    color: #ffffff;
+    padding-right: 4px;
+    margin-left: 15px;
+    line-height: 0;
+}
+
+
+.topBar span{
+    color: #ffffff;
+}
+
+.topBar .socialLinks a {
+    text-decoration: underline;
+    color: #fff;
+    padding-left: 15px;
+    display: inline-block;
+    line-height: 1px;
+    transition: 0.3s;
+}
+
+
+
+.topBar .socialLinks a:first-child {
+    border-left: 0;
+}

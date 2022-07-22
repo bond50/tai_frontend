@@ -1,0 +1,130 @@
+.Hero {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(4, 12, 21, 0.8);
+    /*background: url("/hero1.jpeg") top left;*/
+    background-size: cover;
+    position: relative;
+    z-index: 99;
+
+}
+
+
+.Hero:before {
+    content: "";
+    z-index: 5;
+    background-color: rgba(4, 12, 21, 0.5);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.Hero img {
+    width: 100vw;
+    height: auto;
+    z-index: 3;
+
+}
+
+.Hero .container {
+    z-index: 6;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .Hero{
+        margin-bottom: 0;
+    }
+    .Hero .container {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+.Hero h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+
+.Hero h2 {
+    font-family: "Open Sans", Arial, serif;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 300;
+
+
+}
+
+@media (min-width: 1200px) {
+    .Hero h2 {
+        width: 50%;
+    }
+}
+
+.Hero .btnStart {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 4px;
+    transition: 0.5s;
+    line-height: 1;
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    background: #ed502e;
+    margin-top: 15px;
+}
+
+.Hero .btnStart:hover {
+    background: #ef6445;
+}
+
+
+@media (min-width: 1024px) {
+    .Hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    .Hero {
+        height: 100vh;
+    }
+
+    .Hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .Hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    .Hero .btnStart {
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 500px) {
+    .Hero {
+        height: 120vh;
+    }
+}
