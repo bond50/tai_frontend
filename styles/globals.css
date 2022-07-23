@@ -1075,37 +1075,37 @@ section {
     background-size: cover;
 }
 
-.alt-services .img-bg {
+.alt-services .img-bg,.alt-services1,.img-bg {
     background-size: cover;
     background-position: center center;
     min-height: 400px;
 }
 
-/*.alt-services h3 {*/
-/*    font-size: 28px;*/
-/*    font-weight: 700;*/
-/*    color: var(--color-secondary);*/
-/*    margin-bottom: 20px;*/
-/*    padding-bottom: 20px;*/
-/*    position: relative;*/
-/*}*/
+.alt-services1 h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
 
-/*.alt-services h3:after {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    display: block;*/
-/*    width: 120px;*/
-/*    height: 3px;*/
-/*    background: var(--color-secondary);*/
-/*    left: 0;*/
-/*    bottom: 0;*/
-/*}*/
+.alt-services1 h3:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: var(--color-secondary);
+    left: 0;
+    bottom: 0;
+}
 
-.alt-services .icon-box {
+.alt-services .icon-box,.alt-services1 .icon-box {
     margin-top: 20px;
 }
 
-.alt-services .icon-box i {
+.alt-services .icon-box i,.alt-services1 .icon-box i {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1121,27 +1121,27 @@ section {
     transition: 0.3s;
 }
 
-.alt-services .icon-box:hover i {
+.alt-services .icon-box:hover i,.alt-services1 .icon-box:hover i {
     background-color: #f03c02;
     color: #fff;
 }
 
-.alt-services .icon-box h4 {
+.alt-services .icon-box h4,.alt-services1 .icon-box h4  {
     font-weight: 700;
     margin-bottom: 10px;
     font-size: 18px;
 }
 
-.alt-services .icon-box h4 a {
+.alt-services .icon-box h4 a ,.alt-services1 .icon-box h4 a{
     color: #000;
     transition: 0.3s;
 }
 
-.alt-services .icon-box h4 a:hover {
+.alt-services .icon-box h4 a:hover,.alt-services .icon-box h4 a:hover {
     color: #f03c02;
 }
 
-.alt-services p {
+.alt-services p,.alt-services p {
     line-height: 20px;
     font-size: 14px;
     /*margin-bottom: 0;*/

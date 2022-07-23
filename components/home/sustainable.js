@@ -2,12 +2,10 @@ import React from 'react';
 
 const Sustainable = () => {
     return (
-        <section className="alt-services section-bg">
+        <section className="alt-services1 section-bg">
             <div className="container" data-aos="fade-up">
 
-                <div className="row justify-content-around gy-4">
-
-
+                <div className="row justify-content-around ps-2 ">
                     <div className="col-lg-6 d-flex flex-column justify-content-center">
                         <h3>Partner up with Tai in sustainable construction</h3>
 
@@ -38,7 +36,7 @@ const Sustainable = () => {
                             electrical engineering. Therefore, do not hesitate to contact Tai Lifestyle for
                             aforementioned products and services. </p>
                     </div>
-                    <div className="col-lg-5 img-bg"
+                    <div className="col-lg-5 img-bg "
                          style={{backgroundImage: `url(/con1.jpeg)`}}
                          data-aos="zoom-in" data-aos-delay="100"/>
                 </div>
