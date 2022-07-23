@@ -5,7 +5,7 @@ const Sustainable = () => {
         <section className="alt-services1 section-bg">
             <div className="container" data-aos="fade-up">
 
-                <div className="row justify-content-around ps-2 ">
+                <div className="row justify-content-around ">
                     <div className="col-lg-6 d-flex flex-column justify-content-center">
                         <h3>Partner up with Tai in sustainable construction</h3>
 

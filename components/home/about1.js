@@ -71,13 +71,10 @@ import {APP_NAME} from "../../config";
 
 const About1 = () => {
     return (
-        <section id="about" className="about">
+        <section className="about " >
             <div className="container" data-aos="fade-up">
-
                 <div className="row position-relative">
-
                     <div className="col-lg-5 about-img" style={{backgroundImage: `url(/late.jpg)`}}/>
-
                     <div className="col-lg-10">
                         <h2>Tai Lifestyle LTD</h2>
                         <div className="our-story">

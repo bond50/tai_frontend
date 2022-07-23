@@ -5,7 +5,7 @@ import Image from "../reusables/lazy/Image";
 const About = () => {
 
     return (
-        <section  className="alt-services ">
+        <section  className="alt-services pt-0 ">
             <div className="container" data-aos="fade-up">
                 <div className="section-title">
                     <h3>Summery about <span>Tai Limited</span></h3>

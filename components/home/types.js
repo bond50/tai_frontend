@@ -2,7 +2,7 @@ import React from 'react';
 
 const Types = () => {
     return (
-        <section className="alt-services1 section-bg ps-2">
+        <section className="alt-services1 section-bg ">
             <div className="container" data-aos="fade-up">
 
                 <div className="row justify-content-around gy-4">
