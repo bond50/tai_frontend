@@ -79,7 +79,6 @@ const SingleBlog = ({blog, query}) => {
                         <div className="row mt-5">
                             <div className='col-lg-8 col-sm-12'>
                                 {showBlog()}
-
                             </div>
                             <aside className=' col-lg-4 col-sm-12 side'>
                                 <BlogSideBarContent/>
