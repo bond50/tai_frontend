@@ -4,7 +4,7 @@ import Image from "../reusables/lazy/Image";
 
 const Techniques = () => {
     return (
-        <section className='features section-bg'>
+        <section className='features '>
             <div className="container">
                 <div className="row justify-content-around align-items-center gy-4" data-aos="fade-up">
                     <div className="col-md-5 order-1 order-md-2 ">

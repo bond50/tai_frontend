@@ -11,15 +11,16 @@ import {API} from "../../config";
 const Services = ({className}) => {
     const {data, error} = useSWR({url: `/featured-services`, method: 'get'}, fetcher);
     if (error) return <div>failed to load</div>
-    if (!data) return <div id='preloader'/>
+    if (!data) return <div  id='preloader'/>
 
 
     return (
-        <section id="services" className={className}>
+        <section id="services " className={className}>
             <div className="container" data-aos="fade-up">
-                <div className="section-title text-start">
-                    <h3>Featured Services</h3>
+                 <div className="section-title">
+                    <h3>Featured <span>Services</span></h3>
                 </div>
+
                 <div className="row gy-4">
                     {data && data.map((service, i) => (
                         <ServiceCard

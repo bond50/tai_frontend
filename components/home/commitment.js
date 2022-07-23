@@ -8,7 +8,7 @@ const Commitment = () => {
             <div className="container">
                 <div className="row justify-content-around align-items-center gy-4" data-aos="fade-up">
                     <div className="col-md-5 order-1 order-md-2 ">
-                       <Image src='/commit.jpg' className="img-fluid"
+                        <Image src='/commit.jpg' className="img-fluid"
                                alt="ai’s safe sludge disposal techniques" width={1600} height={721}/>
                     </div>
                     <div className="col-md-7 order-2 order-md-1 ">

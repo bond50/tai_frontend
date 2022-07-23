@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sustainable = () => {
     return (
-        <section className="alt-services ">
+        <section className="alt-services section-bg">
             <div className="container" data-aos="fade-up">
 
                 <div className="row justify-content-around gy-4">

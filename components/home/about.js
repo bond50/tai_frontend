@@ -5,24 +5,16 @@ import Image from "../reusables/lazy/Image";
 const About = () => {
 
     return (
-        <section  className="alt-services section-bg">
+        <section  className="alt-services ">
             <div className="container" data-aos="fade-up">
-                {/*<div className="section-title">*/}
-                {/*    <h2>about</h2>*/}
-                {/*    <h3>Who  <span>we are</span></h3>*/}
-                {/*    <p>Tai Lifestyle is well established and time tested company with plenty of experience in*/}
-                {/*        construction and heavy civil engineering works.*/}
-                {/*    </p>*/}
-                {/*</div>*/}
-                <div className="row justify-content-around gy-4">
+                <div className="section-title">
+                    <h3>Summery about <span>Tai Limited</span></h3>
+                </div>
+                <div className="row justify-content-around align-items-center gy-4 ">
                     <div className="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                         <Image src='/hero/image2.jpg' className="img-fluid" alt="Safe Management of hazardous waste emanating" width={1600} height={1200}/>
                     </div>
                      <div className="col-lg-5 d-flex flex-column justify-content-center">
-                        {/*<h3>Summery about Tai Limited</h3>*/}
-                        {/*<p className="fst-italic">*/}
-                        {/*    The following is a brief history about Tai company*/}
-                        {/*</p>*/}
 
                           <div className="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
                             <i className="bx bx-trash flex-shrink-0"/>

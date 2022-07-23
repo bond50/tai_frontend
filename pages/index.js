@@ -62,11 +62,12 @@ const Index = () => {
             {head()}
             <Layout>
                 <About1/>
+
                 <Commitment/>
-                {/*<Cta/>*/}
+                <Cta/>
                 <Concern/>
                 <Team/>
-                {/*<About/>*/}
+                <About/>
                 <Types/>
                 <Featured/>
                 <Prevention/>
