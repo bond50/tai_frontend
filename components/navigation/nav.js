@@ -24,7 +24,7 @@ const Nav = () => {
         return <p>failed to load categories</p>
     }
 
-    if (data) {
+    if (!data) {
         return <div id='preloader'/>
     }
 
