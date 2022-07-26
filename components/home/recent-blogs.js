@@ -5,9 +5,12 @@ import renderHTML from "html-react-parser";
 import Link from "next/link";
 import useSWR from "swr";
 import {fetcher} from "../axios/axios";
-import dayjs from "dayjs";
-import Image from "../reusables/lazy/Image";
 
+import Image from "../reusables/lazy/Image";
+import relativeTime from 'dayjs/plugin/relativeTime'
+import dayjs from "dayjs";
+
+dayjs.extend(relativeTime)
 
 const RecentBlogs = () => {
     const {data: blogs, error} = useSWR({url: `/list-recent-blogs`, method: 'get'}, fetcher);
@@ -21,8 +24,9 @@ const RecentBlogs = () => {
                 </div>
 
                 <div className="row">
-                    {blogs.map((blog,i) => {
-                        return <div className="col-lg-4" key={blog._id} data-aos="fade-up" data-aos-delay={`${i + 100}`}>
+                    {blogs.map((blog, i) => {
+                        return <div className="col-lg-4" key={blog._id} data-aos="fade-up"
+                                    data-aos-delay={`${i + 100}`}>
                             <div className={classes.PostBox}>
                                 <div className={classes.PostImage}>
                                     <Image
@@ -33,7 +37,7 @@ const RecentBlogs = () => {
                                         alt={blog.title}/>
                                 </div>
                                 <span
-                                    className={classes.PostDate}> {dayjs(blog.updatedAt).format("ddd, MMM D, YYYY h:mm A")}</span>
+                                    className={classes.PostDate}> {dayjs(blog.updatedAt).fromNow()}</span>
                                 <h3 className={classes.PostTitle}>{blog.title.toLowerCase()}</h3>
                                 {renderHTML(blog.excerpt.length >= 160 ? `${blog.excerpt.substring(0, 80)}...` : blog.excerpt)}
                                 <Link href={`/blogs/${blog.slug}`}>

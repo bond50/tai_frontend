@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import parse from 'html-react-parser';
 import {API} from '../../config';
-import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime'
+import dayjs from "dayjs";
 import classes from '../../styles/SmallCard.module.css'
 import Image from "next/image";
 import React from "react";
 
+dayjs.extend(relativeTime)
 const SmallCard = ({blog}) => {
     console.log(blog.imgHeight)
 
@@ -43,7 +45,7 @@ const SmallCard = ({blog}) => {
                 </h3>
                 <div className="card-text"> {parse(blog.excerpt)}</div>
                 {blog && <div className={classes.Info}>
-                    Posted on {dayjs(blog.createdAt).format("ddd, MMM D, YYYY h:mm A")}
+                    Updated {dayjs(blog.createdAt).fromNow()}
                     <Link href={`/profile/${blog.postedBy.username}`}>
                         <a className="float-end">{blog.postedBy.username}</a>
                     </Link>
