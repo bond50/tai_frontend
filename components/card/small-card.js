@@ -24,9 +24,8 @@ const SmallCard = ({blog}) => {
                 <a>
                     {blog.imgWidth && blog.imgHeight && <Image
                         loader={myLoader}
-                        style={{maxHeight: '15vw', width: '100%',objectFit:'cover'}}
+                        style={{maxHeight: 'auto', width: '100%'}}
                         className="img-fluid"
-                        layout="responsive"
                         width={blog.imgWidth}
                         height={blog.imgHeight}
                         src={photoLink}
