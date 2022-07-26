@@ -116,7 +116,7 @@
 .section ul li {
     display: flex;
     /*color: #7b829c;*/
-    align-items: start;
+    align-items: flex-start;
     padding: 5px 0;
 }
 
