@@ -1,21 +1,21 @@
 import React from 'react';
-import Link from "next/link";
+import classes from '../../styles/features.module.css'
 import Image from "../reusables/lazy/Image";
 
 const Concern = () => {
     return (
-        <section className='features '>
+        <section className={classes.Features}>
             <div className="container">
                 <div className="row justify-content-around align-items-center gy-4" data-aos="fade-up">
-                    <div className="col-md-5  ">
+                    <div className="col-md-5 " data-aos="fade-right" data-aos-delay="100">
                         <Image
                             width={1920}
                             height={1256}
                             src="/asbestos.png"
-                            className="img-fluid" alt="asbestos"/>
+                            className="img-fluid" alt="Is the use of Asbestos a health concern"/>
                     </div>
-                    <div className="col-md-7  ">
-                        <h3>Is the use of Asbestos a health concern? </h3>
+                    <div className="col-md-7 ">
+                        <h3>Is the<span> use of Asbestos </span>a health concern ? </h3>
                         <p>We are in agreement that presence of Asbestos in the air poses a great risk as well as the
                             environment overtime. For this reason, there is an urgent need to dispose of Asbestos safely
                             and clean our facilities so as to minimize further environmental risks that result from

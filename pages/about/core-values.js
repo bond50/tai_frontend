@@ -48,8 +48,8 @@ const Values = () => {
     return (
         <>
             {head()}
-            <Layout simple title='Core-values'>
-                     <CoreValues/>
+            <Layout breadcrumb breadcrumbHeader2=' Core values' alt={`${APP_NAME} | Core values`}>
+                <CoreValues/>
             </Layout>
 
         </>

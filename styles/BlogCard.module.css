@@ -1,41 +1,30 @@
+
 .Entry {
-    padding:  30px;
-    margin-bottom: 60px;
-    color: #111111;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
 }
 
 .Image {
-    max-height: 440px;
     margin: -30px -30px 20px -30px;
     overflow: hidden;
 }
 
-.Image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
 
 .Title {
     font-size: 28px;
-    text-transform: capitalize !important;
-    font-weight: bold;
+    font-weight: 700;
     padding: 0;
-    margin: 0 0 20px 0;
+    margin: 20px 0 0 0;
+    color: var(--color-secondary);
 }
 
-.Title a {
-    color: #294a70;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    text-transform: capitalize;
+.Title:first-letter {
+    text-transform: capitalize !important;
 }
 
 
 .Meta {
-    margin-bottom: 15px;
-
+    margin-top: 20px;
 }
 
 .Meta ul {
@@ -54,26 +43,24 @@
 .Meta i {
     font-size: 16px;
     margin-right: 8px;
-    color: #111111;
     line-height: 0;
-}
-
-.Meta a {
-    font-size: 14px;
-    display: inline-block;
-    line-height: 1;
+    color: rgba(86, 184, 230, 0.8);
 }
 
 .Meta span {
     font-size: 14px;
-    color: #111111;
     display: inline-block;
     line-height: 1;
 }
 
 
+.Content {
+    margin-top: 20px;
+}
+
 .Content p, .Content ul li {
     line-height: 26px;
+    /*font-family: var(--font-primary);*/
 }
 
 
@@ -83,62 +70,91 @@
     font-weight: bold;
 }
 
-.Content img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
+/*.Content img {*/
+/*    max-width: 100%;*/
+/*    height: auto;*/
+/*    object-fit: cover;*/
+/*}*/
 
 .Content blockquote {
     overflow: hidden;
-    background-color: #e9fbe9;
-    padding: 20px;
+    background-color: rgba(27, 47, 69, 0.06);
+    padding: 60px;
     position: relative;
-    /*margin: 20px 0;*/
-    color: black;
-    line-height: 1.6;
-    margin-bottom: 0;
-    font-weight: 500;
-    font-size: 15px;
+    text-align: center;
+    margin: 20px 0;
 }
 
-.Content blockquote::after {
-    height: 100%;
-    content: '';
+.Content blockquote p {
+    color: var(--color-default);
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.Content blockquote:after {
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     width: 3px;
-    background-color: #f03c02;
-    margin-bottom: 10px;
+    background-color: var(--color-secondary);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
+.Body ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.Body ul li {
+    display: flex;
+    font-size: 15px;
+    align-items: start;
+
+}
+
+.Body ul li:before {
+    content: "\F26A";
+    font-size: 16px;
+    font-family: 'bootstrap-icons';
+    margin-right: 5px;
+    color: #7b829c;
+}
+
+
+
+
 
 .Footer {
     padding-top: 10px;
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid rgba(27, 47, 69, 0.15);
 }
 
 .Footer i {
-    color: #5e5e5e;
+    color: #38618e;
     display: inline;
 }
 
 .Footer a {
-    color: #1e1e1e;
-    transition: 0.3s;
+    color: rgba(27, 47, 69, 0.8);
+  transition: 0.3s;
 }
 
 .Footer a:hover {
-    color: #bb3003;
+    color: var(--color-primary);
 }
 
 .Cats {
-    list-style: none;
-    display: inline;
-    padding: 0 20px 0 0;
-    font-size: 14px;
+     list-style: none;
+  display: inline;
+  padding: 0 20px 0 0;
+  font-size: 14px;
 }
 
 .Cats li {
@@ -147,9 +163,9 @@
 
 .Tags {
     list-style: none;
-    display: inline;
-    padding: 0;
-    font-size: 14px;
+  display: inline;
+  padding: 0;
+  font-size: 14px;;
 }
 
 .Tags li {
@@ -158,7 +174,7 @@
 
 .Tags li + li::before {
     padding-right: 6px;
-    color: #6c757d;
+    color: var(--color-default);
     content: ",";
 }
 

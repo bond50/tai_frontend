@@ -1,14 +1,13 @@
 import React from 'react';
+import classes from '../../styles/AltServices1.module.css'
 
 const Sustainable = () => {
     return (
-        <section className="alt-services1 section-bg">
+        <section className={`${classes.AltServices} section-bg`}>
             <div className="container" data-aos="fade-up">
-
-                <div className="row justify-content-around ">
+                <div className="row justify-content-around">
                     <div className="col-lg-6 d-flex flex-column justify-content-center">
-                        <h3>Partner up with Tai in sustainable construction</h3>
-
+                        <h3 className={classes.Header}>Partner up with Tai in sustainable construction</h3>
                         <p>Tai Lifestyle understands that even large-scale construction is a concoction of smaller
                             projects and that why we acknowledge the importance of effective planning. In this regard,
                             we are actively involved in the environmental impact of a project; it’s funding, scheduling,
@@ -36,7 +35,7 @@ const Sustainable = () => {
                             electrical engineering. Therefore, do not hesitate to contact Tai Lifestyle for
                             aforementioned products and services. </p>
                     </div>
-                    <div className="col-lg-5 img-bg "
+                    <div className= {`col-lg-5 ${classes.ImgBg}`}
                          style={{backgroundImage: `url(/con1.jpeg)`}}
                          data-aos="zoom-in" data-aos-delay="100"/>
                 </div>

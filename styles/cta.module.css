@@ -46,7 +46,7 @@
 }
 
 .cta h3 span {
-    color: #fa4202;;
+    color: var(--color-primary);
 }
 
 .cta p {
@@ -65,13 +65,13 @@
     transition: 0.4s;
     margin: 10px;
     border-radius: 4px;
-    border: 2px solid #f03c02;
-    color: #f03c02;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
     background: #fff;
 }
 
 .Btn:hover {
-    background: #f03c02;
+    background: var(--color-primary);
     color: #fff;
 }
 

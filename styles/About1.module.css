@@ -1,5 +1,71 @@
- .header {
-  font-weight: 700;
-  font-size: 32px;
-  color: #001f8d;
+ .About h2 {
+    font-size: 48px;
+    color: var(--color-secondary);
+    font-weight: 700;
+    font-family: var(--font-secondary);
+    margin: 30px 0;
+}
+
+@media (min-width: 991px) {
+    .About h2 {
+        max-width: 65%;
+        margin: 0 0 40px 0;
+    }
+}
+
+.About .OurStory {
+    padding: 40px;
+    background-color: #f5f6f7;
+
+}
+
+@media (min-width: 991px) {
+    .About .OurStory {
+        padding-right: 35%;
+    }
+}
+
+.About .OurStory h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #838893;
+
+}
+
+.About .OurStory h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+}
+
+.About p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.About .OurStory p:last-child {
+    margin-bottom: 0;
+}
+
+
+.About .AboutImg {
+    min-height: 600px;
+    background-size: cover;
+
+    background-position: center;
+}
+@media (max-width: 768px) {
+      .About{
+        background-color: #f3f5fa;
+    }
+
+}
+@media (min-width: 992px) {
+
+    .About .AboutImg {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }

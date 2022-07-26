@@ -1,20 +1,21 @@
 import React from 'react';
+import classes from '../../styles/AltServices1.module.css'
 
 const Types = () => {
     return (
-        <section className="alt-services1 section-bg ">
+        <section className={`${classes.AltServices} section-bg `}>
             <div className="container" data-aos="fade-up">
 
                 <div className="row justify-content-around gy-4">
                     <div className="col-lg-5 d-flex flex-column justify-content-center">
-                        <h3>The types of Asbestos handled </h3>
+                        <h3 className={classes.Header}>The types of <span>Asbestos handled</span> </h3>
                         <p>
                             At Tai, our workers are trained and competent to handle the six types of asbestos which are
                             legally recognized by the Asbestos Hazard Emergency Response Act of 1986. However, these
                             asbestos fall into two main categories namely:-
                         </p>
-                        <div className="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
-                            <i className="bi bi-easel flex-shrink-0"></i>
+                        <div className={`${classes.IconBox} d-flex position-relative`} data-aos="fade-up" data-aos-delay="100">
+                            <i className="bi bi-easel flex-shrink-0"/>
                             <div>
                                 <h4><a href="" className="stretched-link">Amphibole Asbestos</a></h4>
                                 <p>We are highly experienced in disposing of asbestos fibers that have a jugged,
@@ -23,8 +24,8 @@ const Types = () => {
                         </div>
 
 
-                        <div className="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
-                            <i className="bi bi-brightness-high flex-shrink-0"></i>
+                        <div className={`${classes.IconBox} d-flex position-relative`} data-aos="fade-up" data-aos-delay="200">
+                            <i className="bi bi-brightness-high flex-shrink-0"/>
                             <div>
                                 <h4><a href="" className="stretched-link">Serpentine Asbestos</a></h4>
                                 <p>Also, our company is well-reputed in its professional competence in handling curly

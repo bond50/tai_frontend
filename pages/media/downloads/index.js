@@ -50,7 +50,7 @@ const Downloads = () => {
     return (
         <>
             {head()}
-            <Layout title='Downloads' simple>
+              <Layout breadcrumb breadcrumbHeader2='Downloads' alt={`${APP_NAME} |Downloads`}>
                 <DownloadList files={files}/>
             </Layout>
         </>

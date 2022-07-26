@@ -7,7 +7,7 @@ import classes from '../../styles/BlogCard.module.css'
 import Image from "next/image";
 
 
-const Card = ({blog, single}) => {
+const Card = ({blog}) => {
     const showBlogTags = () =>
         blog.tags.map((t, i) => {
             let tagsLink = `/tags/${t.slug}`
@@ -20,6 +20,7 @@ const Card = ({blog, single}) => {
 
             );
         });
+
     function showCats() {
         return blog.categories.map((c, i) => {
             let catsLink = `/categories/${c.slug}`
@@ -41,56 +42,50 @@ const Card = ({blog, single}) => {
 
     return (
         <article className={classes.Entry}>
-            <Fragment>
-                <div className={classes.Image}>
-                    <Image
-                        loader={myLoader}
-                        className="img-fluid"
-                        width={1200}
-                        height={700}
-                        src={imgSrc}
-                        alt={blog.title}
-                    />
-
-                </div>
-                {/*<h2 className={classes.Title}>*/}
-                {/*    <Link href={single ? '' : `/blogs/${blog.slug}`}>*/}
-                {/*        <a>*/}
-                {/*            {blog.title.toLowerCase()}*/}
-                {/*        </a>*/}
-                {/*    </Link>*/}
-                {/*</h2>*/}
-            </Fragment>
+            <div className={classes.Image}>
+                {blog.imgWidth && blog.imgHeight && <Image
+                    loader={myLoader}
+                    className="img-fluid"
+                    width={blog.imgWidth}
+                    height={blog.imgHeight}
+                    src={imgSrc}
+                    alt={blog.title}
+                />}
+            </div>
+            <h2 className={classes.Title}>
+                {blog.title.toLowerCase()}
+            </h2>
 
             <div className={classes.Meta}>
-                <ul className='mark pt-3 pb-3 '>
-                    <li className="d-flex align-items-center"><i className="bi bi-person"/>
-                        <span className='px-2'> Written by  </span>
-                        <Link href={`/profile/${blog.postedBy.username}`}>
-                            <a> {blog.postedBy.username}</a>
-                        </Link>
+                <ul>
+
+                    <li className="d-flex align-items-center">
+                        <i className="bi bi-person"/>
+                        <span
+                        >{blog.postedBy.username}</span>
                     </li>
+
                     <li className="d-flex align-items-center">
                         <i className="bi bi-calendar"/>
-
-                        <span> {dayjs(blog.updatedAt).format('ddd, MMM D, YYYY h:mm A')}</span>
+                        <span>{dayjs(blog.updatedAt).format('ddd, MMM D, YYYY h:mm A')} </span>
                     </li>
-
                 </ul>
             </div>
             <div className={classes.Content}>
-                {renderHTML(blog.body)}
-                <div className={classes.Footer}>
-                    <i className="bi bi-folder"/>
-                    <ul className={classes.Cats}>
-                        {showCats()}
-                    </ul>
-
-                    <i className="bi bi-tags"/>
-                    <ul className={classes.Tags}>
-                        {showBlogTags()}
-                    </ul>
+                <div className={classes.Body}>
+                    {renderHTML(blog.body)}
                 </div>
+            </div>
+            <div className={classes.Footer}>
+                <i className="bi bi-folder"/>
+                <ul className={classes.Cats}>
+                    {showCats()}
+                </ul>
+
+                <i className="bi bi-tags"/>
+                <ul className={classes.Tags}>
+                    {showBlogTags()}
+                </ul>
             </div>
         </article>
     );

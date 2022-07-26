@@ -1,0 +1,25 @@
+.Accordion {
+    padding: 0 0 20px 0;
+}
+
+.Item {
+    border: none;
+
+}
+
+.AccordionList button {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    outline: none;
+    color: var(--color-secondary);
+    box-shadow: none !important;
+}
+
+.AccordionList span {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 18px;
+    padding-right: 10px;
+}

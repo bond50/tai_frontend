@@ -12,9 +12,7 @@ const ShowTags = ({tags}) => {
             ));
         };
         return (
-
-
-            <ul className={classes.Tags}>
+            <ul className={`${classes.Tags} mt-3`}>
                 {showAllTags()}
             </ul>
 

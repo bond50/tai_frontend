@@ -73,23 +73,30 @@ const SingleBlog = ({blog, query}) => {
     return (
         <>
             {head()}
-            <Layout simple title={blog.title}>
-                <div className="container">
-                    <div id='single-blog'>
-                        <div className="row mt-5">
-                            <div className='col-lg-8 col-sm-12'>
+            <Layout breadcrumb breadcrumbHeader2='Blog Details' alt={`${APP_NAME} | Blog Details`}>
+               <section>
+                    <div className="container" data-aos="fade-up">
+                        <div className="row g-5 ">
+                            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
                                 {showBlog()}
                             </div>
-                            <aside className=' col-lg-4 col-sm-12 side'>
+                            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="400">
                                 <BlogSideBarContent/>
-                            </aside>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <section className='section-bg'>
+                    <div className="container" data-aos="fade-up">
+                        <div className="section-header">
+                            <h2>Related articles</h2>
+                        </div>
+                        <div className="row">
+                            {showRelatedBlog()}
                         </div>
                     </div>
-                    <div className="row">
-                        <h3>Related articles</h3>
-                        {showRelatedBlog()}
-                    </div>
-                </div>
+                </section>
             </Layout>
 
         </>

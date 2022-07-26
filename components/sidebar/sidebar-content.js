@@ -40,13 +40,13 @@ const BlogSideBarContent = () => {
     };
 
 
-    return <>
+    return <div className='ps-lg-4'>
         {items.map((item, index) => {
             return <ShowItem ItemTitle={item.title.toLowerCase()} key={index}>
                 {item.component}
             </ShowItem>
         })}
-    </>
+    </div>
 
 
 };

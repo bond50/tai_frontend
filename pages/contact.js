@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import ContactForm from "../components/form/ContactForm";
 import {useRouter} from "next/router";
 import Head from "next/head";
-import { APP_NAME, DOMAIN} from "../config";
+import {APP_NAME, DOMAIN} from "../config";
 
 
 const ContactUs = () => {
@@ -14,7 +14,8 @@ const ContactUs = () => {
             <title>Contact Us | {APP_NAME}</title>
             <meta name="title" content={`Contact Us | ${APP_NAME}`}/>
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
-            <meta name="keywords" content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com, Contact Us, contact"/>
+            <meta name="keywords"
+                  content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com, Contact Us, contact"/>
             <meta name="description" content="For questions about Tai Lifestyle services, we're ready to help."/>
 
             <meta property="og:title" content={`History | ${APP_NAME}`}/>
@@ -42,7 +43,7 @@ const ContactUs = () => {
 
         <>
             {head()}
-            <Layout simple title='Contact us'>
+            <Layout breadcrumb breadcrumbHeader2=' Contact us' alt={`${APP_NAME} | Contact us`}>
                 <ContactForm/>
             </Layout>
         </>

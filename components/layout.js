@@ -1,34 +1,31 @@
- import React from 'react';
+import React, {Fragment} from 'react';
 import Navigation from "./navigation/navigation";
-
 import dynamic from 'next/dynamic'
 import ScrollTop from "./ScrollTop";
- const Hero  = dynamic(() => import('./hero'))
-const AltHero  = dynamic(() => import('./AltHero'))
-const SimpleHero  = dynamic(() => import('./simple-hero'))
-const Footer  = dynamic(() => import('./footer/footer'))
+import Breadcrumbs from "./reusables/Breadcrumbs";
+const Hero = dynamic(() => import('./hero'))
+const Footer = dynamic(() => import('./footer/footer'))
 
 
+const Layout = ({children, home, alt,header2Class, breadcrumb, breadcrumbHeader2}) => {
 
-const Layout = ({children, noCarousel, simple, title, className}) => {
-
-    let carousel = <Hero/>
-    if (noCarousel) {
-        carousel = null
-    }
-    if (simple) {
-        carousel = <SimpleHero title={title}/>
-    }
     return (
-        <>
+        <Fragment>
             <Navigation/>
-            {carousel}
-            <main className={className ? className : null}>
+            {home && <Hero/>}
+            <main id="main">
+                {breadcrumb &&
+                <Breadcrumbs
+                    alt={alt}
+                    header2={breadcrumbHeader2}
+                    header2Class={header2Class}
+                />
+                }
                 {children}
             </main>
             <Footer/>
             <ScrollTop/>
-        </>
+        </Fragment>
     );
 };
 

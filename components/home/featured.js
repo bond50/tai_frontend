@@ -15,7 +15,7 @@ const Services = ({className}) => {
 
 
     return (
-        <section id="services " className={className}>
+        <section  className={className}>
             <div className="container" data-aos="fade-up">
                  <div className="section-title">
                     <h3>Featured <span>Services</span></h3>

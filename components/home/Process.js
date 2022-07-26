@@ -1,18 +1,19 @@
 import React from 'react';
 import Link from "next/link";
 import Image from "../reusables/lazy/Image";
+import classes from "../../styles/features.module.css";
 
 const Process = () => {
     return (
-        <section className='features section-bg'>
+       <section className={`${classes.Features} section-bg`}>
             <div className="container">
                 <div className="row justify-content-around align-items-center gy-4" data-aos="fade-up">
-                    <div className="col-md-5  ">
+                    <div className="col-md-5  " data-aos="fade-right" data-aos-delay="100">
                         <Image src='/oil.jpg' className="img-fluid"
                                alt="ai’s safe sludge disposal techniques" width={640} height={426}/>
                     </div>
                     <div className="col-md-7  ">
-                        <h3>Tai’s Processes</h3>
+                        <h3><span>Tai’s</span> Processes</h3>
                         <p>Oil and water separation process is done at our separation site after collecting the oil, and
                             then it is dispose off to companies with boiler burners where the treated is thereafter used
                             for cleaning and watering plants. Also, we offer oil-free air boiler solutions suitable for

@@ -60,9 +60,8 @@ const Index = () => {
     return (
         <>
             {head()}
-            <Layout>
+            <Layout home>
                 <About1/>
-
                 <Commitment/>
                 <Cta/>
                 <Concern/>

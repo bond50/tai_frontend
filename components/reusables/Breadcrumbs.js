@@ -1,36 +1,31 @@
 import Breadcrumbs from 'nextjs-breadcrumbs';
-import {useRouter} from 'next/router';
-import React, {useEffect, useState} from "react";
+import React from "react";
+import Image from "next/image";
+import classes from '../../styles/breadcrumb.module.css'
 
 
-const Breadcrumb = () => {
-    // const [breadcrumbs, setBreadcrumbs] = useState('');
-    //
-    // const router = useRouter();
-    //
-    // useEffect(() => {
-    //     if (router) {
-    //
-    //         let linkPath = router.asPath.split('/');
-    //         linkPath.pop()
-    //         linkPath.shift()
-    //
-    //         let last = router.asPath.substring(1).replaceAll(/-/g, ' ')
-    //         if (linkPath.length > 0) {
-    //             last = linkPath[linkPath.length - 1].replace(/-/g, ' ')
-    //         }
-    //         setBreadcrumbs(last);
-    //     }
-    // }, [router]);
+const Breadcrumb = ({header2,alt, header2Class}) => {
 
     return (
-        <section id="breadcrumbs" className='breadcrumbs'>
-                    <ol>
-                        <li>
-                            <Breadcrumbs useDefaultStyle/>
-                        </li>
-                    </ol>
-        </section>
+        <div
+            className={`${classes.breadcrumbs} ${header2Class} d-flex align-items-center text-center`}
+        >
+            <Image
+                src={`/footer.jpg`}
+                layout='fill'
+                objectFit={'cover'}
+                alt={alt}
+                objectPosition='center'
+            />
+            <div className="container position-relative d-flex flex-column align-items-center">
+                <h2>{header2}</h2>
+                <ol>
+                    <li>
+                        <Breadcrumbs useDefaultStyle/>
+                    </li>
+                </ol>
+            </div>
+        </div>
     );
 };
 

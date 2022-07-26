@@ -13,35 +13,31 @@
     font-size: 20px;
     font-family: 'bootstrap-icons';
     margin-right: 8px;
-    color: #f03c02;
+    color: var(--color-primary);
 }
 
 
 .Service ul li {
-
     font-size: 13px;
-    color: #001973;
+    color: var(--color-secondary);
 }
-
-
-
 
 
 .Card {
     border: 1px solid rgba(14, 29, 52, 0.15);
-    background: #fff;
+    background: var(--color-white);
     position: relative;
-    border-radius: 0;
+    border-radius: 2px;
     height: 100%;
 }
 
-.Card .Card-img {
+.Card .CardImg {
     overflow: hidden;
     margin-bottom: 15px;
     border-radius: 0;
 }
 
-.Card .Card-img img {
+.Card .CardImg img {
     transition: 0.3s ease-in-out;
 }
 
@@ -50,7 +46,7 @@
     font-size: 18px;
     margin-bottom: 5px;
     padding: 10px 30px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 
@@ -66,8 +62,6 @@
 
 .Card p {
     padding: 0 30px;
-
-    color: #05579e;
     font-size: 15px;
 }
 

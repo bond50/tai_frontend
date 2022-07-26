@@ -1,18 +1,18 @@
 import React from 'react';
-import Link from "next/link";
+import classes from '../../styles/features.module.css'
 import Image from "../reusables/lazy/Image";
 
 const Commitment = () => {
     return (
-        <section className='features '>
+        <section className={`${classes.Features} pt-0`}>
             <div className="container">
                 <div className="row justify-content-around align-items-center gy-4" data-aos="fade-up">
-                    <div className="col-md-5 order-1 order-md-2 ">
+                    <div className="col-md-5 order-1 order-md-2 " data-aos="fade-left" data-aos-delay="100">
                         <Image src='/commit.jpg' className="img-fluid"
                                alt="ai’s safe sludge disposal techniques" width={1600} height={721}/>
                     </div>
                     <div className="col-md-7 order-2 order-md-1 ">
-                        <h3>Tai’s commitment to a sustainable future </h3>
+                        <h3>Tai’s commitment <span>  to a sustainable</span> future</h3>
                         <p>
                             Generally, Asbestos disposal entails the removal of old hazardous roofing sheets; and then
                             wrapping them with the recommended polythene tapes and bags in readiness for transportation

@@ -1,6 +1,7 @@
 import React from "react";
 import Accordion from 'react-bootstrap/Accordion'
 import PageWrapper from "../../hoc/page-wrapper";
+import classes from '../../styles/values.module.css'
 
 const CoreValues = () => {
     const values = [
@@ -35,29 +36,28 @@ const CoreValues = () => {
     ]
 
     const list = [
-        {to:"/about/mission", title:"Mission"},
-        {to:"/about/vision", title:"Vision"},
-        {to:"/about/history", title:"History"},
+        {slug: "mission", title: "Mission"},
+        {slug: "vision", title: "Vision"},
+        {slug: "history", title: "History"},
     ]
 
-    return <PageWrapper title='Core values'  sidebarTitle='Related' sideList={list}>
-        <div className="values">
-            <div className="accordion-list">
-                {values && values.map((item, i) => {
-                    return (
-                        <Accordion defaultActiveKey='0' key={i}>
-                            <Accordion.Item eventKey={i.toString()}>
-                                <Accordion.Header>
-                                    <span>{`0${i + 1}`}</span>{item.title.toLowerCase()}
-                                </Accordion.Header>
-                                <Accordion.Body>
-                                    {item.content}
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    );
-                })}
-            </div>
+    return <PageWrapper
+        title='Core values' sidebarTitle='Related' sideList={list} className='section-bg' to={'about'}>
+        <div className={`accordion-list ${classes.AccordionList}`}>
+            {values && values.map((item, i) => {
+                return (
+                    <Accordion defaultActiveKey='0' key={i} className={classes.Accordion}>
+                        <Accordion.Item eventKey={i.toString()} className={classes.Item}>
+                            <Accordion.Header>
+                                <span>{`0${i + 1}`}</span>{item.title.toLowerCase()}
+                            </Accordion.Header>
+                            <Accordion.Body>
+                                {item.content}
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                );
+            })}
         </div>
 
 

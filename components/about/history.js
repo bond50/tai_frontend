@@ -3,12 +3,12 @@ import PageWrapper from "../../hoc/page-wrapper";
 
 const History = () => {
         const list = [
-        {to:"/about/mission", title:"Mission"},
-        {to:"/about/vision", title:"Vision"},
-        {to:"/about/core-values", title:"Core values"},
+        {slug:"mission", title:"Mission"},
+        {slug:"vision", title:"Vision"},
+        {slug:"core-values", title:"Core values"},
     ]
     return (
-        <PageWrapper title='History' sidebarTitle='Related' sideList={list}>
+        <PageWrapper title='History' sidebarTitle='Related' sideList={list} to={'about'}>
             <p>
                 Tai Lifestyle Limited is a private liability company, registered and incorporated under
                 the

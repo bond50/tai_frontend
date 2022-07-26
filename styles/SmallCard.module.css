@@ -8,32 +8,31 @@
 
 .Card p {
     line-height: 26px;
-    color: #111;
+    /*color: var(--color-black);*/
 }
 
-.Card h5 a {
-    font-weight: 700;
-    font-family: "Open Sans", Arial, serif;
+.Card h3 a {
+    font-weight: 500;
+    font-size: 20px;
     text-transform: capitalize;
     margin-bottom: 5px;
-    color: #0082ba;
+    color: var(--color-secondary);
 }
 
-.Card h5 a:hover {
-    color: #0366d6;
+.Card h3 a:hover {
+    color: var(--color-primary);
 }
 
 .Info {
     font-weight: 400;
-    color: #847872;
+    font-size: 15px;
+    color: var(--color-default);
 }
 
 .Info a {
-    color: #0082ba;
+    color:var(--color-secondary);
 }
 
 .Info a:hover {
-    color: #2CC73E;
+    color: var(--color-primary);
 }
-
-

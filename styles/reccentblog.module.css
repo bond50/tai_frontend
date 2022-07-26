@@ -1,0 +1,66 @@
+.PostBox {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 10px 40px 10px;
+    background: #fff;
+    Box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.PostImage {
+    overflow: hidden;
+    margin: -30px -30px 15px -30px;
+    position: relative;
+}
+
+.PostImage img {
+    transition: 0.5s;
+    width: 100%; /* or max-width: 100%; */
+    height: auto;
+
+}
+
+.PostDate {
+    font-size: 14px;
+    font-weight: 600;
+    color: #999999;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.PostTitle {
+    font-size: 18px;
+    color: #444444;
+    font-weight: 700;
+    margin-bottom: 9px;
+    text-transform: capitalize;
+    position: relative;
+    transition: 0.3s;
+}
+
+.Btn {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    line-height: 1;
+    color: #05579e;
+    transition: 0.3s;
+}
+
+.Btn i {
+    line-height: 0;
+    margin-left: 4px;
+    font-size: 16px;
+    color: #05579e;
+}
+
+.PostBox:hover .PostImage {
+    color: #05579e;
+}
+
+.PostBox:hover .PostImage img {
+    transform: rotate(6deg) scale(1.2);
+}

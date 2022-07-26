@@ -1,0 +1,70 @@
+.ImgBg {
+    background-size: cover;
+    background-position: center center;
+    min-height: 400px;
+}
+
+.Header {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.Header:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 3px;
+    background: var(--color-primary);
+    left: 0;
+    bottom: 0;
+}
+
+.AltServices .IconBox {
+    margin-top: 20px;
+}
+
+.IconBox i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    margin-right: 25px;
+    font-size: 28px;
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    line-height: 0;
+    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.08);
+    background-color: var(--color-white);
+    transition: 0.3s;
+}
+
+.IconBox:hover i {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.IconBox h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.IconBox h4 a {
+    color: #000;
+    transition: 0.3s;
+}
+
+.IconBox h4 a:hover {
+    color: var(--color-primary);
+}
+
+.AltServices p {
+    /*line-height: 20px;*/
+    margin-bottom: 14px;
+}

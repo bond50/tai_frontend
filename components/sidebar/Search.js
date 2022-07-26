@@ -45,12 +45,15 @@ const Search = () => {
     };
 
     const searchForm = () => (
-        <form className={classes.Form} onSubmit={searchSubmit}>
+        <form className={`${classes.Form} mt-3`} onSubmit={searchSubmit} >
             <input placeholder="Search here" type="search" onChange={handleChange}/>
             <button
                 type="submit"
                 className={classes.Button}>
                 <i className={`bi bi-search`}/>
+                <span>
+                    search
+                </span>
             </button>
         </form>
     );

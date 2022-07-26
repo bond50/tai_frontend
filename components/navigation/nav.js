@@ -4,10 +4,11 @@ import useToggle from "../../hooks/useToggle";
 import useSWR from "swr";
 import {fetcher} from "../axios/axios";
 import SingleDropdown from "./single-dropdown";
-import {API, BLOG_DOMAIN} from "../../config";
 import {useRouter} from "next/router";
 import About from "./about";
 import Media from "./media";
+import Loader2 from "../loaders/loader2";
+
 
 const Nav = () => {
     const router = useRouter()
@@ -25,12 +26,14 @@ const Nav = () => {
     }
 
     if (!data) {
-        return <div id='preloader'/>
+        return <Loader2/>
     }
 
 
     const showLinks = data.map(link => (
-        <SingleDropdown caption={link.name} slug={link.slug} key={link._id}/>
+        <SingleDropdown
+            key={link._id} info={link}
+            closeNav={toggleClosed}/>
     ))
 
 
@@ -44,7 +47,7 @@ const Nav = () => {
                 <Item to={`/blogs`} active={router.pathname === "/blogs"} clicked={toggleClosed}>Our Blog</Item>
                 <Media clicked={toggleClosed}/>
                 <Item to={`/contact`} active={router.pathname === "/contact"} clicked={toggleClosed}>Contact</Item>
-                <Item to={`/`} clicked={toggleClosed} className='getstarted'>Get Started</Item>
+                <Item to={`/#about`} clicked={toggleClosed} className='getstarted'>Get Started</Item>
             </ul>
             <i className={`bi bi-${open ? "x" : 'list'} mobile-nav-toggle`} onClick={toggleClosed}/>
         </nav>

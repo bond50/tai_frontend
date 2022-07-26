@@ -5,7 +5,7 @@
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: #f03c02;
+    background: var(--color-primary);
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -19,7 +19,7 @@
 }
 
 .backTop:hover {
-    background: #bb3003;
+    background: var(--color-primary);
     color: #fff;
 }
 

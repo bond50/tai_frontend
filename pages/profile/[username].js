@@ -56,7 +56,7 @@ const Userprofile = ({user, blogs, query}) => {
     return (
         <>
             {head()}
-            <Layout simple title={user.name}>
+              <Layout breadcrumb breadcrumbHeader2={user.name} alt={`${APP_NAME} | ${user.name}`}>
                 <section>
                     <div className="container">
                         <div className="row">

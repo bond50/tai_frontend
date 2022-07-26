@@ -48,7 +48,7 @@ const Vis = () => {
     return (
         <>
             {head()}
-            <Layout simple title='Vision'>
+            <Layout breadcrumb breadcrumbHeader2='Vision' alt={`${APP_NAME} |Vision`}>
                 <Vision/>
             </Layout></>
     );

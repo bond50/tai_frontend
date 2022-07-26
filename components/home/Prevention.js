@@ -1,19 +1,21 @@
 import React from 'react';
-import Link from "next/link";
+import classes from '../../styles/features.module.css'
 import Image from "../reusables/lazy/Image";
 
 const Concern = () => {
     return (
-        <section className='features section-bg'>
+        <section className={`${classes.Features} section-bg`}>
             <div className="container">
                 <div className="row justify-content-around align-items-center gy-4" data-aos="fade-up">
-                    <div className="col-md-5  ">
+                    <div className="col-md-5" data-aos="fade-right" data-aos-delay="100">
                         <Image src='/pevent.jpg' className="img-fluid"
-                               alt="Prevention of Asbestos Exposure and Effects" width={640} height={427}/>
+                               alt="Prevention of Asbestos Exposure and Effects"
+                               width={640}
+                               height={427}/>
 
                     </div>
-                    <div className="col-md-7  ">
-                        <h3>Prevention of Asbestos Exposure and Effects</h3>
+                    <div className="col-md-7 ">
+                        <h3>Prevention of<span> Asbestos Exposure </span> and Effects</h3>
                         <p>Truth is, Asbestos fibers can easily be inhaled, get trapped in the lungs and eventually
                             leading to fibrotic lung cancer or Asbestosis. Additionally, asbestos exposure increases the
                             risk of Mesothelioma, and heart complications where the heart is enlarged as a result of
@@ -27,7 +29,7 @@ const Concern = () => {
                         </p>
 
                         <h4> Our Asbestos Services Include:</h4>
-                        <ul>
+                        <ul className={classes.List}>
                             <li>Asbestos monitoring</li>
                             <li>Asbestos surveys</li>
                             <li>Asbestos management and disposal</li>

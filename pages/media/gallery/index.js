@@ -67,7 +67,7 @@ const GalleryIndex = () => {
     return (
         <>
             {head()}
-            <Layout noCarousel>
+              <Layout>
                 <Gallery
                     data={data}/>
             </Layout>

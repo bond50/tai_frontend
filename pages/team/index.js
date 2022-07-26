@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import Team from "../../components/team";
 import useSWR from "swr";
 import {fetcher} from "../../components/axios/axios";
+import {APP_NAME} from "../../config";
 
 
 const Index = () => {
@@ -11,7 +12,7 @@ const Index = () => {
     if (!data) return <div id='preloader'/>
     return (
         <>
-            <Layout simple title='Our team'>
+           <Layout breadcrumb breadcrumbHeader2=' Team members' alt={`${APP_NAME} | Team members`}>
                 <Team members={data}/>
             </Layout>
         </>

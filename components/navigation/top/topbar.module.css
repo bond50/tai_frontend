@@ -11,12 +11,6 @@
     top: -40px;
 }
 
-.topBar .contactInfo{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
 .topBar .contactInfo a {
     line-height: 1;
     color: #fff;

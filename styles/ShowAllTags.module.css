@@ -3,8 +3,8 @@
 }
 
 .Tags ul {
-    list-style: none;
-    padding: 0;
+   list-style: none;
+  padding: 0;
 }
 
 .Tags li {
@@ -12,24 +12,25 @@
 }
 
 .Tags a {
-    color: #515151;
-    text-transform: uppercase;
-    font-size: 14px;
-    padding: 6px 14px;
-    margin: 0 6px 8px 0;
-    border: 1px solid #c4c4c4;
-    display: inline-block;
-    transition: 0.3s;
+   color: #38618e;
+  font-size: 14px;
+  padding: 6px 14px;
+  margin: 0 6px 8px 0;
+  border: 1px solid rgba(27, 47, 69, 0.15);
+  display: inline-block;
+  border-radius: 50px;
+  transition: 0.3s;
 }
 
 .Tags a:hover {
     color: #fff;
-    border: 1px solid #2CC73E;
-    background: #2CC73E;
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
 }
 
 .Tags a span {
     padding-left: 5px;
-    color: #aaaaaa;
-    font-size: 14px;
+  color: rgba(27, 47, 69, 0.8);
+  font-size: 14px;
 }
+

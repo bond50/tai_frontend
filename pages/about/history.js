@@ -48,7 +48,7 @@ const Hist = () => {
     return (
         <>
             {head()}
-            <Layout simple title='History'>
+           <Layout breadcrumb breadcrumbHeader2=' History' alt={`${APP_NAME} | History`}>
                 <History/>
             </Layout>
 

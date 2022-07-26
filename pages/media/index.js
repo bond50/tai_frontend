@@ -45,7 +45,7 @@ const Index = () => {
     return (
         <>
             {head()}
-            <Layout simple title='Useful media links'>
+            <Layout breadcrumb breadcrumbHeader2=' Useful media links' alt={`${APP_NAME} | Useful media links`}>
                 <section>
                     <div className="container page-intro">
                         <h4>Useful Media Links</h4>

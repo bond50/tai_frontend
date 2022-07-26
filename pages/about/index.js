@@ -12,12 +12,12 @@ const Index = () => {
 
     const head = () => (
         <Head>
-            <title>About  | {APP_NAME}</title>
+            <title>About | {APP_NAME}</title>
             <meta
                 name="description"
                 content={`Tai Lifestyle Limited is a private liability company, registered and incorporated under the company act, 2015 cap 486 of the laws of Kenya`}
             />
-             <meta name="keywords"
+            <meta name="keywords"
                   content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com, core-values,history, vision, mission"/>
 
 
@@ -50,7 +50,7 @@ const Index = () => {
     return (
         <>
             {head()}
-            <Layout simple title='About'>
+            <Layout breadcrumb breadcrumbHeader2=' About' alt={`${APP_NAME} | About`}>
                 <section>
                     <div className="container page-intro">
                         <h4>Links</h4>

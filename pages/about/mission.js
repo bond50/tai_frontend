@@ -45,7 +45,7 @@ const Miss = () => {
 
         <>
             {head()}
-            <Layout simple title='Mission'>
+           <Layout breadcrumb breadcrumbHeader2='Mission' alt={`${APP_NAME} |Mission`}>
                 <Mission/>
             </Layout>
         </>

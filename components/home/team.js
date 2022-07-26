@@ -1,21 +1,24 @@
 import React from 'react';
 import Link from "next/link";
 import Image from "../reusables/lazy/Image";
+import classes from '../../styles/features.module.css'
 
 const Team = () => {
     return (
-        <section className='features section-bg'>
+        <section className={`${classes.Features} section-bg`}>
             <div className="container">
                 <div className="row justify-content-around align-items-center gy-4" data-aos="fade-up">
-                    <div className="col-md-5 order-1 order-md-2 ">
-                          <Image
+                    <div className="col-md-5 order-1 order-md-2" data-aos="fade-left" data-aos-delay="100">
+                        <Image
                             width={1600}
                             height={720}
                             src="/late.jpg"
-                            className="img-fluid" alt="asbestos"/>
+
+                            className="img-fluid"
+                            alt="Tai’s Asbestos Handling Team"/>
                     </div>
                     <div className="col-md-7 order-2 order-md-1 ">
-                        <h3>Tai’s Asbestos Handling Team </h3>
+                        <h3>Tai’s <span>Asbestos Handling </span>Team </h3>
                         <p>After coming into contact with Asbestos waste directly, our handling team usually takes clean
                             water showers to wash off any asbestos fiber remnants from their personal protective
                             equipment (PPE) every day. Due to this, we utilize a fully-operational trailer or

@@ -98,7 +98,7 @@ const Blogs = ({blogs, totalBlogs, blogsLimit, router}) => {
     return (
         <>
             {head()}
-            <Layout simple title='Blog Section'>
+            <Layout breadcrumb breadcrumbHeader2='Our blog' alt={`${APP_NAME} | Blog`}>
                 <main>
                     <section className='blog-section'>
                         <div className="container ">

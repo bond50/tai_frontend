@@ -44,7 +44,7 @@ const Category = ({category, blogs, query}) => {
     return (
         <>
             {head()}
-            <Layout simple title={category.name}>
+             <Layout breadcrumb breadcrumbHeader2={category.name} alt={`${APP_NAME} | ${category.name}`}>
                 <section className='blog-section'>
                     <div className="container mt-2">
                         <div className="row">{showCats()}</div>

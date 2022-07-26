@@ -2,12 +2,12 @@ import React from 'react';
 import Image from "./reusables/lazy/Image";
 import Link from "next/link";
 import {API} from "../config";
-
+import classes from '../styles/team.module.css'
 const Team = ({members}) => {
 
 
     return (
-        <section className="team" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+        <section  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="100">
             <div className="container">
                 <div className="row">
                     {members && members.map(({
@@ -23,8 +23,8 @@ const Team = ({members}) => {
                         const imgSrc = `${API}/member/photo/${username}`
                         return < div className="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
                                      data-aos-delay={`${i + 1}00`} key={_id}>
-                            <div className="member">
-                                <div className="member-img">
+                            <div className={classes.Member}>
+                                <div className={classes.Img}>
                                     {
                                         photoDimensions && username && <Image
                                             width={photoDimensions.width}
@@ -35,7 +35,7 @@ const Team = ({members}) => {
                                             alt="user profile"
                                         />
                                     }
-                                    <div className="social">
+                                    <div className={classes.Social}>
                                         {twitter && <Link href={twitter}>
                                             <a> <i className="bi bi-twitter"/></a>
                                         </Link>
@@ -51,7 +51,7 @@ const Team = ({members}) => {
                                     </div>
 
                                 </div>
-                                <div className="member-info">
+                                <div className={classes.Info}>
                                     <h4>{name}</h4>
                                     <span>{companyRole}</span>
                                         Contact

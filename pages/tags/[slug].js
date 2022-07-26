@@ -32,7 +32,7 @@ const Tag = ({tag, blogs, query}) => {
     return (
         <>
             {head()}
-            <Layout simple title={tag.name}>
+            <Layout breadcrumb breadcrumbHeader2={tag.name} alt={`${APP_NAME} | ${tag.name}`}>
                 <section className='blog-section'>
                     <div className="container mt-2">
                         <div className="row">

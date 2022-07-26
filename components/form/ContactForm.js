@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {emailContactForm} from '../../actions/form';
 import Alert from "../messages/Alert";
+import classes from '../../styles/contact.module.css'
 
 
 const ContactForm = ({authorEmail, label}) => {
@@ -63,25 +64,24 @@ const ContactForm = ({authorEmail, label}) => {
     );
 
     const sideData = () => {
-        return <div className="info">
-            <div className="address">
+        return <div className={classes.Info}>
+            <div className={classes.Address}>
                 <i className="bi bi-geo-alt"/>
                 <h4>Mombasa Branch</h4>
-                <p>Off Nkrumah Road,
-                    Third Floor, Taiyebi House,
-                    opposite NSSF Building. <br/>+254 798777444
+                <p>Sea View Plaza – 2nd floor <br/>
+                    Margaret Avenue off Mama Ngina Drive
                 </p>
 
             </div>
-            <div className="address">
+            <div className={classes.Address}>
                 <i className="bi bi-geo-alt"/>
                 <h4>Nairobi Branch</h4>
                 <p>Westlands, woodvale Avenue <br/>
-                    +254 798777666
+                    Madonna House
                 </p>
             </div>
 
-            <div className="email">
+            <div className={classes.Email}>
                 <i className="bi bi-envelope"/>
                 <h4>Email</h4>
                 <p>info@tailifestyle.co.ke</p>
@@ -89,16 +89,23 @@ const ContactForm = ({authorEmail, label}) => {
 
             <div className="phone">
                 <i className="bi bi-phone"/>
-                <h4>Alternative</h4>
+                <h4>Call</h4>
                 <p>
                     +254 798777999 <br/>
+                    +254 798777444 <br/>
+
+                    <br/>
                 </p>
             </div>
             <div className="d-flex justify-content-between">
                 <div className='mx-1'>
+
+
                     <iframe
-                        src="https://maps.google.com/maps?q=Taiyebi%20House,%20Nkurumah%20Rd,%20Mombasa&t=&z=11&ie=UTF8&iwloc=&output=embed"
-                        frameBorder="0" style={{border: "0", width: "100%", height: "190px"}} allowFullScreen/>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7506888396447!2d39.67485761469203!3d-4.0711404970396226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18401316baa39e0d%3A0x7c12b7f1400477fc!2sSea%20View%20Plaza!5e0!3m2!1sen!2ske!4v1658836253865!5m2!1sen!2ske"
+                        width="600" height="450" style={{border: "0", width: "100%", height: "190px"}}
+                        allowFullScreen="" loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"/>
                 </div>
 
                 <div>
@@ -113,36 +120,36 @@ const ContactForm = ({authorEmail, label}) => {
     }
 
     const contactForm = () =>
-        <form onSubmit={clickSubmit} className="email-form">
+        <form onSubmit={clickSubmit} className={classes.Form}>
             {label && <label className="form-label">{label}</label>}
             <div className="row">
-                <div className="form-group col-md-6">
+                <div className={`form-group col-md-6 ${classes.FormGroup}`}>
                     <label htmlFor="name">Your Name</label>
                     <input
                         placeholder="Your Name"
                         type="text"
                         onChange={handleChange('name')}
-                        className="form-control"
+                        className={`form-control shadow-none ${classes.Input}`}
                         value={name}
                         required/>
                 </div>
-                <div className="form-group col-md-6 mt-3 mt-md-0">
+                <div className={`form-group ${classes.FormGroup} col-md-6 mt-3 mt-md-0`}>
                     <label htmlFor="name">Your Email</label>
                     <input
                         placeholder="Your Email"
                         type="email"
                         onChange={handleChange('email')}
-                        className="form-control"
+                        className={`form-control shadow-none ${classes.Input}`}
                         value={email}
                         required
                     />
                 </div>
             </div>
-            <div className="form-group mt-3">
+            <div className={`form-group mt-3 ${classes.FormGroup}`}>
                 <label htmlFor="name">Subject</label>
                 <input
                     type="text"
-                    className="form-control"
+                    className={`form-control shadow-none ${classes.Input}`}
                     name="subject"
                     id="subject"
                     value={subject}
@@ -150,11 +157,11 @@ const ContactForm = ({authorEmail, label}) => {
                     placeholder="Subject"
                     required/>
             </div>
-            <div className="form-group mt-3">
+            <div className={`form-group mt-3 ${classes.FormGroup}`}>
                 <label htmlFor="name">Message</label>
                 <textarea
                     onChange={handleChange('message')}
-                    className="form-control"
+                    className={`form-control shadow-none ${classes.Textarea}`}
                     value={message}
                     name="message"
                     rows={authorEmail ? '4' : '14'} required/>
@@ -162,7 +169,7 @@ const ContactForm = ({authorEmail, label}) => {
             {showSuccessMessage()}
             {showErrorMessage()}
             <div className="text-center mt-3">
-                <button type="submit">{btnText}</button>
+                <button type="submit" className={classes.Button}>{btnText}</button>
             </div>
         </form>
 
@@ -174,7 +181,7 @@ const ContactForm = ({authorEmail, label}) => {
     }
 
     return (
-        <section id="contact" className="contact">
+        <section>
             <div className="container" data-aos="fade-up">
                 <div className="row">
                     <div className="col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">

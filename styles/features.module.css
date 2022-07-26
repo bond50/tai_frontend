@@ -1,0 +1,41 @@
+
+.Features h3, .Features h4 {
+    color: var(--color-secondary);
+    margin: 15px 0;
+    font-size: 32px;
+    font-weight: 700;
+
+}
+
+.Features h3 span {
+    color: var(--color-primary);
+}
+
+.Features h4 {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--color-secondary);
+}
+/*.Features img{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
+
+.List {
+    list-style: none;
+}
+
+.List li {
+    display: flex;
+    align-items: center;
+}
+
+.List li:before {
+    color: rgba(34, 34, 34, 0.7);
+    content: "\F26A";
+    font-family: 'bootstrap-icons';
+    margin-right: 8px;
+
+}
+

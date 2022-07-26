@@ -43,9 +43,9 @@ const UserName = ({user, query}) => {
     return (
         <>
             {head()}
-            <Layout simple title={`Contact ${user.name}`}>
+           <Layout breadcrumb breadcrumbHeader2={`Contact ${user.name}`} alt={`${APP_NAME} | ${user.name}`}>
                 <section >
-                    <div className="container ">
+                    <div className="container">
                         <div className="row">
                             <div className="col-xl-4">
                                 <div className={`card ${classes.Card} `}>
@@ -55,7 +55,7 @@ const UserName = ({user, query}) => {
                                         width={620}
                                         height={480}
                                         layout="responsive"
-                                        className="card-img-top" alt="..."/>
+                                        className="card-img-top" alt={user.name}/>
                                     <div
                                         className={`card-body ${classes.CardBody}  d-flex flex-column align-items-center`}>
                                         <h2>{user.name}</h2>

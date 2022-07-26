@@ -6,6 +6,7 @@ import {listRelated, singlePage} from "../../../actions/service";
 import Layout from "../../../components/layout";
 import renderHTML from "html-react-parser";
 import Link from "next/link";
+import PageWrapper from "../../../hoc/page-wrapper";
 
 
 const Slug = ({service, query}) => {
@@ -49,30 +50,14 @@ const Slug = ({service, query}) => {
     return (
         <Fragment>
             {head()}
-            <Layout simple title={service.title}>
-                <div className="container">
-                    <div id='service'>
-                        <div className="wrapper">
-                            <section className='service'>
-                                <div className="container">
-                                    {renderHTML(service.body)}
-                                </div>
-                            </section>
-                            <aside className='sticky'>
-                                <h3 className="sidebar-title">Related pages</h3>
-                                <ul>
-                                    {related.map(service => {
-                                        return <li key={service._id}>
-                                            <Link href={`/tai/${service.slug}`}>
-                                                <a>{service.title.toLowerCase()}</a>
-                                            </Link>
-                                        </li>
-                                    })}
-                                </ul>
-                            </aside>
-                        </div>
-                    </div>
-                </div>
+            <Layout breadcrumb breadcrumbHeader2={'Service details'} alt={`${APP_NAME} | ${service.title}`}>
+                <PageWrapper
+                    title='Core values'
+                    service={service}
+                    sidebarTitle='Related'
+                    sideList={related}
+                    className='section-bg' to={'tai'}>
+                </PageWrapper>
             </Layout>
         </Fragment>
     )
