@@ -47,7 +47,7 @@ const Nav = () => {
                 <Item to={`/blogs`} active={router.pathname === "/blogs"} clicked={toggleClosed}>Our Blog</Item>
                 <Media clicked={toggleClosed}/>
                 <Item to={`/contact`} active={router.pathname === "/contact"} clicked={toggleClosed}>Contact</Item>
-                <Item to={`/#about`} clicked={toggleClosed} className='getstarted'>Get Started</Item>
+                {/*<Item to={`/#about`} clicked={toggleClosed} className='getstarted'>Get Started</Item>*/}
             </ul>
             <i className={`bi bi-${open ? "x" : 'list'} mobile-nav-toggle`} onClick={toggleClosed}/>
         </nav>
