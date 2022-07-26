@@ -46,6 +46,7 @@ const Card = ({blog}) => {
                 {blog.imgWidth && blog.imgHeight && <Image
                     loader={myLoader}
                     className="img-fluid"
+                    layout="responsive"
                     width={blog.imgWidth}
                     height={blog.imgHeight}
                     src={imgSrc}
