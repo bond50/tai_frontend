@@ -115,7 +115,7 @@
 .Body ul li {
     display: flex;
     font-size: 15px;
-    align-items: start;
+    align-items: flex-start;
 
 }
 
@@ -126,9 +126,6 @@
     margin-right: 5px;
     color: #7b829c;
 }
-
-
-
 
 
 .Footer {
@@ -143,7 +140,7 @@
 
 .Footer a {
     color: rgba(27, 47, 69, 0.8);
-  transition: 0.3s;
+    transition: 0.3s;
 }
 
 .Footer a:hover {
@@ -151,10 +148,10 @@
 }
 
 .Cats {
-     list-style: none;
-  display: inline;
-  padding: 0 20px 0 0;
-  font-size: 14px;
+    list-style: none;
+    display: inline;
+    padding: 0 20px 0 0;
+    font-size: 14px;
 }
 
 .Cats li {
@@ -163,9 +160,9 @@
 
 .Tags {
     list-style: none;
-  display: inline;
-  padding: 0;
-  font-size: 14px;;
+    display: inline;
+    padding: 0;
+    font-size: 14px;;
 }
 
 .Tags li {
