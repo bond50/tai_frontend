@@ -37,12 +37,14 @@
 
 
 .section h3 {
-    color: #272e4a;
+    color: #2b180d;
 
 }
 
 .header3 {
-    color: #272e4a;
+    color: #2b180d;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .header {
@@ -92,6 +94,7 @@
     font-family: var(--font-primary);
     color: #7b829c;
     font-size: 14px;
+    line-height: 20px;
     margin-bottom: 12px;
 }
 

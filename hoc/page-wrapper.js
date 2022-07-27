@@ -13,6 +13,19 @@ const PageWrapper = ({service, children, dynamic, header, sideList, alt, src, cl
         renderedBody = renderHTML(service.body)
     }
 
+    function side() {
+        if (!sideList) {
+            return <Loader1/>
+        } else {
+            return sideList.map((list, i) => {
+                return <Link href={`/${to}/${list.slug}`} key={i}>
+                    <a>{list.title.toLowerCase()}</a>
+                </Link>
+            })
+        }
+
+    }
+
 
     return (
         <section className={`${classes.section} ${className}`}>
@@ -20,14 +33,7 @@ const PageWrapper = ({service, children, dynamic, header, sideList, alt, src, cl
                 <div className="row ">
                     <div className={`${classes.sticky} col-lg-4 order-2 order-lg-1`}>
                         <h4 className={classes.header}>{sidebarTitle}</h4>
-                        {sideList.map((list, i) => {
-                            if (!sideList) {
-                                return <Loader1/>
-                            }
-                            return <Link href={`/${to}/${list.slug}`} key={i}>
-                                <a>{list.title.toLowerCase()}</a>
-                            </Link>
-                        })}
+                        {side()}
                     </div>
                     <div className={`col-lg-6 order-1 order-lg-2 ${classes.body}`}>
                         {dynamic && service.imgHeight && service.width && <Image
