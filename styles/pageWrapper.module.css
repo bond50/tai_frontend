@@ -36,12 +36,22 @@
 /*}*/
 
 
-.section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
+.section h3 {
+    color: #2b180d;
+
+}
+
+.body h1, .body h2, .body h3, .body h4, .body h5, .body h6 {
     color: #2b180d;
     font-weight: 700 !important;
 
 }
 
+
+.header2 {
+    color: #2b180d;
+    font-weight: 900;
+}
 
 .header {
     padding: 18px 30px 18px 45px;

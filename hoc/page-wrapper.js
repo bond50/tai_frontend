@@ -7,10 +7,10 @@ import Loader1 from "../components/loaders/loader1";
 import {API} from "../config";
 
 const PageWrapper = ({service, children, loading, header, sideList, alt, src, className, to, sidebarTitle}) => {
-    let heading = <h3 className={classes.header3}>{header}</h3>
+    let heading = <h2 className={classes.header2}>{header}</h2>
     let renderedBody = children
     if (service) {
-        heading = <h3 className={classes.header3}>{service.title}</h3>
+        heading = <h2 className={classes.header2}>{service.title}</h2>
         renderedBody = renderHTML(service.body)
     }
 
@@ -33,7 +33,7 @@ const PageWrapper = ({service, children, loading, header, sideList, alt, src, cl
             <div className='container'>
                 <div className="row ">
                     <div className={`${classes.sticky} col-lg-4 order-2 order-lg-1`}>
-                        <h4 className={classes.header}>{sidebarTitle}</h4>
+                        <h3 className={classes.header}>{sidebarTitle}</h3>
                         {side()}
                     </div>
                     <div className={`col-lg-8 order-1 order-lg-2 ${classes.body}`}>
