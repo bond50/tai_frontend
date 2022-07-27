@@ -73,9 +73,12 @@
 }
 
 .sticky a:last-child {
-
     border-bottom: none;
+}
 
+.sticky a:first-letter {
+    border-bottom: none;
+    text-transform: uppercase;
 }
 
 
