@@ -5,7 +5,8 @@ import Image from "../components/reusables/lazy/Image";
 import renderHTML from "html-react-parser";
 import Loader1 from "../components/loaders/loader1";
 
-const PageWrapper = ({service, children, dynamic,loading, header, sideList, alt, src, className, to, sidebarTitle}) => {
+const PageWrapper = ({service, children, loading, header, sideList, alt, src, className, to, sidebarTitle}) => {
+    console.log(service)
     let heading = <h3 className={classes.header3}>{header}</h3>
     let renderedBody = children
     if (service) {
@@ -36,7 +37,7 @@ const PageWrapper = ({service, children, dynamic,loading, header, sideList, alt,
                         {side()}
                     </div>
                     <div className={`col-lg-6 order-1 order-lg-2 ${classes.body}`}>
-                        {dynamic && service.imgHeight && service.width && <Image
+                        {service.imgHeight && service.width && <Image
                             src={src}
                             alt={alt} className="img-fluid"
                             width={service.imgWidth}
