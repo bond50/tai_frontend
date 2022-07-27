@@ -36,15 +36,13 @@
 /*}*/
 
 
-.section h3 {
+.section h1,h2,h3,h4,h5,h6 {
     color: #2b180d;
+    font-weight: 700!important;
 
 }
 
-.header3 {
-    color: #2b180d;
 
-}
 
 .header {
     padding: 18px 30px 18px 45px;
