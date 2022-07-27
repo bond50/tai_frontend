@@ -7,7 +7,7 @@ import SingleDropdown from "./single-dropdown";
 import {useRouter} from "next/router";
 import About from "./about";
 import Media from "./media";
-import Loader2 from "../loaders/loader2";
+import Loader2 from "../loaders/loader1";
 
 
 const Nav = () => {
