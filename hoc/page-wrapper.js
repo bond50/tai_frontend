@@ -5,7 +5,7 @@ import Image from "../components/reusables/lazy/Image";
 import renderHTML from "html-react-parser";
 import Loader1 from "../components/loaders/loader1";
 
-const PageWrapper = ({service, children, dynamic, header, sideList, alt, src, className, to, sidebarTitle}) => {
+const PageWrapper = ({service, children, dynamic,loading, header, sideList, alt, src, className, to, sidebarTitle}) => {
     let heading = <h3 className={classes.header3}>{header}</h3>
     let renderedBody = children
     if (service) {
@@ -14,7 +14,7 @@ const PageWrapper = ({service, children, dynamic, header, sideList, alt, src, cl
     }
 
     function side() {
-        if (!sideList) {
+        if (loading) {
             return <Loader1/>
         } else {
             return sideList.map((list, i) => {

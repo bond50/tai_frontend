@@ -1,5 +1,6 @@
 import {handleResponse, isAuth} from "./auth";
 import {API} from "../config";
+import fetch from "isomorphic-fetch";
 
 export const createService = (blog, token) => {
     let blogEndpoint
@@ -77,21 +78,14 @@ export const removePage = (slug, token) => {
         .catch(err => console.log(err));
 };
 
-
-export const listRelated = (page) => {
-    return fetch(`${API}/service/related`, {
-        method: 'POST',
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(page)
-    })
+export const listRelated = (options) => {
+    return fetch(`${API}/service/related`, options)
         .then(response => {
             return response.json();
         })
         .catch(err => console.log(err));
 };
+
 
 
 export const updatePage = (page, token, slug) => {

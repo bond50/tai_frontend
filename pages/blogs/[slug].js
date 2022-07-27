@@ -11,6 +11,7 @@ import SmallCard from "../../components/card/small-card";
 
 const SingleBlog = ({blog, query}) => {
     const [related, setRelated] = useState([])
+    const [loading, setLoading] = useState(false)
     useEffect(() => {
         const abortCtrl = new AbortController();
         const opts = {
@@ -22,11 +23,14 @@ const SingleBlog = ({blog, query}) => {
             },
             body: JSON.stringify({blog})
         };
+        setLoading(true)
         listRelated(opts).then(data => {
             if (data.error) {
                 console.log(data.error)
+                setLoading(false)
             } else {
                 setRelated(data)
+                setLoading(false)
             }
         })
         return () => abortCtrl.abort();
@@ -74,7 +78,7 @@ const SingleBlog = ({blog, query}) => {
         <>
             {head()}
             <Layout breadcrumb breadcrumbHeader2='Blog Details' alt={`${APP_NAME} | Blog Details`} noBread={true}>
-               <section>
+                <section>
                     <div className="container" data-aos="fade-up">
                         <div className="row g-5 ">
                             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">

@@ -12,20 +12,47 @@ import PageWrapper from "../../../hoc/page-wrapper";
 const Slug = ({service, query}) => {
 
     const [related, setRelated] = useState([])
+     const [loading, setLoading] = useState(false)
 
-    const loadRelated = () => {
-        listRelated({service}).then(data => {
-            if (data.error) {
-                console.log(data.error)
-            } else {
-                setRelated(data)
-            }
-        })
-    };
+    // const loadRelated = () => {
+    //     listRelated({service}).then(data => {
+    //         if (data.error) {
+    //             console.log(data.error)
+    //         } else {
+    //             setRelated(data)
+    //         }
+    //     })
+    // };
+    //
+    // useEffect(() => {
+    //     loadRelated()
+    // }, [service])
+    //
 
     useEffect(() => {
-        loadRelated()
+        const abortCtrl = new AbortController();
+        const opts = {
+            signal: abortCtrl.signal,
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({service})
+        };
+        setLoading(true)
+        listRelated(opts).then(data => {
+            if (data.error) {
+                console.log(data.error)
+                setLoading(false)
+            } else {
+                setRelated(data)
+                setLoading(false)
+            }
+        })
+        return () => abortCtrl.abort();
     }, [service])
+
 
 
     const head = () => (
@@ -54,6 +81,7 @@ const Slug = ({service, query}) => {
                 <PageWrapper
                     title='Core values'
                     service={service}
+                    loading={loading}
                     sidebarTitle='Related'
                     sideList={related}
                     className='section-bg' to={'tai'}>

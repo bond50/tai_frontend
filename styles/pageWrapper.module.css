@@ -1,6 +1,5 @@
 .section {
     overflow: unset;
-
     /*overflow-x: hidden;*/
 }
 
@@ -43,7 +42,7 @@
 
 .header3 {
     color: #2b180d;
-    font-weight: 700;
+
 }
 
 .header {
@@ -65,14 +64,12 @@
 
 .sticky a {
     display: block;
-    line-height: 1;
-    padding: 15px 30px 15px 45px;
     border-bottom: 1px solid #d9e3e8;
+    line-height: 1;
+    padding: 8px 0 8px 15px;
+    margin: 10px 0;
     color: #272e4a;
-    font-weight: 700;
-    text-transform: capitalize;
     transition: 0.3s;
-    /*margin: 10px 0;*/
 }
 
 .sticky a:last-child {
@@ -83,7 +80,6 @@
 
 
 .section img {
-    margin-bottom: 20px;
     max-width: 100%;
     height: auto;
     object-fit: cover;
