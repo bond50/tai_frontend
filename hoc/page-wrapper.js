@@ -37,7 +37,7 @@ const PageWrapper = ({service, children, loading, header, sideList, alt, src, cl
                         {side()}
                     </div>
                     <div className={`col-lg-8 order-1 order-lg-2 ${classes.body}`}>
-                        {service.imgHeight && service.imgWidth && <Image
+                        {service && service.imgHeight && service.imgWidth && <Image
                             src={`${API}/service/photo/${service.slug}`}
                             alt={alt}
                             className={`img-fluid ${classes.Img}`}
