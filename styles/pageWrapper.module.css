@@ -96,7 +96,7 @@
     /*font-family: var(--font-primary);*/
     /*color: #7b829c;*/
     /*font-size: 14px;*/
-    line-height: 20px;
+    /*line-height: 20px;*/
     margin-bottom: 12px;
 }
 
@@ -106,7 +106,7 @@
     padding: 0;
     font-size: 14px;
     font-family: var(--font-primary);
-    color: #7b829c;
+    /*color: #7b829c;*/
 }
 
 .section ul li {
