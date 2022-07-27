@@ -1,11 +1,12 @@
 .breadcrumbs {
     padding: 140px 0 60px 0;
-    min-height: 50vh;
+    min-height: 30vh;
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: var(--color-secondary);
+
 }
 
 .breadcrumbs img {
@@ -16,14 +17,13 @@
     z-index: 1;
     content: "";
     background-color: rgba(16, 61, 103, 0.93);
-    /* background: linear-gradient(rgba(16,61,103,0.1),rgba(16,61,103,0.9));*/
     position: absolute;
     inset: 0;
 }
 
 .breadcrumbs h2 {
     z-index: 1;
-    font-size: 48px;
+    font-size: 48.132px;
     font-weight: 500;
     color: var(--color-white);
     font-family: var(--font-secondary);
@@ -33,35 +33,95 @@
     text-transform: uppercase;
 }
 
-
 .breadcrumbs ol {
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+    font-family: var(--font-primary);
+    list-style-type: none;
+    color: var(--color-white);
     padding: 0 0 10px 0;
     margin: 0;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: capitalize;
+    font-size: 14px;
+    z-index: 1;
+    /* truncate.breadcrumbs container */
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
 }
 
-.breadcrumbs ol a {
-    color: var(--color-white-rgba7);
-    transition: 0.3s;
-}
-
-.breadcrumbs ol a:hover {
-    text-decoration: underline;
-}
 
 .breadcrumbs ol li + li {
     padding-left: 5px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs ol li {
     display: inline-block;
-    padding-right: 5px;
-    color: var(--color-white-rgba7);
-    content: "/";
+    /* truncate breadcrumbs */
+    max-width: 100%;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+
+.breadcrumbs li:before {
+    padding-right: 5px;
+    color: var(--color-white-rgba6);
+    content: "|";
+}
+
+.breadcrumbs li:first-child:before {
+    content: none;
+
+}
+
+.breadcrumbs ol a {
+    text-decoration: none;
+    color: var(--color-white-rgba7);
+    text-transform: capitalize;
+}
+
+
+.breadcrumbs ol li a:hover {
+    text-decoration: underline
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+    .breadcrumbs li:last-child {
+        /* main title can have a bigger truncating treshhold */
+        max-width: 80%;
+    }
+
+}
+
+/* mobile */
+
+
+@media (max-width: 768px) {
+    .breadcrumbs ol li,
+    .breadcrumbs ol li:last-child {
+        display: none;
+    }
+
+
+    .breadcrumbs ol li:nth-last-child(2) {
+        display: block;
+        /* truncate breadcrumbs */
+        max-width: 100%;
+    }
+
+    .breadcrumbs ol li a {
+        text-decoration: none
+    }
+
+    .breadcrumbs ol li:nth-last-child(2) a:before {
+        content: '< Return to ';
+        color: var(--color-white-rgba7);
+    }
+
+    .breadcrumbs ol li:nth-last-child(2):before {
+        content: none
+    }
+}
+

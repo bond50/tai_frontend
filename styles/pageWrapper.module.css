@@ -48,7 +48,7 @@
 
 .header {
     padding: 18px 30px 18px 45px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     color: var(--color-white);
     font-size: 15px;
     font-weight: 700;
@@ -81,17 +81,9 @@
 
 }
 
-.sticky a.active {
-    font-weight: 700;
-    color: var(--color-secondary);
-}
-
-.sticky a:hover {
-    color: var(--color-secondary);
-}
 
 
-.Img img {
+.section img {
     margin-bottom: 20px;
     max-width: 100%;
     height: auto;

@@ -3,11 +3,12 @@ import Navigation from "./navigation/navigation";
 import dynamic from 'next/dynamic'
 import ScrollTop from "./ScrollTop";
 import Breadcrumbs from "./reusables/Breadcrumbs";
+
 const Hero = dynamic(() => import('./hero'))
 const Footer = dynamic(() => import('./footer/footer'))
 
 
-const Layout = ({children, home, alt,header2Class, breadcrumb, breadcrumbHeader2}) => {
+const Layout = ({children, home, alt, noBread, breadcrumb, breadcrumbHeader2}) => {
 
     return (
         <Fragment>
@@ -18,7 +19,7 @@ const Layout = ({children, home, alt,header2Class, breadcrumb, breadcrumbHeader2
                 <Breadcrumbs
                     alt={alt}
                     header2={breadcrumbHeader2}
-                    header2Class={header2Class}
+                    noBread={noBread}
                 />
                 }
                 {children}

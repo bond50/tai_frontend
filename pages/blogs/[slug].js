@@ -73,7 +73,7 @@ const SingleBlog = ({blog, query}) => {
     return (
         <>
             {head()}
-            <Layout breadcrumb breadcrumbHeader2='Blog Details' alt={`${APP_NAME} | Blog Details`}>
+            <Layout breadcrumb breadcrumbHeader2='Blog Details' alt={`${APP_NAME} | Blog Details`} noBread={true}>
                <section>
                     <div className="container" data-aos="fade-up">
                         <div className="row g-5 ">

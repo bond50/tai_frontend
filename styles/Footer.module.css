@@ -68,8 +68,10 @@
 }
 
 .Links ul li {
-    padding: 3px 0;
+    display: flex;
+    padding: 10px 0;
     font-size: 13px;
+    align-items: flex-start;
     text-transform: capitalize;
 }
 
