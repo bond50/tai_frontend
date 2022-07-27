@@ -93,9 +93,9 @@
 }
 
 .section p {
-    font-family: var(--font-primary);
+    /*font-family: var(--font-primary);*/
     /*color: #7b829c;*/
-    font-size: 14px;
+    /*font-size: 14px;*/
     line-height: 20px;
     margin-bottom: 12px;
 }
