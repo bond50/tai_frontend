@@ -46,7 +46,7 @@ const Breadcrumbs = ({header2, alt}) => {
                 objectPosition='center'
             />
             <div className="container position-relative d-flex flex-column align-items-center">
-                <h2>{header2}</h2>
+                <h2 className='text-center'>{header2}</h2>
                 <ol>
                     <li>
                         <Link href={`/`}>
