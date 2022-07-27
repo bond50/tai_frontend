@@ -3,6 +3,7 @@ import Link from "next/link";
 import classes from '../styles/pageWrapper.module.css'
 import Image from "../components/reusables/lazy/Image";
 import renderHTML from "html-react-parser";
+import Loader1 from "../components/loaders/loader1";
 
 const PageWrapper = ({service, children, dynamic, header, sideList, alt, src, className, to, sidebarTitle}) => {
     let heading = <h3 className={classes.header3}>{header}</h3>
@@ -12,28 +13,30 @@ const PageWrapper = ({service, children, dynamic, header, sideList, alt, src, cl
         renderedBody = renderHTML(service.body)
     }
 
+
     return (
         <section className={`${classes.section} ${className}`}>
             <div className='container'>
                 <div className="row ">
                     <div className={`${classes.sticky} col-lg-4 order-2 order-lg-1`}>
                         <h4 className={classes.header}>{sidebarTitle}</h4>
-                        {sideList && sideList.map((list, i) => {
+                        {sideList.map((list, i) => {
+                            if (!sideList) {
+                                return <Loader1/>
+                            }
                             return <Link href={`/${to}/${list.slug}`} key={i}>
                                 <a>{list.title.toLowerCase()}</a>
                             </Link>
-
                         })}
                     </div>
                     <div className={`col-lg-6 order-1 order-lg-2 ${classes.body}`}>
-                        <div className={classes.Img}>
-                            {dynamic && service.imgHeight && service.width && <Image
-                                src={src}
-                                alt={alt} className="img-fluid"
-                                width={service.imgWidth}
-                                height={service.imgHeight}
-                            />}
-                        </div>
+                        {dynamic && service.imgHeight && service.width && <Image
+                            src={src}
+                            alt={alt} className="img-fluid"
+                            width={service.imgWidth}
+                            height={service.imgHeight}
+                        />}
+
                         {heading}
                         {renderedBody}
                     </div>
