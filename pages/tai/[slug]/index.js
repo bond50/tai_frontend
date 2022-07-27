@@ -77,7 +77,7 @@ const Slug = ({service, query}) => {
     return (
         <Fragment>
             {head()}
-            <Layout breadcrumb breadcrumbHeader2={'Service details'} alt={`${APP_NAME} | ${service.title}`}>
+            <Layout breadcrumb breadcrumbHeader2={service.title} alt={`${APP_NAME} | ${service.title}`}>
                 <PageWrapper
                     title='Core values'
                     service={service}
