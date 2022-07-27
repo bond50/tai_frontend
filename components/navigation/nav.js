@@ -15,7 +15,6 @@ const Nav = () => {
 
     const [open, toggleClosed] = useToggle();
     let attachedClasses = [`navbar`];
-
     if (open) {
         attachedClasses.push('navbar-mobile')
     }
