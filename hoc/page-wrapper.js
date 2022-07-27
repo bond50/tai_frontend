@@ -4,9 +4,9 @@ import classes from '../styles/pageWrapper.module.css'
 import Image from "../components/reusables/lazy/Image";
 import renderHTML from "html-react-parser";
 import Loader1 from "../components/loaders/loader1";
+import {API} from "../config";
 
 const PageWrapper = ({service, children, loading, header, sideList, alt, src, className, to, sidebarTitle}) => {
-    console.log(service)
     let heading = <h3 className={classes.header3}>{header}</h3>
     let renderedBody = children
     if (service) {
@@ -36,13 +36,16 @@ const PageWrapper = ({service, children, loading, header, sideList, alt, src, cl
                         <h4 className={classes.header}>{sidebarTitle}</h4>
                         {side()}
                     </div>
-                    <div className={`col-lg-6 order-1 order-lg-2 ${classes.body}`}>
-                        {service.imgHeight && service.width && <Image
-                            src={src}
-                            alt={alt} className="img-fluid"
+                    <div className={`col-lg-8 order-1 order-lg-2 ${classes.body}`}>
+                        {service.imgHeight && service.imgWidth && <Image
+                            src={`${API}/service/photo/${service.slug}`}
+                            alt={alt}
+                            className={`img-fluid ${classes.Img}`}
                             width={service.imgWidth}
+                            layout={'responsive'}
                             height={service.imgHeight}
-                        />}
+                        />
+                        }
 
                         {heading}
                         {renderedBody}
