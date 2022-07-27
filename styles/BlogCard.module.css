@@ -57,7 +57,11 @@
 .Content {
     margin-top: 20px;
 }
-
+.Content img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 .Content p, .Content ul li {
     line-height: 26px;
     /*font-family: var(--font-primary);*/
