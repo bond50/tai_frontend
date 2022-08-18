@@ -11,7 +11,6 @@ class MyDocument extends Document {
                     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/>
                     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/>
                     <link rel="manifest" href="/icons/site.webmanifest"/>
-
                     <link rel="preconnect" href="https://fonts.googleapis.com"/>
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true'/>
                     <link
@@ -23,6 +22,7 @@ class MyDocument extends Document {
                     <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet preload"
                           as="style"/>
                     <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet preload" as="style"/>
+                    <meta name="google-site-verification" content="ZugS14mi4dhHzkTYnRG-qfec8KqrGxse2mR-8lSDeoE"/>
 
                     {/*<script*/}
                     {/*    dangerouslySetInnerHTML={{*/}
