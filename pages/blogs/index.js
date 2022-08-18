@@ -6,7 +6,6 @@ import {withRouter} from "next/router";
 import SmallCard from "../../components/card/small-card";
 import Layout from "../../components/layout";
 
-
 const Blogs = ({blogs, totalBlogs, blogsLimit, router}) => {
 
     const head = () => (
