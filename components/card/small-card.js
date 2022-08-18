@@ -46,9 +46,9 @@ const SmallCard = ({blog}) => {
                 <div className="card-text"> {parse(blog.excerpt)}</div>
                 {blog && <div className={classes.Info}>
                     Updated {dayjs(blog.createdAt).fromNow()}
-                    <Link href={`/profile/${blog.postedBy.username}`}>
-                        <a className="float-end">{blog.postedBy.username}</a>
-                    </Link>
+                    {/*<Link href={`/profile/${blog.postedBy.username}`}>*/}
+                    {/*    <a className="float-end">{blog.postedBy.username}</a>*/}
+                    {/*</Link>*/}
                 </div>
                 }
             </div>

@@ -60,11 +60,11 @@ const Card = ({blog}) => {
             <div className={classes.Meta}>
                 <ul>
 
-                    <li className="d-flex align-items-center">
-                        <i className="bi bi-person"/>
-                        <span
-                        >{blog.postedBy.username}</span>
-                    </li>
+                    {/*<li className="d-flex align-items-center">*/}
+                    {/*    <i className="bi bi-person"/>*/}
+                    {/*    <span*/}
+                    {/*    >{blog.postedBy.username}</span>*/}
+                    {/*</li>*/}
 
                     <li className="d-flex align-items-center">
                         <i className="bi bi-calendar"/>
