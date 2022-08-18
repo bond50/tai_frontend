@@ -71,7 +71,7 @@ const Services = () => {
                     <div className="container" data-aos="fade-up">
                         <div className="row">
                             {services.map((service, i) => {
-                                return <div className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0"
+                                return <div className="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mb-4 mt-xl-0"
                                             data-aos="zoom-in" data-aos-delay={`${i * 100}`} key={service._id}>
                                     <Link href={`/tai/${service.slug}`}>
                                         <div className={classes.iconBox}>
