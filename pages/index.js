@@ -54,6 +54,7 @@ const Index = () => {
             />
             <meta property="og:image:type" content="image/png"/>
             <meta name="google-site-verification" content="x3MS8gaN8c4Z1BM2Vgjzf4VOGW4K-Pe_AeHTdIwb6kI" />
+
             {/*<meta property="fb:app_id" content={`${FB_APP_ID}`}/>*/}
         </Head>
     );
