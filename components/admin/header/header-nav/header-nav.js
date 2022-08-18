@@ -2,8 +2,7 @@ import classes from './header-nav.module.css'
 
 import {isAuth, signout} from "../../../../actions/auth";
 import {useEffect, useState} from "react";
-import {API} from "../../../../config";
-import Image from "../../../reusables/lazy/Image";
+
 import Router from "next/router";
 
 const HeaderNav = () => {

@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 import {singleCategory} from "../../actions/category";
 import Item from "./item";
 import {useRouter} from "next/router";
-import Loader2 from "../loaders/loader2";
+
 
 const SingleDropdown = ({info,closeNav}) => {
     const router = useRouter()

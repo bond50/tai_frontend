@@ -1,12 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import CreateForm from "../reusables/forms/CreateForm";
 import SideCatTags from "../reusables/forms/side-cat-tags";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Alert from "../messages/Alert";
-import {useEffect, useState} from "react";
 import {dataFromLocalStorage, setDataToLocalStorage} from "../reusables/functions/dataFromLocalStorage";
 import useSWR from "swr";
-import axiosInstance, {fetcher} from "../axios/axios";
+import {fetcher} from "../axios/axios";
 import {createService} from "../../actions/service";
 import {getCookie} from "../../actions/auth";
 
@@ -25,8 +23,8 @@ const PageCreate = () => {
         hidePublishButton: false
     });
 
-    const {data: categories, error: catError, mutate} = useSWR({url: `/service-categories`, method: 'get'}, fetcher);
-    const {error, sizeError, success, formData, title, loading} = values;
+    const {data: categories} = useSWR({url: `/service-categories`, method: 'get'}, fetcher);
+    const {error, success, formData, title, loading} = values;
 
 
     useEffect(() => {

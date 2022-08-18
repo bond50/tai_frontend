@@ -3,10 +3,9 @@ import DynamicTableRows from "./dynamic-table-rows";
 
 import useARP from "../../../hooks/useARP";
 import {Fragment} from "react";
-import {isAuth} from "../../../actions/auth";
 import Alert from "../../messages/Alert";
 
-const ApprovedPages = ({username}) => {
+const ApprovedPages = () => {
     const {
         mouseMoveHandler,
         loading,

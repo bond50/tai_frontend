@@ -1,19 +1,16 @@
 import React from 'react';
 import classes from './overview.module.css'
 import Button from "../reusables/ui/Button";
-import {isAuth} from "../../actions/auth";
+
 
 
 const Profile = ({
-                     handleCheckBox,
+
                      handleSubmit,
                      handleChange,
                      username,
                      name,
-                     role,
-                     email,
-                     toggleRole,
-                     password,
+
                      about,
                      errorMsg,
                      twitter,

@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from "react";
 import {API} from "../../config";
 import {getCookie, updateUser,} from "../../actions/auth";

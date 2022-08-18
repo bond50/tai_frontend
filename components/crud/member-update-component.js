@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from "react";
 import {API} from "../../config";
 import {getCookie} from "../../actions/auth";
@@ -10,7 +9,6 @@ import {getTeamMember, update} from "../../actions/team";
 import {Tab, Tabs} from "react-bootstrap";
 import Overview from "../profile/overview";
 import Profile from "../profile/profile";
-import ForgotPassword from "../../pages/auth/password/forgot";
 
 
 const MemberUpdateComponent = ({id}) => {

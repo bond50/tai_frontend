@@ -11,7 +11,6 @@ import SmallCard from "../../components/card/small-card";
 
 const SingleBlog = ({blog, query}) => {
     const [related, setRelated] = useState([])
-    const [loading, setLoading] = useState(false)
     useEffect(() => {
         const abortCtrl = new AbortController();
         const opts = {
@@ -23,14 +22,11 @@ const SingleBlog = ({blog, query}) => {
             },
             body: JSON.stringify({blog})
         };
-        setLoading(true)
         listRelated(opts).then(data => {
             if (data.error) {
                 console.log(data.error)
-                setLoading(false)
             } else {
                 setRelated(data)
-                setLoading(false)
             }
         })
         return () => abortCtrl.abort();

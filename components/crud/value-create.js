@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import {getCookie} from "../../actions/auth";
-import Button from "../reusables/ui/Button";
 import Alert from "../messages/Alert";
 import axiosInstance from "../axios/axios";
 
@@ -40,6 +38,7 @@ const ValueCreate = () => {
         });
         const data = {title, content}
         axiosInstance.post('/core-values', data)
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             .then(r => {
                 setValues({
                     ...values,

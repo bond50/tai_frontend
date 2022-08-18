@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import classes from '../../styles/ServiceCard.module.css'
 
-const ServiceCard = ({delay, children, imgSrc, imgHeight, imgAlt, imgWidth, href, title}) => {
+const ServiceCard = ({delay, children, imgSrc, imgAlt, href, title}) => {
 
     return (
         <div className={`col-lg-4 col-md-6 ${classes.Service}`} data-aos="fade-up" data-aos-delay={delay}>

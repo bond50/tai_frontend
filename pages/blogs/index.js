@@ -17,7 +17,17 @@ const Blogs = ({blogs, totalBlogs, blogsLimit, router}) => {
                 content="Tai Lifestyle Limited Latest articles on safety tips when handling asbestos, news ,workers training,our concern about asbestos,disposal of sludge and construction"
             />
             <meta name="keywords"
-                  content="Tai, Tai lifestyle ,Tai lifestyle Limited,tailifestyle.com, blog, blog section, news, events, safety tips"/>
+                  content="Tai,
+                  Tai lifestyle
+                  ,Tai lifestyle Limited,tailifestyle.com,
+                   blog,
+                    blog section,
+                    news,
+                     events,
+                     Asbestos,
+                     Asbestos handling,
+                     Safety and management tips,Green Highway,Measuring Sustainability,Green Transportation,Green asphalt,Green Asphalt Road,Eco-friendly Asphalt Roads,Carbon gasses,greenhouse gasses,Water sustainability,Sustainable water infrastructure,Sustainable water system,Green water systems,Sustainable water practices,Green principles,Environmental governing bodies,Modern energy technology,safe disposal methods,Sustainability in business,A sustainable company,Sustainable regulations
+                     safety tips"/>
 
             <link rel="canonical" href={`${DOMAIN}${router.pathname}`}/>
 

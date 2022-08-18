@@ -22,7 +22,6 @@ const TeamMember = () => {
         name,
         email,
         about,
-        photoPreview,
         companyRole,
         error,
         loading,

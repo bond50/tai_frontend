@@ -1,11 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, {Fragment, useEffect, useState} from 'react';
 import Head from "next/head";
 import {API, APP_NAME, DOMAIN,} from "../../../config";
 import {listRelated, singlePage} from "../../../actions/service";
 import Layout from "../../../components/layout";
-import renderHTML from "html-react-parser";
-import Link from "next/link";
+
 import PageWrapper from "../../../hoc/page-wrapper";
 
 

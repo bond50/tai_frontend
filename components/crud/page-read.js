@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import Link from 'next/link';
 import React, {useEffect, useState} from 'react';
 import {getCookie, isAuth} from '../../actions/auth';

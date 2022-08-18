@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from "next/link";
 import Image from "../reusables/lazy/Image";
 import classes from '../../styles/AltServices1.module.css'
 

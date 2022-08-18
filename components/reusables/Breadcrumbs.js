@@ -53,7 +53,7 @@ const Breadcrumbs = ({header2, alt}) => {
                             <a>home</a>
                         </Link>
                     </li>
-                    {breadcrumbs.map((breadcrumb, i) => {
+                    {breadcrumbs.map((breadcrumb) => {
                         return (
                             <li key={breadcrumb.href}>
                                 <Link href={breadcrumb.href}>

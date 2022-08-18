@@ -1,4 +1,3 @@
-import React, {useEffect, useState} from 'react';
 import Logo from "./Logo";
 import Nav from "./nav";
 import classes from '../../styles/Header.module.css'

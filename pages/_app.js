@@ -43,7 +43,6 @@ function MyApp({Component, pageProps}) {
                     src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`}
                 />
 
-                {/* eslint-disable-next-line @next/next/inline-script-id */}
                 <Script strategy="lazyOnload">
                     {`
             window.dataLayer = window.dataLayer || [];

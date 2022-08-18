@@ -1,5 +1,4 @@
 import React from 'react';
-import Item from "./item";
 import useToggle from "../../hooks/useToggle";
 
 const CustomDropdown = ({text, children, nested}) => {
